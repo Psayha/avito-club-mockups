@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Вариант B — Глянец</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,900;1,400;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ===== База (всё внутри .mz) ===== */
+.mz{
+  --black:#111010; --ink:#1b1a18; --cream:#f3ede2; --cream-2:#e9e0d0; --paper:#faf7f1;
+  --gold:#b08d57; --gold-soft:#d9c29a; --muted:#77706a; --line:#d8ccb8;
+  --serif:'Playfair Display',Georgia,serif; --sans:'Manrope',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  font-family:var(--sans); color:var(--ink); background:var(--cream);
+  max-width:480px; margin:0 auto; font-size:15px; line-height:1.6; overflow:hidden; -webkit-font-smoothing:antialiased;
+}
+.mz *{box-sizing:border-box}
+.mz h1,.mz h2,.mz h3,.mz p{margin:0}
+.mz .pad{padding:56px 22px}
+.mz .kicker{display:flex;align-items:center;gap:10px;font-size:10.5px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.mz .kicker:after{content:'';flex:1;height:1px;background:currentColor;opacity:.5}
+.mz h2{font-family:var(--serif);font-weight:400;font-size:38px;line-height:1.05;letter-spacing:-.02em;margin:14px 0 16px}
+.mz h2 i{font-style:italic;color:var(--gold)}
+.mz .muted{color:var(--muted)}
+.mz .ph{background:#fff3b0;color:#5a4a00;padding:0 4px;border-radius:3px;font-weight:700;font-style:normal}
+.mz-native{border:1.5px dashed #9b8f7c;border-radius:4px;padding:14px;text-align:center;font-size:11px;line-height:1.5;color:#6f6450;
+  background:repeating-linear-gradient(45deg,#efe7da 0 10px,#e9e0d0 10px 20px);margin:0 22px}
+.mz-native b{display:block;font-size:12px;letter-spacing:.06em;color:#4a4232}
+.mz-native .fake-btn{display:block;margin:10px 0 6px;background:var(--black);color:var(--cream);padding:17px;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.mz-native .fake-btn small{display:block;font-weight:500;letter-spacing:.04em;text-transform:none;font-size:12px;color:var(--gold-soft);margin-top:2px}
+.mz-flag{background:var(--black);color:#e9e2d6;text-align:center;font-size:11px;padding:9px;letter-spacing:.04em}
+.mz-gap{height:22px}
+
+/* ===== 1. Обложка ===== */
+.mz-cover{position:relative;height:720px;background:#2a2622;color:#fff;overflow:hidden}
+.mz-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.mz-cover:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.75) 100%)}
+.mz-cover>*{position:relative;z-index:1}
+.mz-cover .top{display:flex;justify-content:space-between;font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;padding:16px 18px 0;color:var(--black)}
+.mz-cover .mast{font-family:var(--serif);font-weight:900;font-size:118px;line-height:.86;letter-spacing:-.04em;text-align:center;margin-top:6px;color:var(--black)}
+.mz-cover .sub{text-align:center;font-size:10.5px;font-weight:800;letter-spacing:.32em;text-transform:uppercase;color:#7a5c2e;margin-top:4px}
+.mz-cover .lines{position:absolute;left:18px;right:18px;bottom:22px;z-index:1}
+.mz-cover .line{border-top:1px solid rgba(255,255,255,.35);padding:11px 0}
+.mz-cover .line small{display:block;font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-soft)}
+.mz-cover .line span{font-family:var(--serif);font-size:23px;line-height:1.15}
+.mz-cover .line span i{font-style:italic}
+.mz-cover .price{position:absolute;right:16px;top:178px;z-index:1;width:92px;height:92px;border-radius:50%;background:var(--gold);color:var(--black);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transform:rotate(-10deg);font-weight:800;line-height:1.05}
+.mz-cover .price b{font-family:var(--serif);font-size:22px;font-weight:900}
+.mz-cover .price small{font-size:9px;letter-spacing:.08em;text-transform:uppercase}
+
+/* ===== 2. Письмо редактора ===== */
+.mz-letter{background:var(--paper)}
+.mz-letter .head{display:flex;gap:16px;align-items:center;margin:18px 0 22px}
+.mz-letter .ava{width:86px;height:110px;flex:0 0 86px;overflow:hidden}
+.mz-letter .ava img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.mz-letter .head h2{margin:0;font-size:30px}
+.mz-letter p+p{margin-top:14px}
+.mz-letter .drop:first-letter{font-family:var(--serif);float:left;font-size:64px;line-height:.8;padding:6px 8px 0 0;color:var(--gold)}
+.mz-letter ul{list-style:none;padding:0;margin:18px 0;border-top:1px solid var(--line)}
+.mz-letter li{padding:12px 0 12px 28px;border-bottom:1px solid var(--line);position:relative;font-family:var(--serif);font-size:18px;line-height:1.3}
+.mz-letter li:before{content:'—';position:absolute;left:0;color:var(--gold)}
+.mz-letter .sign{font-family:var(--serif);font-style:italic;font-size:30px;margin-top:22px;color:var(--ink)}
+.mz-letter .sign small{display:block;font-family:var(--sans);font-style:normal;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+/* ===== 3. Содержание ===== */
+.mz-toc{background:var(--black);color:var(--cream)}
+.mz-toc .kicker{color:var(--gold-soft)}
+.mz-toc h2 i{color:var(--gold-soft)}
+.mz-toc .muted{color:#a69e93}
+.mz-toc details{border-top:1px solid #34302b}
+.mz-toc details:last-of-type{border-bottom:1px solid #34302b}
+.mz-toc summary{list-style:none;cursor:pointer;display:flex;align-items:baseline;gap:10px;padding:14px 0}
+.mz-toc summary::-webkit-details-marker{display:none}
+.mz-toc .pg{font-family:var(--serif);font-size:30px;color:var(--gold);min-width:44px;line-height:1}
+.mz-toc .t{font-family:var(--serif);font-size:20px;line-height:1.2}
+.mz-toc .dots{flex:1;border-bottom:1px dotted #5c564e;transform:translateY(-5px)}
+.mz-toc .n{font-size:11px;color:#a69e93;white-space:nowrap}
+.mz-toc ul{list-style:none;padding:0 0 14px 54px;margin:0}
+.mz-toc li{font-size:13.5px;color:#d3cabd;padding:3px 0}
+.mz-toc li.etc{color:#8f877b;font-style:italic}
+.mz-toc .total{display:flex;justify-content:space-between;margin-top:22px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-soft)}
+
+/* ===== 4. Найди ошибки (общий компонент) ===== */
+.fe{--fe-accent:var(--gold);--fe-ink:var(--ink);--fe-card:#fff;--fe-line:var(--line)}
+.fe .card{background:var(--fe-card);border-radius:6px;overflow:visible;position:relative;box-shadow:0 14px 34px -22px rgba(0,0,0,.45);margin-top:22px}
+.fe .img{height:190px;position:relative;background:radial-gradient(ellipse at 40% 60%,#8e887e,#5f5a53 75%);border-radius:6px 6px 0 0;overflow:hidden;filter:saturate(.5)}
+.fe .img:before{content:'';position:absolute;left:0;right:0;bottom:0;height:42%;background:#7b5f5a;opacity:.55} /* «покрывало» */
+.fe .img:after{content:'';position:absolute;left:36%;top:20%;width:28%;height:58%;background:#3f3b36;border-radius:30% 30% 8px 8px;transform:rotate(-12deg)}
+.fe .body{padding:12px 14px 16px;position:relative}
+.fe .price{font-weight:800;font-size:19px}
+.fe .title{font-size:15px;margin:2px 0 6px}
+.fe .desc{font-size:13px;color:#6b665e}
+.fe .meta{font-size:11.5px;color:#9a948a;margin-top:8px}
+.fe .hs{position:relative;z-index:3;display:inline-block;vertical-align:middle;margin-left:4px;width:26px;height:26px;border-radius:50%;border:0;padding:0;cursor:pointer;font:800 12px/26px var(--sans);
+  color:#fff;background:var(--fe-accent)}
+.fe .hs:after{content:'';position:absolute;inset:-2px;border-radius:50%;border:2px solid var(--fe-accent);animation:fePulse 1.8s infinite;pointer-events:none}
+.fe .hs[aria-pressed="true"]:after{display:none}
+.fe .hs.abs{position:absolute;left:14px;top:14px;margin:0;width:30px;height:30px;line-height:30px}
+.fe .hs[aria-pressed="true"]{background:var(--fe-ink)}
+@keyframes fePulse{0%{transform:scale(1);opacity:.8}80%,100%{transform:scale(1.7);opacity:0}}
+.mz-fe{background:var(--paper)}
+.fe .count{display:flex;justify-content:space-between;align-items:center;margin:18px 0 8px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.fe .count b{color:var(--fe-accent)}
+.fe ol{list-style:none;margin:0;padding:0}
+.fe li{display:flex;gap:12px;padding:12px 0;border-top:1px solid var(--fe-line);font-size:14px;line-height:1.45}
+.fe li .num{flex:0 0 24px;height:24px;border-radius:50%;background:var(--fe-accent);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.fe li b{display:block}
+.fe.js li{display:none}
+.fe.js li.on{display:flex;animation:feIn .3s ease-out}
+@keyframes feIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+.fe .done{display:none;margin-top:12px;padding:14px;background:var(--cream-2,#eee);font-size:14px}
+.fe.all .done{display:block}
+@media (prefers-reduced-motion:reduce){.fe .hs:after,.fe li.on{animation:none}}
+
+/* ===== 5. Фото-разворот ===== */
+.mz-spread{position:relative;height:560px;overflow:hidden;background:#1a1816}
+.mz-spread img{width:100%;height:100%;object-fit:cover;object-position:60% 50%;display:block}
+.mz-spread:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.75),transparent 55%)}
+.mz-spread blockquote{position:absolute;z-index:1;left:22px;right:22px;bottom:28px;margin:0;color:#fff;font-family:var(--serif);font-size:26px;line-height:1.2}
+.mz-spread blockquote i{color:var(--gold-soft)}
+.mz-spread cite{display:block;font-family:var(--sans);font-style:normal;font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-top:12px;color:var(--gold-soft)}
+
+/* ===== 6. Также в номере ===== */
+.mz-also .item{display:grid;grid-template-columns:70px 1fr;gap:14px;padding:18px 0;border-top:1px solid var(--line)}
+.mz-also .item:last-child{border-bottom:1px solid var(--line)}
+.mz-also .item .no{font-family:var(--serif);font-style:italic;font-size:40px;color:var(--gold);line-height:1}
+.mz-also h3{font-family:var(--serif);font-weight:600;font-size:20px;line-height:1.2;margin-bottom:4px}
+.mz-also .item p{font-size:13.5px;color:var(--muted);line-height:1.5}
+.mz-also .pic{height:300px;overflow:hidden;margin:22px 0 4px}
+.mz-also .pic img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.mz-also .cap{font-size:11px;color:var(--muted);font-style:italic}
+
+/* ===== 7. Первая неделя ===== */
+.mz-week{background:var(--paper)}
+.mz-week .days{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:22px}
+.mz-week .d{background:var(--paper);padding:16px 14px}
+.mz-week .d small{font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.mz-week .d b{display:block;font-family:var(--serif);font-weight:600;font-size:18px;line-height:1.2;margin:6px 0 4px}
+.mz-week .d p{font-size:12.5px;color:var(--muted);line-height:1.45}
+.mz-week .d.wide{grid-column:1/-1;background:var(--black);color:var(--cream)}
+.mz-week .d.wide p{color:#b9b0a3}
+
+/* ===== 8. Письма читательниц ===== */
+.mz-mail .letters{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:22px -22px 0;padding:0 22px 8px;scrollbar-width:none}
+.mz-mail .letters::-webkit-scrollbar{display:none}
+.mz-mail .lt{flex:0 0 78%;scroll-snap-align:start;background:var(--paper);border:1px solid var(--line);padding:20px;position:relative}
+.mz-mail .lt:before{content:'“';position:absolute;top:-6px;left:14px;font-family:var(--serif);font-size:70px;color:var(--gold);line-height:1}
+.mz-mail .lt p{font-family:var(--serif);font-size:17px;line-height:1.4;margin-top:24px}
+.mz-mail .lt span{display:block;margin-top:14px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+/* ===== 9. Вкладыш-чек-лист ===== */
+.mz-insert{padding:0 22px 22px}
+.mz-insert .tear{background:var(--gold-soft);padding:26px 22px 22px;position:relative;
+  -webkit-mask:radial-gradient(circle 7px at 50% 0,transparent 98%,#000) 0 0/22px 100% repeat-x;mask:radial-gradient(circle 7px at 50% 0,transparent 98%,#000) 0 0/22px 100% repeat-x}
+.mz-insert small{font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+.mz-insert h3{font-family:var(--serif);font-size:28px;font-weight:400;line-height:1.1;margin:8px 0 10px}
+.mz-insert h3 i{font-style:italic}
+.mz-insert p{font-size:14px}
+
+/* ===== 10. Подписка ===== */
+.mz-sub{background:var(--black);color:var(--cream)}
+.mz-sub .kicker{color:var(--gold-soft)}
+.mz-sub h2 i{color:var(--gold-soft)}
+.mz-sub .muted{color:#a69e93}
+.mz-sub .ticket{border:1px solid var(--gold);padding:22px 20px;margin-top:24px;position:relative}
+.mz-sub .ticket:before,.mz-sub .ticket:after{content:'';position:absolute;top:50%;width:18px;height:18px;border-radius:50%;background:var(--black);border:1px solid var(--gold);transform:translateY(-50%)}
+.mz-sub .ticket:before{left:-10px;clip-path:inset(0 0 0 50%)}
+.mz-sub .ticket:after{right:-10px;clip-path:inset(0 50% 0 0)}
+.mz-sub .ticket small{font-size:10px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-soft)}
+.mz-sub .big{font-family:var(--serif);font-size:64px;font-weight:400;line-height:1;margin:8px 0 2px}
+.mz-sub .big sup{font-size:26px}
+.mz-sub ul{list-style:none;padding:0;margin:18px 0 0}
+.mz-sub li{padding:9px 0;border-top:1px solid #34302b;font-size:14px}
+.mz-sub li:before{content:'✦';color:var(--gold);margin-right:10px;font-size:11px}
+.mz-sub .vs{display:flex;justify-content:space-between;font-size:12.5px;color:#a69e93;margin-top:18px;padding-top:14px;border-top:1px dashed #4a453e}
+.mz-sub .vs s{color:#7d766c}
+.mz-sub .legal{font-size:11px;color:#8f877b;margin-top:22px;line-height:1.5}
+</style>
+</head>
+<body style="margin:0;background:#d9d1c4">
+<div class="mz">
+<div class="mz-flag">ВАРИАНТ B · «ГЛЯНЕЦ» · <span class="ph">жёлтым</span> заглушки · пунктир = штатные блоки</div>
+
+<!-- ===================== HTML-БЛОК 1: ОБЛОЖКА ===================== -->
+<section class="mz-cover">
+  <img src="assets/fur.jpg" alt="Лиза Чайкина">
+  <div class="top"><span>Авито-выпуск</span><span>№1 · 2026</span></div>
+  <div class="mast">ЛИЗА</div>
+  <div class="sub">Клуб о продажах на Авито</div>
+  <div class="price"><b>4 500₽</b><small>навсегда</small></div>
+  <div class="lines">
+    <div class="line"><small>Главная тема</small><span>10 лет продаж на Авито — <i>в одном клубе</i></span></div>
+    <div class="line"><small>Внутри</small><span>50+ разборов: от фото до алгоритмов</span></div>
+    <div class="line"><small>Без подписки</small><span>Платишь один раз — <i>читаешь всегда</i></span></div>
+  </div>
+</section>
+
+<!-- ===================== ШТАТНО: КНОПКА ОПЛАТЫ ===================== -->
+<div class="mz-gap"></div>
+<div class="mz-native">
+  <b>ШТАТНАЯ КНОПКА TAPLINK · ОПЛАТА</b>
+  <span class="fake-btn">Получить свой выпуск<small>4 500 ₽ · один раз и навсегда</small></span>
+</div>
+<div class="mz-gap"></div>
+
+<!-- ===================== HTML-БЛОК 2: ПИСЬМО РЕДАКТОРА ===================== -->
+<section class="mz-letter pad">
+  <div class="kicker">Письмо редактора</div>
+  <div class="head">
+    <div class="ava"><img src="assets/hero.jpg" alt="Лиза"></div>
+    <h2>Привет, <i>это Лиза</i></h2>
+  </div>
+  <p class="drop">Я продаю на Авито больше 10 лет. За это время набила все возможные шишки, выучилась на авитолога и разобралась, почему одни вещи улетают за день, а другие висят месяцами.</p>
+  <p>Если тебе знакомо хоть что-то из этого — этот выпуск для тебя:</p>
+  <ul>
+    <li>выложила вещь, а за неделю пара просмотров</li>
+    <li>не понимаешь, какую цену ставить</li>
+    <li>пугают доставка, лимиты и платные тарифы</li>
+    <li>покупатели торгуются и пропадают</li>
+    <li>дома полно вещей, а руки не доходят</li>
+  </ul>
+  <p>Я собрала всё, что знаю, в закрытый клуб — с инструкциями, эфирами и чатом, где тебе ответят. Без марафонов, без подписки. Один раз — и навсегда.</p>
+  <div class="sign">Лиза Чайкина<small>основательница Авито-клуба</small></div>
+</section>
+
+<!-- ===================== HTML-БЛОК 3: СОДЕРЖАНИЕ ===================== -->
+<section class="mz-toc pad">
+  <div class="kicker">Содержание</div>
+  <h2>В этом <i>выпуске</i></h2>
+  <p class="muted">Нажми на рубрику — откроются темы.</p>
+  <div style="height:18px"></div>
+  <details><summary><span class="pg">04</span><span class="t">Профиль</span><span class="dots"></span><span class="n">5 тем</span></summary>
+    <ul><li>Создание профиля с нуля</li><li>Связанные профили</li><li>Правила Авито</li><li>Налог с продаж</li><li>Уровень сервиса</li></ul></details>
+  <details><summary><span class="pg">12</span><span class="t">Идеальное объявление</span><span class="dots"></span><span class="n">8 тем</span></summary>
+    <ul><li>Объявление, которое продаёт</li><li>Фото + видеоурок</li><li>Фото с помощью ИИ</li><li>Нужно ли видео</li><li>Цена и ценообразование</li><li class="etc">и ещё 3 темы</li></ul></details>
+  <details><summary><span class="pg">24</span><span class="t">Алгоритмы</span><span class="dots"></span><span class="n">7 тем</span></summary>
+    <ul><li>Бесплатные лимиты</li><li>Активные продажи</li><li>Если вещи долго продаются</li><li>Негативный отзыв</li><li class="etc">и ещё 3 темы</li></ul></details>
+  <details><summary><span class="pg">36</span><span class="t">Авито Доставка</span><span class="dots"></span><span class="n">8 тем</span></summary>
+    <ul><li>Как работает доставка</li><li>Упаковка</li><li>Кросс-доставка</li><li>Запрещённые товары</li><li class="etc">и ещё 4 темы</li></ul></details>
+  <details><summary><span class="pg">48</span><span class="t">Продвижение</span><span class="dots"></span><span class="n">3 темы</span></summary>
+    <ul><li>Продвижение б/у вещей</li><li>Нюансы просмотров</li><li>Тариф за сделку</li></ul></details>
+  <details><summary><span class="pg">56</span><span class="t">Доп. заработок</span><span class="dots"></span><span class="n">5 тем</span></summary>
+    <ul><li>Профессия ресейлера</li><li>Вещи с Садовода</li><li>Как я заработала на текстах</li><li class="etc">и ещё 2 темы</li></ul></details>
+  <details><summary><span class="pg">64</span><span class="t">Лайфхаки</span><span class="dots"></span><span class="n">5 тем</span></summary>
+    <ul><li>Адрес продавца</li><li>Проверка духов на подделку</li><li>Правка объявления после продажи</li><li class="etc">и ещё 2 темы</li></ul></details>
+  <details><summary><span class="pg">72</span><span class="t">По категориям</span><span class="dots"></span><span class="n">5 тем</span></summary>
+    <ul><li>Одежда и обувь</li><li>Техника</li><li>Детские игрушки</li><li class="etc">и ещё 2 темы</li></ul></details>
+  <details><summary><span class="pg">80</span><span class="t">Эфиры</span><span class="dots"></span><span class="n">4+</span></summary>
+    <ul><li>Расхламление</li><li>Закуп в Китае</li><li>Нейросети</li><li>Продажа растений</li></ul></details>
+  <div class="total"><span>10 рубрик</span><span>50+ тем</span><span>выходят новые</span></div>
+</section>
+
+<!-- ===================== HTML-БЛОК 4: НАЙДИ ОШИБКИ ===================== -->
+<section class="mz-fe pad fe" data-fe>
+  <div class="kicker">Рубрика «Разбор»</div>
+  <h2>Найди <i>6 ошибок</i> в объявлении</h2>
+  <p class="muted">Нажимай на мигающие точки. Так мы разбираем объявления в клубе.</p>
+  <div class="card">
+    <div class="img"></div>
+    <button class="hs abs" type="button" data-i="1" aria-pressed="false" aria-label="Ошибка 1">1</button>
+    <div class="body">
+      <div class="price">3 000 ₽ <button class="hs" type="button" data-i="3" aria-pressed="false" aria-label="Ошибка 3">3</button></div>
+      <div class="title">Куртка <button class="hs" type="button" data-i="2" aria-pressed="false" aria-label="Ошибка 2">2</button></div>
+      <div class="desc">Продаю куртку, почти не носила. <button class="hs" type="button" data-i="4" aria-pressed="false" aria-label="Ошибка 4">4</button> <u>Торг.</u> <button class="hs" type="button" data-i="5" aria-pressed="false" aria-label="Ошибка 5">5</button></div>
+      <div class="meta">Самовывоз · Москва <button class="hs" type="button" data-i="6" aria-pressed="false" aria-label="Ошибка 6">6</button></div>
+    </div>
+  </div>
+  <div class="count"><span>Найдено</span><span><b data-fe-n>0</b> из 6</span></div>
+  <ol>
+    <li data-i="1"><span class="num">1</span><span><b>Тёмное фото на покрывале</b>Вещь теряется, не видно цвета и деталей. Нужен светлый фон и дневной свет.</span></li>
+    <li data-i="2"><span class="num">2</span><span><b>Заголовок «Куртка»</b>Так никто не ищет. Пиши тип, бренд, размер: «Пуховик Zara, 44 (M)».</span></li>
+    <li data-i="3"><span class="num">3</span><span><b>Цена «на глаз»</b>Без сравнения с похожими объявлениями — либо дёшево, либо тишина.</span></li>
+    <li data-i="4"><span class="num">4</span><span><b>Нет размера и замеров</b>Покупатель не будет спрашивать — он просто уйдёт к другому.</span></li>
+    <li data-i="5"><span class="num">5</span><span><b>Слово «Торг»</b>Это приглашение сбивать цену. Лучше заложить скидку заранее.</span></li>
+    <li data-i="6"><span class="num">6</span><span><b>Нет Авито Доставки</b>Только самовывоз — значит, покупатели только из твоего города.</span></li>
+  </ol>
+  <div class="done">Все 6 найдены. В клубе — разбор каждой из этих тем по шагам.</div>
+</section>
+
+<!-- ===================== HTML-БЛОК 5: ФОТО-РАЗВОРОТ ===================== -->
+<section class="mz-spread">
+  <img src="assets/piano.jpg" alt="">
+  <blockquote>«Продавать на Авито можно спокойно — <i>без суеты, угадайки и страха что-то нажать</i>»<cite>Лиза Чайкина</cite></blockquote>
+</section>
+
+<!-- ===================== HTML-БЛОК 6: ТАКЖЕ В НОМЕРЕ ===================== -->
+<section class="mz-also pad">
+  <div class="kicker">Также в номере</div>
+  <h2>Не только <i>статьи</i></h2>
+  <div class="item"><div class="no">i</div><div><h3>Эфиры с экспертами</h3><p>ИИ для продавца, закуп в Китае, мистери-боксы — с записями.</p></div></div>
+  <div class="item"><div class="no">ii</div><div><h3>Чат продавцов</h3><p>Делимся успехами, есть рубрики и дни барахолки.</p></div></div>
+  <div class="item"><div class="no">iii</div><div><h3>Ответы от меня</h3><p>Застряла с объявлением, доставкой или отзывом — спрашиваешь, я отвечаю.</p></div></div>
+  <div class="item"><div class="no">iv</div><div><h3>Поставщик мистери-боксов</h3><p>Контакт — когда захочешь продавать не только своё.</p></div></div>
+  <div class="pic"><img src="assets/phone.jpg" alt="Лиза на связи"></div>
+  <p class="cap">Лиза на связи с участницами клуба.</p>
+</section>
+
+<!-- ===================== HTML-БЛОК 7: ПЕРВАЯ НЕДЕЛЯ ===================== -->
+<section class="mz-week pad">
+  <div class="kicker">Как читать выпуск</div>
+  <h2>Твоя <i>первая неделя</i></h2>
+  <p class="muted">Не нужно изучать всё сразу. Вот спокойный план на старт.</p>
+  <div class="days">
+    <div class="d"><small>День 1</small><b>Профиль</b><p>Оформляешь аккаунт так, чтобы ему доверяли.</p></div>
+    <div class="d"><small>День 2</small><b>Что продавать</b><p>Разбираешь вещи и смотришь таблицу лимитов.</p></div>
+    <div class="d"><small>День 3</small><b>Фото</b><p>Снимаешь по инструкции — на телефон.</p></div>
+    <div class="d"><small>День 4</small><b>Тексты и цена</b><p>Пишешь заголовки и считаешь цену по рынку.</p></div>
+    <div class="d"><small>День 5</small><b>Доставка</b><p>Подключаешь и разбираешься с упаковкой.</p></div>
+    <div class="d"><small>День 6–7</small><b>Публикация</b><p>Выкладываешь и показываешь в чате на разбор.</p></div>
+    <div class="d wide"><small>Дальше</small><b>Эфиры, новые темы и чат</b><p>Возвращаешься к библиотеке, когда появляется вопрос.</p></div>
+  </div>
+</section>
+
+<!-- ===================== HTML-БЛОК 8: ПИСЬМА ЧИТАТЕЛЬНИЦ ===================== -->
+<section class="mz-mail pad">
+  <div class="kicker">Письма читательниц</div>
+  <h2>Что пишут <i>в чате</i></h2>
+  <p class="muted">Листай → <span class="ph">заменить реальными отзывами / скринами</span></p>
+  <div class="letters">
+    <div class="lt"><p>Поменяла фото по инструкции — пуховик ушёл за два дня.</p><span>Участница · <span class="ph">имя</span></span></div>
+    <div class="lt"><p>Таблица лимитов сэкономила мне кучу денег, я не знала, что так можно.</p><span>Участница · <span class="ph">имя</span></span></div>
+    <div class="lt"><p>За первый месяц продала на <span class="ph">00 000 ₽</span> — то, что просто лежало в шкафу.</p><span>Участница · <span class="ph">имя</span></span></div>
+  </div>
+</section>
+
+<!-- ===================== HTML-БЛОК 9: ВКЛАДЫШ ===================== -->
+<section class="mz-insert">
+  <div class="tear">
+    <small>Бесплатный вкладыш</small>
+    <h3>Чек-лист <i>«5 ошибок в объявлении»</i></h3>
+    <p>Пока думаешь про клуб — забери чек-лист и проверь свои объявления уже сегодня.</p>
+  </div>
+</section>
+<div class="mz-native">
+  <b>ШТАТНО · ФОРМА / КНОПКА МЕССЕНДЖЕРА</b>
+  «Получить чек-лист» → подписка на Telegram-канал Лизы, бот отдаёт PDF
+</div>
+<div class="mz-gap" style="height:44px"></div>
+
+<!-- ===================== HTML-БЛОК 10: ПОДПИСКА ===================== -->
+<section class="mz-sub pad">
+  <div class="kicker">Подписка</div>
+  <h2>Без подписки. <i>Один номер — навсегда.</i></h2>
+  <p class="muted">Обычно обучение по Авито продают доступом на месяц. Здесь платишь один раз, а новые темы приходят бесплатно.</p>
+  <div class="ticket">
+    <small>Авито-клуб · доступ навсегда</small>
+    <div class="big">4 500<sup> ₽</sup></div>
+    <ul>
+      <li>Библиотека: 10 рубрик, 50+ тем</li>
+      <li>Эфиры с экспертами и записи</li>
+      <li>Чат продавцов и дни барахолки</li>
+      <li>Поставщик мистери-боксов</li>
+      <li>Мои ответы на вопросы</li>
+    </ul>
+    <div class="vs"><span>Подписка на 3 месяца</span><s>≈ 6 000 ₽</s></div>
+  </div>
+  <p class="legal">Клуб окупается одной-двумя проданными вещами. Результат зависит от товаров, спроса и твоих действий. Не является официальным проектом Авито.</p>
+</section>
+<div class="mz-gap"></div>
+<div class="mz-native">
+  <b>ШТАТНАЯ КНОПКА TAPLINK · ОПЛАТА</b>
+  <span class="fake-btn">Получить свой выпуск<small>4 500 ₽ · навсегда</small></span>
+</div>
+<div class="mz-gap"></div>
+<div class="mz-native" style="text-align:left"><b style="text-align:center">ШТАТНО · ВОПРОСЫ</b>новичку? · закупать ли товар? · как придёт доступ? · «навсегда» — правда? · кому не подойдёт? · возврат <span class="ph">?</span></div>
+<div class="mz-gap"></div>
+<div class="mz-native"><b>ШТАТНО · TELEGRAM, СОЦСЕТИ, ОФЕРТА, ПОЛИТИКА, РЕКВИЗИТЫ</b></div>
+<div class="mz-gap" style="height:40px"></div>
+</div>
+
+<script>
+/* «Найди ошибки»: точки открывают пункты списка */
+document.querySelectorAll('[data-fe]').forEach(function(root){
+  root.classList.add('js');
+  var n=root.querySelector('[data-fe-n]'), total=root.querySelectorAll('.hs').length;
+  root.addEventListener('click',function(e){
+    var b=e.target.closest('.hs'); if(!b) return;
+    b.setAttribute('aria-pressed','true');
+    var li=root.querySelector('li[data-i="'+b.dataset.i+'"]'); if(li) li.classList.add('on');
+    var found=root.querySelectorAll('.hs[aria-pressed="true"]').length;
+    n.textContent=found; if(found===total) root.classList.add('all');
+  });
+});
+</script>
+</body>
+</html>
