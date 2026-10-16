@@ -43,7 +43,7 @@
 .ek-hero .photo:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(20,19,17,.82) 100%)}
 .ek-hero .badges{position:absolute;left:14px;right:14px;bottom:14px;z-index:1;display:flex;flex-wrap:wrap;gap:6px}
 .ek-hero .badge{background:rgba(247,243,236,.94);color:var(--ink);font-size:12px;font-weight:600;padding:7px 11px;border-radius:30px}
-.ek-hero .badge i{font-style:normal;color:var(--accent)}
+.ek-hero .badge .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);margin-right:7px;vertical-align:1px}
 .ek-hero .copy{padding:26px 6px 22px}
 .ek-hero h1{font-family:var(--serif);font-weight:500;font-size:40px;line-height:1.04;letter-spacing:-.025em;margin:12px 0 14px}
 .ek-hero h1 em{font-style:italic;color:var(--accent)}
@@ -116,7 +116,9 @@
 .ek-plus .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
 .ek-plus .tile{background:#fff;border-radius:16px;padding:16px 14px;border:1px solid var(--line)}
 .ek-plus .tile.wide{grid-column:1/-1;background:var(--accent-soft);border-color:transparent}
-.ek-plus .ico{font-size:22px;line-height:1}
+.ek-plus .ico{width:42px;height:42px;border-radius:50%;background:var(--sand);color:var(--accent);display:flex;align-items:center;justify-content:center}
+.ek-plus .ico .ic{width:21px;height:21px}
+.ek-plus .tile.wide .ico{background:#fff}
 .ek-plus h3{font-size:15px;font-weight:800;margin:10px 0 4px;line-height:1.25}
 .ek-plus .tile p{font-size:13px;color:var(--muted);line-height:1.45}
 
@@ -169,7 +171,7 @@
 .ek-price .ribbon{position:absolute;top:16px;right:16px;background:var(--accent);font-size:11px;font-weight:800;padding:5px 10px;border-radius:20px}
 .ek-price ul{list-style:none;padding:0;margin:16px 0 0;border-top:1px solid #45423d}
 .ek-price li{padding:10px 0;border-bottom:1px solid #45423d;font-size:14px;display:flex;gap:10px}
-.ek-price li:before{content:'✓';color:#e3a58f;font-weight:800}
+.ek-price li:before{content:'';display:inline-block;width:14px;height:14px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/contain no-repeat;flex:0 0 14px;color:#e3a58f;margin-top:4px}
 .ek-price .payback{background:var(--accent-soft);border-radius:16px;padding:16px;font-size:14px;line-height:1.5}
 .ek-price .payback b{color:var(--accent)}
 .ek-price .vip{margin-top:12px;border:1.5px dashed var(--line);border-radius:18px;padding:16px;font-size:13px;color:var(--muted)}
@@ -227,7 +229,11 @@
 .ek-lead .sheet{margin-top:16px;background:#f7f3ec;color:var(--ink);border-radius:10px;padding:14px 16px;transform:rotate(-1.5deg);box-shadow:0 12px 24px -14px rgba(0,0,0,.6)}
 .ek-lead .sheet b{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
 .ek-lead .sheet div{font-size:13px;padding:4px 0;border-bottom:1px dashed var(--line)}
-.ek-lead .sheet div:before{content:'☐ ';color:var(--muted)}
+.ek-lead .sheet div{display:flex;gap:8px;align-items:center}
+.ek-lead .sheet div:before{content:'';display:inline-block;width:14px;height:14px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='4' y='4' width='16' height='16' rx='3'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='4' y='4' width='16' height='16' rx='3'/%3E%3C/svg%3E") center/contain no-repeat;flex:0 0 14px;color:var(--muted)}
+.ek .ic{width:1.05em;height:1.05em;display:inline-block;vertical-align:-.18em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ek .stars{display:inline-flex;gap:2px;vertical-align:-.1em}
+.ek .stars svg{width:.95em;height:.95em;fill:var(--star,#f5a623)}
 .ek-gap{height:22px}
 @media (prefers-reduced-motion:reduce){.ek *{transition:none!important}}
 </style>
@@ -242,7 +248,7 @@
   <div class="photo">
     <img src="assets/hero.jpg" alt="Лиза Чайкина">
     <div class="badges">
-      <span class="badge"><i>●</i> 10+ лет продаю на Авито</span>
+      <span class="badge"><i class="dot"></i>10+ лет продаю на Авито</span>
       <span class="badge">Дипломированный авитолог</span>
     </div>
   </div>
@@ -302,7 +308,7 @@
     <li data-i="5"><span class="num">5</span><span><b>Слово «Торг»</b>Приглашение сбивать цену.</span></li>
     <li data-i="6"><span class="num">6</span><span><b>Нет доставки</b>Только самовывоз — только твой город.</span></li>
   </ol>
-  <div class="done">✓ Все 6 найдены. Ниже — как это выглядит после исправления.</div>
+  <div class="done"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Все 6 найдены. Ниже — как это выглядит после исправления.</div>
 </section>
 
 <!-- ===================== HTML-БЛОК 3: ДО / ПОСЛЕ ===================== -->
@@ -318,7 +324,7 @@
         <div class="price">3 000 ₽</div>
         <div class="title">Куртка</div>
         <div class="meta"><span>Продаю куртку, почти не носила. Торг.</span></div>
-        <div class="stat">👁 12 просмотров за неделю · 0 сообщений</div>
+        <div class="stat"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg> 12 просмотров за неделю · 0 сообщений</div>
       </div>
     </div>
     <div class="card after">
@@ -328,7 +334,7 @@
         <div class="price">4 200 ₽</div>
         <div class="title">Пуховик женский Zara, 44 (M), тёплый, как новый</div>
         <div class="meta"><span class="chip">Доставка</span><span>Замеры в описании · 8 фото при дневном свете</span></div>
-        <div class="stat">👁 147 просмотров за день · 6 в избранном · 3 сообщения</div>
+        <div class="stat"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg> 147 просмотров за день · 6 в избранном · 3 сообщения</div>
       </div>
     </div>
   </div>
@@ -383,11 +389,11 @@
   <h2>Ты не одна <em>со своими вопросами</em></h2>
   <div class="pic"><img src="assets/phone.jpg" alt="Лиза отвечает на вопросы"></div>
   <div class="grid">
-    <div class="tile wide"><div class="ico">💬</div><h3>Мои ответы на вопросы</h3><p>Застряла с объявлением, доставкой или отзывом — спрашиваешь в клубе, я отвечаю.</p></div>
-    <div class="tile"><div class="ico">🎙</div><h3>Эфиры с экспертами</h3><p>ИИ, закуп в Китае, мистери-боксы и другие темы.</p></div>
-    <div class="tile"><div class="ico">🤝</div><h3>Чат продавцов</h3><p>Делимся успехами, есть рубрики и дни барахолки.</p></div>
-    <div class="tile"><div class="ico">📦</div><h3>Поставщик мистери-боксов</h3><p>Контакт, когда захочешь продавать не только своё.</p></div>
-    <div class="tile"><div class="ico">📊</div><h3>Таблицы</h3><p>Лимиты по категориям и учёт продаж.</p></div>
+    <div class="tile wide"><div class="ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.9-.9L3 21l1.9-5.1A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></svg></div><h3>Мои ответы на вопросы</h3><p>Застряла с объявлением, доставкой или отзывом — спрашиваешь в клубе, я отвечаю.</p></div>
+    <div class="tile"><div class="ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4"/></svg></div><h3>Эфиры с экспертами</h3><p>ИИ, закуп в Китае, мистери-боксы и другие темы.</p></div>
+    <div class="tile"><div class="ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>Чат продавцов</h3><p>Делимся успехами, есть рубрики и дни барахолки.</p></div>
+    <div class="tile"><div class="ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg></div><h3>Поставщик мистери-боксов</h3><p>Контакт, когда захочешь продавать не только своё.</p></div>
+    <div class="tile"><div class="ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg></div><h3>Таблицы</h3><p>Лимиты по категориям и учёт продаж.</p></div>
   </div>
 </section>
 
@@ -423,7 +429,7 @@
   <h2>Что пишут <em>участницы</em></h2>
   <p class="lead">Настоящие сообщения из чата, без постановки. Листай →</p>
   <div class="shots">
-    <div class="shot"><div class="bub">Девочки, продала пуховик за 2 дня после того, как поменяла фото! 🎉</div><div class="line" style="width:80%"></div><div class="line" style="width:60%"></div><div class="bub r">Ура! 🔥</div><div class="cap">Скрин №1</div></div>
+    <div class="shot"><div class="bub">Девочки, продала пуховик за 2 дня после того, как поменяла фото!</div><div class="line" style="width:80%"></div><div class="line" style="width:60%"></div><div class="bub r">Ура, поздравляем!</div><div class="cap">Скрин №1</div></div>
     <div class="shot"><div class="bub">Итог месяца: +750 бельё, +1300 толстовка…</div><div class="line" style="width:70%"></div><div class="line" style="width:85%"></div><div class="line" style="width:50%"></div><div class="cap">Скрин №2</div></div>
     <div class="shot"><div class="bub">Лиза, спасибо за таблицу лимитов, наконец поняла…</div><div class="line" style="width:75%"></div><div class="line" style="width:65%"></div><div class="cap">Скрин №3</div></div>
   </div>

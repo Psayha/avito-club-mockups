@@ -39,7 +39,8 @@
 .ad-top .track::-webkit-scrollbar{display:none}
 .ad-top .track img{flex:0 0 100%;width:100%;height:440px;object-fit:cover;scroll-snap-align:start;display:block}
 .ad-top .counter{position:absolute;right:12px;bottom:12px;background:rgba(0,0,0,.55);color:#fff;font-size:12px;font-weight:700;padding:4px 10px;border-radius:20px}
-.ad-top .fav{position:absolute;right:12px;top:12px;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;font-size:18px}
+.ad-top .fav{position:absolute;right:12px;top:12px;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;color:var(--ink)}
+.ad-top .fav .ic{width:20px;height:20px}
 .ad-top .hint{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.92);font-size:11.5px;font-weight:700;padding:5px 10px;border-radius:20px}
 .ad-top .info{padding:16px 16px 0}
 .ad-top .price{font-size:32px;font-weight:800;letter-spacing:-.02em;display:flex;align-items:baseline;gap:10px}
@@ -57,7 +58,7 @@
 .ad-seller .ava img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
 .ad-seller .name{font-weight:800;font-size:16px}
 .ad-seller .rate{font-size:13px;margin-top:2px}
-.ad-seller .rate i{font-style:normal;color:var(--star);letter-spacing:1px}
+.ad-seller .rate .stars{font-size:12px}
 .ad-seller .rate span{color:#2b6fd6;font-weight:600}
 .ad-seller .sub{font-size:12px;color:var(--muted)}
 .ad-badges{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:14px}
@@ -75,7 +76,7 @@
 .ad-desc p+p{margin-top:12px}
 .ad-desc ul{padding:0;margin:12px 0;list-style:none}
 .ad-desc li{padding:5px 0 5px 24px;position:relative;font-size:14.5px}
-.ad-desc li:before{content:'✕';position:absolute;left:0;color:var(--accent);font-weight:800;font-size:12px;top:7px}
+.ad-desc li:before{content:'';display:inline-block;width:12px;height:12px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 6 6 18M6 6l12 12'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 6 6 18M6 6l12 12'/%3E%3C/svg%3E") center/contain no-repeat;flex:0 0 12px;position:absolute;left:0;top:10px;color:var(--accent)}
 
 /* ===== 5. Что внутри ===== */
 .ad-inside .sum{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:12px}
@@ -94,6 +95,7 @@
 .ad-inside li.etc{color:var(--muted);font-style:italic}
 .ad-inside .extra{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
 .ad-inside .extra div{border:1px solid var(--line);border-radius:14px;padding:12px;font-size:12.5px;color:var(--muted);line-height:1.4}
+.ad-inside .extra .ic{width:22px;height:22px;color:var(--accent)}
 .ad-inside .extra b{display:block;color:var(--ink);font-size:14px;margin:4px 0 2px}
 
 /* ===== 6. Найди ошибки (общий компонент) ===== */
@@ -129,12 +131,12 @@
 /* ===== 7. Отзывы ===== */
 .ad-rev .score{display:flex;align-items:center;gap:14px;margin-bottom:14px}
 .ad-rev .score b{font-size:44px;font-weight:800;line-height:1}
-.ad-rev .score i{font-style:normal;color:var(--star);font-size:18px;letter-spacing:2px}
+.ad-rev .score .stars{font-size:18px}
 .ad-rev .r{border-top:1px solid var(--line);padding:14px 0}
 .ad-rev .r .h{display:flex;justify-content:space-between;font-size:13px}
 .ad-rev .r .h b{font-weight:700}
 .ad-rev .r .h span{color:var(--muted)}
-.ad-rev .r i{font-style:normal;color:var(--star);font-size:13px;letter-spacing:1px}
+.ad-rev .r .stars{font-size:13px;margin-top:2px}
 .ad-rev .r p{font-size:14px;margin-top:4px}
 .ad-rev .r .deal{font-size:11.5px;color:var(--muted);margin-top:6px}
 
@@ -165,6 +167,9 @@
 .ad-free .price span{font-size:14px;font-weight:600;color:#8a8780;margin-left:6px}
 
 .ad .legal{font-size:11px;color:var(--muted);padding:14px 18px 0;line-height:1.5}
+.ad .ic{width:1.05em;height:1.05em;display:inline-block;vertical-align:-.18em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ad .stars{display:inline-flex;gap:2px;vertical-align:-.1em}
+.ad .stars svg{width:.95em;height:.95em;fill:var(--star,#f5a623)}
 .ad-end{height:40px}
 </style>
 </head>
@@ -183,7 +188,7 @@
       <img src="assets/sofa.jpg" alt="">
       <img src="assets/profile.jpg" alt="">
     </div>
-    <div class="fav">♡</div>
+    <div class="fav"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"/></svg></div>
     <div class="hint">листай →</div>
     <div class="counter"><span data-gal-n>1</span>/5</div>
   </div>
@@ -191,11 +196,11 @@
     <div class="price">4 500 ₽ <s>в месяц</s></div>
     <h1>Авито-клуб: опыт продаж за 10 лет, доступ навсегда</h1>
     <div class="chips">
-      <span class="chip ok">✓ Состояние: проверено на себе</span>
+      <span class="chip ok"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Состояние: проверено на себе</span>
       <span class="chip hot">Без подписки</span>
       <span class="chip">Онлайн</span>
     </div>
-    <div class="views">👁 <span class="ph">000</span> просмотров · обновлено недавно</div>
+    <div class="views"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg> <span class="ph">000</span> просмотров · обновлено недавно</div>
   </div>
 </section>
 
@@ -205,7 +210,7 @@
     <div class="ava"><img src="assets/hero.jpg" alt="Лиза"></div>
     <div>
       <div class="name">Лиза Чайкина</div>
-      <div class="rate"><b>5,0</b> <i>★★★★★</i> <span><span class="ph">00</span> отзывов</span></div>
+      <div class="rate"><b>5,0</b> <i class="stars" aria-label="5 из 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></i> <span><span class="ph">00</span> отзывов</span></div>
       <div class="sub">Продаёт на Авито 10+ лет · авитолог</div>
     </div>
   </div>
@@ -252,7 +257,7 @@
     <li>покупатели торгуются и пропадают</li>
     <li>дома полно вещей, а руки не доходят</li>
   </ul>
-  <p>Внутри — пошаговые инструкции, эфиры, чат продавцов и мои ответы. Платите один раз, доступ остаётся навсегда. <b>Торг неуместен 🙂</b></p>
+  <p>Внутри — пошаговые инструкции, эфиры, чат продавцов и мои ответы. Платите один раз, доступ остаётся навсегда. <b>Торг неуместен.</b></p>
 </section>
 
 <!-- ===================== HTML-БЛОК 5: ЧТО ВНУТРИ ===================== -->
@@ -268,8 +273,8 @@
   <details><summary>Лайфхаки и категории<span class="c">10</span></summary><ul><li>Адрес продавца</li><li>Проверка духов на подделку</li><li>Одежда, обувь, техника, игрушки</li><li class="etc">и ещё 6 тем</li></ul></details>
   <details><summary>Таблицы и эфиры<span class="c">6</span></summary><ul><li>Таблица лимитов по категориям</li><li>Таблица статистики продаж</li><li>Эфиры: расхламление, Китай, нейросети, растения</li></ul></details>
   <div class="extra">
-    <div>💬<b>Чат продавцов</b>рубрики и дни барахолки</div>
-    <div>📦<b>Мистери-боксы</b>контакт поставщика</div>
+    <div><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><b>Чат продавцов</b>рубрики и дни барахолки</div>
+    <div><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg><b>Мистери-боксы</b>контакт поставщика</div>
   </div>
 </section>
 
@@ -296,16 +301,16 @@
     <li data-i="5"><span class="num">5</span><span><b>Слово «Торг»</b>Приглашение сбивать цену.</span></li>
     <li data-i="6"><span class="num">6</span><span><b>Нет доставки</b>Только самовывоз — только ваш город.</span></li>
   </ol>
-  <div class="done">✓ Все 6 найдены. В клубе — как исправить каждую по шагам.</div>
+  <div class="done"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Все 6 найдены. В клубе — как исправить каждую по шагам.</div>
 </section>
 
 <!-- ===================== HTML-БЛОК 7: ОТЗЫВЫ ===================== -->
 <section class="box ad-rev">
   <h2>Отзывы о продавце</h2>
-  <div class="score"><b>5,0</b><div><i>★★★★★</i><div class="muted" style="font-size:12.5px"><span class="ph">00</span> отзывов участниц</div></div></div>
-  <div class="r"><div class="h"><b><span class="ph">Имя</span></b><span>недавно</span></div><i>★★★★★</i><p>Поменяла фото по инструкции — пуховик ушёл за два дня.</p><div class="deal">Сделка: Авито-клуб</div></div>
-  <div class="r"><div class="h"><b><span class="ph">Имя</span></b><span>недавно</span></div><i>★★★★★</i><p>Таблица лимитов сэкономила кучу денег.</p><div class="deal">Сделка: Авито-клуб</div></div>
-  <div class="r"><div class="h"><b><span class="ph">Имя</span></b><span>недавно</span></div><i>★★★★★</i><p>За первый месяц продала на <span class="ph">00 000 ₽</span> то, что лежало в шкафу.</p><div class="deal">Сделка: Авито-клуб</div></div>
+  <div class="score"><b>5,0</b><div><i class="stars" aria-label="5 из 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></i><div class="muted" style="font-size:12.5px"><span class="ph">00</span> отзывов участниц</div></div></div>
+  <div class="r"><div class="h"><b><span class="ph">Имя</span></b><span>недавно</span></div><i class="stars" aria-label="5 из 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></i><p>Поменяла фото по инструкции — пуховик ушёл за два дня.</p><div class="deal">Сделка: Авито-клуб</div></div>
+  <div class="r"><div class="h"><b><span class="ph">Имя</span></b><span>недавно</span></div><i class="stars" aria-label="5 из 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></i><p>Таблица лимитов сэкономила кучу денег.</p><div class="deal">Сделка: Авито-клуб</div></div>
+  <div class="r"><div class="h"><b><span class="ph">Имя</span></b><span>недавно</span></div><i class="stars" aria-label="5 из 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></i><p>За первый месяц продала на <span class="ph">00 000 ₽</span> то, что лежало в шкафу.</p><div class="deal">Сделка: Авито-клуб</div></div>
   <p class="muted" style="font-size:11px;margin-top:6px"><span class="ph">Заменить реальными отзывами или скринами из чата</span></p>
 </section>
 
