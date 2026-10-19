@@ -200,7 +200,13 @@
 .ek-chat .pin i{width:2px;border-radius:2px;background:#3390ec;flex:0 0 2px}
 .ek-chat .pin b{display:block;color:#3390ec;font-weight:600}
 .ek-chat .pin span{color:#55595e;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.ek-chat .wall{background-color:#cfe3c4;background-image:radial-gradient(rgba(255,255,255,.35) 1.2px,transparent 1.4px),linear-gradient(160deg,#d7e8c1 0%,#bcd9c6 50%,#a9cdd0 100%);background-size:18px 18px,100% 100%;padding:12px 10px 14px}
+.ek-chat .screen{position:relative}
+.ek-chat .wall{height:470px;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;scrollbar-width:thin;background-attachment:local;background-color:#cfe3c4;background-image:radial-gradient(rgba(255,255,255,.35) 1.2px,transparent 1.4px),linear-gradient(160deg,#d7e8c1 0%,#bcd9c6 50%,#a9cdd0 100%);background-size:18px 18px,100% 100%;padding:12px 10px 14px}
+.ek-chat .screen:after{content:'';position:absolute;left:0;right:0;bottom:0;height:46px;background:linear-gradient(0deg,rgba(169,205,208,.95),transparent);pointer-events:none;transition:opacity .3s}
+.ek-chat .screen.end:after{opacity:0}
+.ek-chat .scroll-hint{position:absolute;z-index:2;left:50%;bottom:12px;transform:translateX(-50%);display:flex;align-items:center;gap:6px;background:rgba(0,0,0,.55);color:#fff;font-size:12px;font-weight:700;padding:6px 12px;border-radius:20px;pointer-events:none;transition:opacity .3s}
+.ek-chat .scroll-hint .ic{width:14px;height:14px;stroke-width:2.4}
+.ek-chat .screen.moved .scroll-hint{opacity:0}
 .ek-chat .day{text-align:center;margin:4px 0 10px}
 .ek-chat .day span{background:rgba(0,0,0,.18);color:#fff;font-size:12px;font-weight:600;padding:3px 10px;border-radius:12px}
 .ek-chat .msg{display:flex;gap:7px;align-items:flex-end;margin-bottom:8px}
@@ -214,9 +220,11 @@
 .ek-chat .rx span{display:inline-flex;align-items:center;gap:3px;background:#e8f1fb;color:#3390ec;font-size:12px;font-weight:700;border-radius:12px;padding:2px 7px 2px 5px}
 .ek-chat .rx svg{width:14px;height:14px}
 .ek-chat .tm{font-size:11px;color:#a0a6ad;margin-left:auto;white-space:nowrap}
-.ek-chat .input{display:flex;align-items:center;gap:10px;background:#fff;padding:9px 12px;border-top:1px solid #e6eaee;color:#a0a6ad;font-size:14px}
-.ek-chat .input .ic{width:22px;height:22px}
-.ek-chat .input .f{flex:1}
+.ek-chat .input{display:flex;align-items:center;gap:10px;background:#fff;padding:9px 10px 9px 14px;border-top:1px solid #e6eaee}
+.ek-chat .input .f{flex:1;color:#a0a6ad;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ek-chat .input .ic{width:22px;height:22px;color:#a0a6ad}
+.ek-chat .write{display:inline-flex;align-items:center;gap:6px;background:#3390ec;color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:10px 14px;border-radius:20px;white-space:nowrap}
+.ek-chat .write .ic{width:16px;height:16px;color:#fff;stroke-width:2.2}
 .ek-chat .note{font-size:11px;color:var(--muted);text-align:center;margin-top:12px;padding:0 22px}
 
 /* ============ 9. КАЛЬКУЛЯТОР ============ */
@@ -522,6 +530,8 @@
       <div><b>Чат Авито-клуба</b><span>закрытый чат участниц</span></div>
     </div>
     <div class="pin"><i></i><div><b>Закреплённое сообщение</b><span>Сегодня у нас тематическая барахолка. Любые…</span></div></div>
+    <div class="screen" data-chat>
+    <div class="scroll-hint"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>листай чат</div>
     <div class="wall">
       <div class="day"><span>Итоги</span></div>
 
@@ -553,9 +563,10 @@
         <div class="bub"><span class="nm" style="color:#2e9ea1">Участница клуба</span><span class="tag-h">#итогимесяца</span><br>Всего продано <mark>183 позиции на сумму 292 596 рублей</mark>. А теперь реальные деньги считаем из этой суммы… И остаётся <mark>чистая прибыль 82 954 рубля</mark>. Из них 29 позиций своих б/у вещей на сумму 14 113. Считаю, очень хороший месяц получился.
           <div class="ft"><div class="rx"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f08a24" d="M12 2c.6 3.2 4.8 5.3 4.8 10a4.8 4.8 0 0 1-9.6 0c0-2.4 1.3-3.6 2.4-4.6.1 1.7.9 2.8 2 3.2-.5-3.2.1-6 .4-8.6z"/></svg>7</span></div><span class="tm">13:13</span></div></div></div>
     </div>
-    <div class="input"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.4 11-8.9 8.9a5.5 5.5 0 0 1-7.8-7.8l8.9-8.9a3.7 3.7 0 0 1 5.2 5.2l-8.9 8.9a1.8 1.8 0 0 1-2.6-2.6l8.2-8.2"/></svg><span class="f">Сообщение</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4"/></svg></div>
+    </div>
+    <div class="input"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.4 11-8.9 8.9a5.5 5.5 0 0 1-7.8-7.8l8.9-8.9a3.7 3.7 0 0 1 5.2 5.2l-8.9 8.9a1.8 1.8 0 0 1-2.6-2.6l8.2-8.2"/></svg><span class="f">Хочу в клуб…</span><a class="write" href="https://t.me/eliza_kry" target="_blank" rel="noopener">Написать<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg></a></div>
   </div>
-  <p class="note">Тексты сообщений — дословно, длинные фрагменты сокращены «…».</p>
+  <p class="note">Листай переписку внутри экрана. Тексты сообщений — дословно, длинные фрагменты сокращены «…».</p>
 </section>
 
 <!-- ===================== HTML-БЛОК 9: КАЛЬКУЛЯТОР ===================== -->
@@ -700,6 +711,16 @@
     if(!s) hint.innerHTML='Клуб стоит <b>4 500 ₽</b> — посмотрим, окупится ли.';
     else if(s<PRICE) hint.innerHTML='Почти! Ещё пара вещей — и клуб <b>окупится</b>.';
     else hint.innerHTML='Это <b>в '+(s/PRICE).toFixed(1).replace('.',',')+' раза</b> больше стоимости клуба.';
+  });
+})();
+
+(function(){
+  document.querySelectorAll('[data-chat]').forEach(function(sc){
+    var w=sc.querySelector('.wall');
+    w.addEventListener('scroll',function(){
+      if(w.scrollTop>20) sc.classList.add('moved');
+      sc.classList.toggle('end', w.scrollTop+w.clientHeight>=w.scrollHeight-4);
+    },{passive:true});
   });
 })();
 </script>
