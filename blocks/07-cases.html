@@ -1,0 +1,117 @@
+<!-- Taplink · HTML-блок 07-cases · Кейсы. Вставлять целиком в блок «HTML-код». -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+.ek{
+  --paper:#f7f3ec; --sand:#ece3d4; --sand-2:#e2d6c3;
+  --ink:#1f1e1c; --graphite:#2b2a27; --muted:#6f6a61; --line:#d9cfbf;
+  --accent:#b4553a; --accent-soft:#f1dcd2; --ok:#4f6b4a; --pale:#e3a58f;
+  --sans:'Manrope',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  font-family:var(--sans); color:var(--ink); background:var(--paper);
+  max-width:480px; margin:0 auto; -webkit-font-smoothing:antialiased;
+  font-size:15px; line-height:1.6; overflow:hidden;
+}
+.ek *{box-sizing:border-box}
+.ek h1,.ek h2,.ek h3,.ek p{margin:0}
+.ek .ek-pad{padding:56px 22px}
+.ek .ek-eyebrow{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.ek h2{font-weight:800;font-size:29px;line-height:1.15;letter-spacing:-.03em;margin:12px 0 16px}
+.ek h2 em{font-style:normal;color:var(--accent)}
+.ek .ek-lead{color:var(--muted)}
+.ek .ek-ph{background:#fff3b0;color:#5a4a00;padding:0 4px;border-radius:3px;font-weight:700}
+.ek .ek-ic{width:1.05em;height:1.05em;display:inline-block;vertical-align:-.18em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ek .ek-photo-card{border-radius:20px;overflow:hidden;background:var(--sand)}
+.ek .ek-photo-card img{width:100%;height:100%;object-fit:cover;display:block}
+@keyframes ekPop{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes ekDot{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
+@media (prefers-reduced-motion:reduce){.ek-chat .ek-wall{scroll-behavior:auto}.ek-chat .ek-msg.ek-pop,.ek-chat .ek-dots i{animation:none}}
+@media (prefers-reduced-motion:reduce){.ek *{transition:none!important}}
+.ek .ek-cases{background:var(--sand)}
+.ek .ek-cases .ek-case{background:var(--paper);border-radius:20px;padding:20px 18px;margin-top:14px}
+.ek .ek-cases .ek-case-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.ek .ek-cases .ek-case-no{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.ek .ek-cases .ek-case-head{display:flex;gap:14px;align-items:center}
+.ek .ek-cases .ek-case-ava{width:68px;height:68px;border-radius:50%;overflow:hidden;flex:0 0 68px;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--line)}
+.ek .ek-cases .ek-case-ava img{width:100%;height:100%;object-fit:cover;display:block}
+.ek .ek-cases .ek-pill{display:inline-block;margin-top:6px;background:var(--accent-soft);color:var(--accent);font-size:12.5px;font-weight:700;line-height:1.3;padding:6px 11px;border-radius:14px}
+.ek .ek-cases .ek-mom .ek-pill{background:#3b3935;color:var(--pale);margin-top:8px}
+.ek .ek-cases .ek-case-head{align-items:flex-start}
+.ek .ek-cases .ek-case-head h3{margin-top:2px}
+.ek .ek-cases .ek-case h3{font-size:20px;font-weight:800;letter-spacing:-.02em;line-height:1.2;margin:4px 0 2px}
+.ek .ek-cases .ek-case .ek-sub{font-size:13px;color:var(--muted);line-height:1.4}
+.ek .ek-cases .ek-ab{display:grid;grid-template-columns:1fr;gap:8px;margin:16px 0}
+.ek .ek-cases .ek-pt{border-radius:14px;padding:12px 14px;font-size:13px;line-height:1.45}
+.ek .ek-cases .ek-pt small{display:block;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px}
+.ek .ek-cases .ek-pt.ek-a{background:#efe9df;color:#5d584f}
+.ek .ek-cases .ek-pt.ek-a small{color:#8f877b}
+.ek .ek-cases .ek-pt.ek-b{background:var(--graphite);color:#efe8dc}
+.ek .ek-cases .ek-pt.ek-b small{color:var(--pale)}
+.ek .ek-cases .ek-pt.ek-b .ek-big{display:block;font-size:26px;font-weight:800;letter-spacing:-.03em;color:#fff;line-height:1.15;margin:2px 0}
+.ek .ek-cases .ek-pt ul{margin:0;padding:0;list-style:none}
+.ek .ek-cases .ek-pt li{padding:2px 0 2px 14px;position:relative}
+.ek .ek-cases .ek-pt li:before{content:'';position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.5}
+.ek .ek-cases .ek-q{font-size:14px;line-height:1.55;padding-left:14px;border-left:3px solid var(--accent)}
+.ek .ek-cases .ek-months{display:flex;gap:8px;margin-top:8px}
+.ek .ek-cases .ek-months span{background:#3b3935;border-radius:8px;padding:4px 9px;font-size:12px;color:#cfc8bc}
+.ek .ek-cases .ek-mom{background:var(--graphite);color:#efe8dc}
+.ek .ek-cases .ek-mom .ek-case-no{color:var(--pale)}
+.ek .ek-cases .ek-mom .ek-sub{color:#b9b1a4}
+.ek .ek-cases .ek-mom .ek-big{font-size:34px;font-weight:800;letter-spacing:-.03em;color:#fff;margin:14px 0 2px;line-height:1.1}
+.ek .ek-cases .ek-mom .ek-q{border-color:var(--pale);color:#d6cfc3;margin-top:14px}
+@media (max-width:600px){.ek{width:100vw;max-width:100vw;margin-left:calc(50% - 50vw)}}
+</style>
+<div class="ek">
+<section class="ek-cases ek-pad">
+  <div class="ek-eyebrow">Результаты участниц</div>
+  <h2>Было → <em>стало</em></h2>
+  <p class="ek-lead">Реальные истории участниц клуба — с их цифрами.</p>
+
+  <div class="ek-case">
+    <div class="ek-case-head"><div class="ek-case-ava"><img src="https://psayha.github.io/avito-club-mockups/assets/case4.jpg?v=1" alt="Анастасия Воскресенская" style="object-position:40% 20%"></div><div><div class="ek-case-no">Кейс №1</div>
+    <h3>Анастасия Воскресенская</h3><span class="ek-pill">Как из редких продаж выйти на стабильный доход на Авито</span></div></div>
+    <div class="ek-ab">
+      <div class="ek-pt ek-a"><small>Точка А</small><ul><li>Ранее не сильно использовала Авито для продаж: выставляла раз в полгода что-то, особо ничего не брали, и я отдавала бесплатно</li><li>Сомнения были, была убеждена, что на Авито ничего не берут и это пустая трата времени</li></ul></div>
+      <div class="ek-pt ek-b"><small>Точка Б</small>Сейчас активно продаю, выходит от 25 тыс. и выше<span class="ek-big">50 000 ₽</span>в этом месяце</div>
+    </div>
+    <p class="ek-q">«Я очень благодарна каналу, здесь масса нужной информации и алгоритмов, новых фишек и экспериментов. Приятное и позитивное общение в кругу единомышленников, поддержка и помощь. А также крутые мотивационные челленджи».</p>
+  </div>
+
+  <div class="ek-case">
+    <div class="ek-case-head"><div class="ek-case-ava"><img src="https://psayha.github.io/avito-club-mockups/assets/case2.jpg?v=1" alt="Наталья Симунова" style="object-position:50% 12%"></div><div><div class="ek-case-no">Кейс №2</div>
+    <h3>Наталья Симунова</h3><span class="ek-pill">Как превратить случайные продажи в стабильный доход</span></div></div>
+    <div class="ek-ab">
+      <div class="ek-pt ek-a"><small>Точка А</small><ul><li>Аккаунт на Авито с 2017 года</li><li>Периодически выкладывала б/у вещи</li><li>Объявления оформляла интуитивно</li><li>Продажи были случайные, без плана</li></ul></div>
+      <div class="ek-pt ek-b"><small>Точка Б</small>Заработала с момента вступления в клуб<span class="ek-big">60 000 ₽</span><div class="ek-months"><span>Май — 33 000 ₽</span><span>Июнь — 24 000 ₽</span></div></div>
+    </div>
+    <p class="ek-q">«Канал дал очень много: от теории по Авито до практических советов. Огромная поддержка от девочек и от Лизы — это бесценно! Благодаря клубу я уже избавилась от множества ненужных вещей дома и на даче».</p>
+  </div>
+
+  <div class="ek-case">
+    <div class="ek-case-head"><div class="ek-case-ava"><img src="https://psayha.github.io/avito-club-mockups/assets/case1.jpg?v=1" alt="Анастасия Лодыгина" style="object-position:50% 25%"></div><div><div class="ek-case-no">Кейс №3</div>
+    <h3>Анастасия Лодыгина</h3><span class="ek-pill">Как из редких продаж выйти на стабильный доход на Авито</span></div></div>
+    <div class="ek-ab">
+      <div class="ek-pt ek-a"><small>Точка А</small><ul><li>Продавала всё подряд: одежду, игрушки, технику</li><li>2–3 продажи в месяц</li><li>Доход до 1 000 ₽ в среднем</li><li>Во многие вещи — вообще тишина</li></ul></div>
+      <div class="ek-pt ek-b"><small>Точка Б</small>Стабильный доход только на Авито<span class="ek-big">15 000–17 000 ₽</span>в месяц · иногда выходит от 10 000 до 40 000 ₽</div>
+    </div>
+    <p class="ek-q">«Узнала много тонкостей и фишек по Авито. Раньше просто нажимала „опубликовать“, сейчас всё делаю по-другому и вижу результат. Авито стало частью моей жизни в декрете и любимым хобби».</p>
+  </div>
+
+  <div class="ek-case">
+    <div class="ek-case-head"><div class="ek-case-ava"><img src="https://psayha.github.io/avito-club-mockups/assets/case3.jpg?v=1" alt="Юлия Дрягина" style="object-position:50% 20%"></div><div><div class="ek-case-no">Кейс №4</div>
+    <h3>Юлия Дрягина</h3><span class="ek-pill">Как из ненужных вещей выйти на доход 16–18 тыс. рублей</span></div></div>
+    <div class="ek-ab">
+      <div class="ek-pt ek-a"><small>Точка А</small><ul><li>Начала с детских вещей осенью 2024</li><li>Продавала только самовывозом, боясь освоить доставку</li><li>В среднем — около 3–5 тысяч рублей</li></ul></div>
+      <div class="ek-pt ek-b"><small>Точка Б</small>60–70 проданных товаров, а в сумме<span class="ek-big">16–18 тысяч ₽</span></div>
+    </div>
+    <p class="ek-q">«Это одно из лучших вложений! Я нашла двух чудесных девочек, с которыми общение вышло далеко за пределы чата».</p>
+  </div>
+
+  <div class="ek-case ek-mom">
+    <div class="ek-case-no">Самая первая ученица</div>
+    <h3>Елена Крючкова — мама Лизы</h3>
+    <span class="ek-pill">Всё началось с переезда в дом</span>
+    <div class="ek-big">370 000 ₽</div>
+    <div class="ek-sub">самая крупная продажа — икона</div>
+    <p class="ek-q">«Вещей после двух детей осталось очень много, квартиру нужно было сдать чистой. Так Лиза познакомила меня с Авито. И понеслось… сижу вплотную уже несколько лет. Авито — моя жизнь».</p>
+  </div>
+</section>
+</div>

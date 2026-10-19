@@ -1,0 +1,55 @@
+<!-- Taplink · HTML-блок 03-for-whom · Для кого клуб. Вставлять целиком в блок «HTML-код». -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+.ek{
+  --paper:#f7f3ec; --sand:#ece3d4; --sand-2:#e2d6c3;
+  --ink:#1f1e1c; --graphite:#2b2a27; --muted:#6f6a61; --line:#d9cfbf;
+  --accent:#b4553a; --accent-soft:#f1dcd2; --ok:#4f6b4a; --pale:#e3a58f;
+  --sans:'Manrope',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  font-family:var(--sans); color:var(--ink); background:var(--paper);
+  max-width:480px; margin:0 auto; -webkit-font-smoothing:antialiased;
+  font-size:15px; line-height:1.6; overflow:hidden;
+}
+.ek *{box-sizing:border-box}
+.ek h1,.ek h2,.ek h3,.ek p{margin:0}
+.ek .ek-pad{padding:56px 22px}
+.ek .ek-eyebrow{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.ek h2{font-weight:800;font-size:29px;line-height:1.15;letter-spacing:-.03em;margin:12px 0 16px}
+.ek h2 em{font-style:normal;color:var(--accent)}
+.ek .ek-lead{color:var(--muted)}
+.ek .ek-ph{background:#fff3b0;color:#5a4a00;padding:0 4px;border-radius:3px;font-weight:700}
+.ek .ek-ic{width:1.05em;height:1.05em;display:inline-block;vertical-align:-.18em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ek .ek-photo-card{border-radius:20px;overflow:hidden;background:var(--sand)}
+.ek .ek-photo-card img{width:100%;height:100%;object-fit:cover;display:block}
+@keyframes ekPop{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes ekDot{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
+@media (prefers-reduced-motion:reduce){.ek-chat .ek-wall{scroll-behavior:auto}.ek-chat .ek-msg.ek-pop,.ek-chat .ek-dots i{animation:none}}
+@media (prefers-reduced-motion:reduce){.ek *{transition:none!important}}
+.ek .ek-fit .ek-row-fit{display:flex;gap:14px;align-items:flex-start;padding:15px 0;border-top:1px solid var(--line)}
+.ek .ek-fit .ek-row-fit:last-of-type{border-bottom:1px solid var(--line)}
+.ek .ek-fit .ek-n{font-size:13px;font-weight:800;color:#fff;background:var(--accent);min-width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.ek .ek-fit .ek-row-fit p{font-weight:600;line-height:1.45;padding-top:3px}
+.ek .ek-fit .ek-myths{display:grid;gap:10px;margin-top:24px}
+.ek .ek-fit .ek-myth{border-radius:18px;padding:18px;background:var(--sand)}
+.ek .ek-fit .ek-myth.ek-dark{background:var(--graphite);color:#efe8dc}
+.ek .ek-fit .ek-myth b{display:block;font-size:17px;line-height:1.3;letter-spacing:-.01em;margin-bottom:6px}
+.ek .ek-fit .ek-myth p{font-size:14px;color:var(--muted)}
+.ek .ek-fit .ek-myth.ek-dark p{color:#c9c1b4}
+.ek .ek-fit .ek-myth.ek-dark b{color:#fff}
+@media (max-width:600px){.ek{width:100vw;max-width:100vw;margin-left:calc(50% - 50vw)}}
+</style>
+<div class="ek">
+<section class="ek-fit ek-pad">
+  <div class="ek-eyebrow">Для кого клуб</div>
+  <h2>Клуб подойдёт тебе, <em>если ты:</em></h2>
+  <div class="ek-row-fit"><div class="ek-n">1</div><p>Только начинаешь продавать на Авито и не знаешь, с чего начать.</p></div>
+  <div class="ek-row-fit"><div class="ek-n">2</div><p>Хочешь превратить ненужные вещи в дополнительный доход.</p></div>
+  <div class="ek-row-fit"><div class="ek-n">3</div><p>Уже продаёшь, но сталкиваешься с отсутствием просмотров и покупок.</p></div>
+  <div class="ek-row-fit"><div class="ek-n">4</div><p>Хочешь развивать перепродажу вещей как отдельное направление заработка.</p></div>
+  <div class="ek-row-fit"><div class="ek-n">5</div><p>Ищешь возможность зарабатывать, совмещая продажи с декретом, основной работой или пенсией.</p></div>
+  <div class="ek-myths">
+    <div class="ek-myth"><b>«У меня нет времени»</b><p>Совмещать продажи на Авито можно и в декрете, и с основной работой, и даже на пенсии!</p></div>
+    <div class="ek-myth ek-dark"><b>«У меня не продаётся»</b><p>Значит, ты просто пока не умеешь это делать. Алгоритмы площадки постоянно меняются, и чтобы продавать — важно их знать. Именно поэтому я сделала формат клуба с вечным доступом.</p></div>
+  </div>
+</section>
+</div>

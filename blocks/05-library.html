@@ -1,0 +1,102 @@
+<!-- Taplink · HTML-блок 05-library · Энциклопедия. Вставлять целиком в блок «HTML-код». -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+.ek{
+  --paper:#f7f3ec; --sand:#ece3d4; --sand-2:#e2d6c3;
+  --ink:#1f1e1c; --graphite:#2b2a27; --muted:#6f6a61; --line:#d9cfbf;
+  --accent:#b4553a; --accent-soft:#f1dcd2; --ok:#4f6b4a; --pale:#e3a58f;
+  --sans:'Manrope',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  font-family:var(--sans); color:var(--ink); background:var(--paper);
+  max-width:480px; margin:0 auto; -webkit-font-smoothing:antialiased;
+  font-size:15px; line-height:1.6; overflow:hidden;
+}
+.ek *{box-sizing:border-box}
+.ek h1,.ek h2,.ek h3,.ek p{margin:0}
+.ek .ek-pad{padding:56px 22px}
+.ek .ek-eyebrow{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.ek h2{font-weight:800;font-size:29px;line-height:1.15;letter-spacing:-.03em;margin:12px 0 16px}
+.ek h2 em{font-style:normal;color:var(--accent)}
+.ek .ek-lead{color:var(--muted)}
+.ek .ek-ph{background:#fff3b0;color:#5a4a00;padding:0 4px;border-radius:3px;font-weight:700}
+.ek .ek-ic{width:1.05em;height:1.05em;display:inline-block;vertical-align:-.18em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ek .ek-photo-card{border-radius:20px;overflow:hidden;background:var(--sand)}
+.ek .ek-photo-card img{width:100%;height:100%;object-fit:cover;display:block}
+@keyframes ekPop{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes ekDot{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
+@media (prefers-reduced-motion:reduce){.ek-chat .ek-wall{scroll-behavior:auto}.ek-chat .ek-msg.ek-pop,.ek-chat .ek-dots i{animation:none}}
+@media (prefers-reduced-motion:reduce){.ek *{transition:none!important}}
+.ek .ek-lib{background:var(--graphite);color:#efe8dc}
+.ek .ek-lib .ek-eyebrow{color:var(--pale)}
+.ek .ek-lib h2 em{color:var(--pale)}
+.ek .ek-lib .ek-lead{color:#b9b1a4}
+.ek .ek-lib .ek-banner{border-radius:20px;overflow:hidden;height:240px;margin-bottom:28px}
+.ek .ek-lib .ek-banner img{width:100%;height:100%;object-fit:cover;object-position:50% 45%;display:block}
+.ek .ek-lib .ek-counters{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#45423d;border-radius:14px;overflow:hidden;margin:24px 0}
+.ek .ek-lib .ek-counters div{background:#33312d;padding:14px 10px;text-align:center}
+.ek .ek-lib .ek-counters b{display:block;font-size:26px;font-weight:800;color:#fff}
+.ek .ek-lib .ek-counters span{font-size:11px;color:#b9b1a4}
+.ek .ek-lib details{border-top:1px solid #45423d}
+.ek .ek-lib details:last-of-type{border-bottom:1px solid #45423d}
+.ek .ek-lib summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:15px 0;font-weight:700;font-size:15px}
+.ek .ek-lib summary::-webkit-details-marker{display:none}
+.ek .ek-lib summary .ek-i{color:var(--pale);min-width:22px;font-weight:700;font-size:13px}
+.ek .ek-lib summary .ek-c{margin-left:auto;font-size:11px;font-weight:600;color:#b9b1a4;background:#3b3935;padding:4px 9px;border-radius:20px;white-space:nowrap}
+.ek .ek-lib summary .ek-c.ek-soon{background:var(--accent);color:#fff}
+.ek .ek-lib summary:after{content:'+';font-size:20px;font-weight:400;color:#b9b1a4;width:14px;text-align:center}
+.ek .ek-lib details[open] summary:after{content:'–'}
+.ek .ek-lib ul{margin:0 0 16px 34px;padding:0;list-style:none}
+.ek .ek-lib li{font-size:13.5px;color:#d6cfc3;padding:4px 0;line-height:1.45}
+.ek .ek-lib li:before{content:'·';color:var(--pale);margin-right:8px;font-weight:800}
+.ek .ek-lib .ek-tags-h{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--pale);margin:28px 0 12px}
+.ek .ek-lib .ek-tags{display:grid;gap:8px}
+.ek .ek-lib .ek-tg-tag{background:#33312d;border-radius:12px;padding:10px 12px;font-size:13px;color:#cfc8bc;line-height:1.4}
+.ek .ek-lib .ek-tg-tag b{color:#fff;font-weight:700;margin-right:6px}
+.ek .ek-lib .ek-more{font-size:13px;color:#cfc8bc;margin-top:22px;padding:14px 16px;border:1px solid #45423d;border-radius:14px}
+@media (max-width:600px){.ek{width:100vw;max-width:100vw;margin-left:calc(50% - 50vw)}}
+</style>
+<div class="ek">
+<section class="ek-lib ek-pad">
+  <div class="ek-banner"><img src="https://psayha.github.io/avito-club-mockups/assets/prep.jpg?v=2" alt="Подготовка вещи к продаже"></div>
+  <div class="ek-eyebrow">Что внутри</div>
+  <h2>Целая энциклопедия <em>продаж</em></h2>
+  <p class="ek-lead">Внутри клуба собрана целая энциклопедия продаж: от создания первого объявления до системной работы с площадкой и увеличения количества продаж. Нажми на раздел, чтобы увидеть темы.</p>
+  <div class="ek-counters">
+    <div><b>10</b><span>разделов</span></div>
+    <div><b>50+</b><span>тем</span></div>
+    <div><b>6</b><span>эфиров</span></div>
+  </div>
+
+  <details><summary><span class="ek-i">01</span>Профиль на Авито<span class="ek-c">4 темы</span></summary>
+    <ul><li>Нужно ли платить налог с продаж Авито</li><li>Всё про лимиты</li><li>Уровень сервиса вашего аккаунта</li><li>Как создавать несколько профилей</li></ul></details>
+  <details><summary><span class="ek-i">02</span>Составление объявления<span class="ek-c">9 тем</span></summary>
+    <ul><li>Составляем идеальное объявление</li><li>Делаем фото</li><li>Ключевые слова</li><li>Видеоурок, как делать качественные фото</li><li>Как сгенерировать в ИИ фотографию быстро и бесплатно</li><li>Нужно ли видео</li><li>Цена</li><li>Как узнать цену товара, о котором мало знаешь</li><li>Ценообразование товаров</li></ul></details>
+  <details><summary><span class="ek-i">03</span>Работа с объявлениями<span class="ek-c">6 тем</span></summary>
+    <ul><li>Алгоритмы и активные продажи</li><li>Что делать, если вещи долго продаются</li><li>Негативный отзыв</li><li>Подкаст: как прокачать профиль, если нет продаж</li><li>Про корзину на Авито и инструкция, как ей пользоваться</li><li>Что такое лимит контактов</li></ul></details>
+  <details><summary><span class="ek-i">04</span>Авито Доставка<span class="ek-c">7 тем</span></summary>
+    <ul><li>Что такое Авито Доставка</li><li>Упаковка товаров</li><li>Кросс-доставка</li><li>Пункты Авито Доставки</li><li>Габариты в доставке</li><li>Почему могут заблокировать «Пятёрочку»</li><li>Запрещённые товары на Авито</li></ul></details>
+  <details><summary><span class="ek-i">05</span>Продвижение и тарифы<span class="ek-c">4 темы</span></summary>
+    <ul><li>Платное продвижение для продажи б/у вещей</li><li>Тариф за просмотры: нюансы</li><li>Тарифы для товаров</li><li>Тариф за сделку</li></ul></details>
+  <details><summary><span class="ek-i">06</span>Дополнительный заработок<span class="ek-c">5 тем</span></summary>
+    <ul><li>Мой путь на Авито</li><li>Аренда техники</li><li>Подкаст: как я писала тексты и заработала 3 000 ₽</li><li>Про профессию ресейлера</li><li>Про перепродажу вещей с Садовода</li></ul></details>
+  <details><summary><span class="ek-i">07</span>Лайфхаки<span class="ek-c">8 тем</span></summary>
+    <ul><li>Как посмотреть адрес продавца</li><li>Как вернуть приложение Авито через Mac</li><li>Как проверить косметику и духи на паль</li><li>Как изменять объявления после продажи</li><li>Как продавать паль</li><li>Про Юлу и её лимиты</li><li>Почему не надо принимать оплату на карту</li><li>Почему нельзя копировать чужие тексты</li></ul></details>
+  <details><summary><span class="ek-i">08</span>По категориям<span class="ek-c">5 тем</span></summary>
+    <ul><li>Как продавать много одежды</li><li>Статья о продаже одежды от участницы чата</li><li>Нюансы при продаже обуви</li><li>Бытовая техника</li><li>Детские игрушки</li></ul></details>
+  <details><summary><span class="ek-i">09</span>Эфиры и материалы<span class="ek-c">8</span></summary>
+    <ul><li>Марафон по расхламлению</li><li>Эфир по закупу в Китае</li><li>Эфир по нейросетям</li><li>Эфир по продаже растений</li><li>Эфир с поставщиком женской одежды оптом для перепродажи</li><li>Эфир с налоговым экспертом</li><li>Таблица с лимитами во всех категориях</li><li>Таблица со статистикой продаж</li></ul></details>
+  <details><summary><span class="ek-i">10</span>ВБ-ресейл<span class="ek-c ek-soon">скоро</span></summary>
+    <ul><li>Как зарегистрироваться</li><li>Нюансы создания объявления</li><li>Кто платит на ВБ</li><li>Алгоритмы и нюансы ВБ</li><li>Возвраты</li></ul></details>
+
+  <div class="ek-tags-h">Рубрики канала</div>
+  <div class="ek-tags">
+    <div class="ek-tg-tag"><b>#итогимесяца</b>мои продажи за месяц — участники публикуют свои итоги в комментариях</div>
+    <div class="ek-tg-tag"><b>#разбор</b>разборы и рекомендации по объявлениям участников</div>
+    <div class="ek-tg-tag"><b>#чтопродать</b>подробнее о каждой продаже</div>
+    <div class="ek-tg-tag"><b>#обновления</b>нововведения на Авито</div>
+    <div class="ek-tg-tag"><b>#упаковка</b>как я упаковываю свои посылки</div>
+    <div class="ek-tg-tag"><b>#осторожномошенники</b>рубрика про мошенников на Авито</div>
+    <div class="ek-tg-tag"><b>#лайфхак</b>разные лайфхаки</div>
+  </div>
+  <p class="ek-more">Доступ к материалам остаётся с тобой навсегда. Ты сможешь возвращаться к урокам в удобное время и изучать обновления по мере их появления.</p>
+</section>
+</div>

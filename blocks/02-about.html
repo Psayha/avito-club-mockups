@@ -1,0 +1,63 @@
+<!-- Taplink · HTML-блок 02-about · Привет, я Лиза. Вставлять целиком в блок «HTML-код». -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+.ek{
+  --paper:#f7f3ec; --sand:#ece3d4; --sand-2:#e2d6c3;
+  --ink:#1f1e1c; --graphite:#2b2a27; --muted:#6f6a61; --line:#d9cfbf;
+  --accent:#b4553a; --accent-soft:#f1dcd2; --ok:#4f6b4a; --pale:#e3a58f;
+  --sans:'Manrope',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  font-family:var(--sans); color:var(--ink); background:var(--paper);
+  max-width:480px; margin:0 auto; -webkit-font-smoothing:antialiased;
+  font-size:15px; line-height:1.6; overflow:hidden;
+}
+.ek *{box-sizing:border-box}
+.ek h1,.ek h2,.ek h3,.ek p{margin:0}
+.ek .ek-pad{padding:56px 22px}
+.ek .ek-eyebrow{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.ek h2{font-weight:800;font-size:29px;line-height:1.15;letter-spacing:-.03em;margin:12px 0 16px}
+.ek h2 em{font-style:normal;color:var(--accent)}
+.ek .ek-lead{color:var(--muted)}
+.ek .ek-ph{background:#fff3b0;color:#5a4a00;padding:0 4px;border-radius:3px;font-weight:700}
+.ek .ek-ic{width:1.05em;height:1.05em;display:inline-block;vertical-align:-.18em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ek .ek-photo-card{border-radius:20px;overflow:hidden;background:var(--sand)}
+.ek .ek-photo-card img{width:100%;height:100%;object-fit:cover;display:block}
+@keyframes ekPop{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes ekDot{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
+@media (prefers-reduced-motion:reduce){.ek-chat .ek-wall{scroll-behavior:auto}.ek-chat .ek-msg.ek-pop,.ek-chat .ek-dots i{animation:none}}
+@media (prefers-reduced-motion:reduce){.ek *{transition:none!important}}
+.ek .ek-letter{background:var(--sand)}
+.ek .ek-letter .ek-me-photo{position:relative;border-radius:22px;overflow:hidden;height:440px;margin:16px 0 22px;background:#d9d4cc}
+.ek .ek-letter .ek-me-photo img{width:100%;height:100%;object-fit:cover;object-position:40% 20%;display:block}
+.ek .ek-letter .ek-me-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(24,23,21,.85) 0%,rgba(24,23,21,.35) 30%,transparent 50%)}
+.ek .ek-letter .ek-me-cap{position:absolute;z-index:1;left:18px;right:18px;bottom:18px;color:#fff}
+.ek .ek-letter .ek-me-cap h2{margin:0 0 6px;color:#fff}
+.ek .ek-letter .ek-me-cap h2 em{color:#f1cdbd}
+.ek .ek-letter .ek-role{font-size:13.5px;line-height:1.4;color:#e9e2d6}
+.ek .ek-letter p+p{margin-top:14px}
+.ek .ek-letter .ek-nums{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:20px 0}
+.ek .ek-letter .ek-nums div{background:var(--paper);border-radius:14px;padding:12px 10px}
+.ek .ek-letter .ek-nums b{display:block;font-size:16px;font-weight:800;letter-spacing:-.02em;line-height:1.15}
+.ek .ek-letter .ek-nums span{display:block;font-size:11px;color:var(--muted);line-height:1.35;margin-top:4px}
+.ek .ek-letter .ek-sign{font-weight:800;font-size:20px;letter-spacing:-.02em;margin-top:22px}
+.ek .ek-letter .ek-sign small{display:block;font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+@media (max-width:600px){.ek{width:100vw;max-width:100vw;margin-left:calc(50% - 50vw)}}
+</style>
+<div class="ek">
+<section class="ek-letter ek-pad">
+  <div class="ek-eyebrow">Обо мне</div>
+  <div class="ek-me-photo">
+    <img src="https://psayha.github.io/avito-club-mockups/assets/letter.jpg?v=3" alt="Елизавета Чайкина">
+    <div class="ek-me-cap"><h2>Привет, <em>я Лиза</em></h2><div class="ek-role">Елизавета Чайкина — эксперт по продажам на Авито и ресейлу</div></div>
+  </div>
+  <p>Более 10 лет я продаю вещи на Авито. Когда-то это было просто хобби, которое помогало мне закрывать кредиты, досрочно гасить ипотеку, копить на путешествия и исполнять мечты.</p>
+  <p>В декрете я решила превратить свой опыт в профессию: прошла обучение на авитолога и начала помогать другим продавать на площадке. Так увлечение стало источником дохода, который позволил мне зарабатывать <b>от 30 000 ₽ в месяц</b>, даже когда на руках был маленький ребёнок.</p>
+  <div class="ek-nums">
+    <div><b>10+ лет</b><span>продаю на Авито</span></div>
+    <div><b>от&nbsp;30&nbsp;000&nbsp;₽</b><span>в месяц — в декрете</span></div>
+    <div><b>550+</b><span>участников в клубе</span></div>
+  </div>
+  <p>Со временем я создала собственный Авито-клуб, который развивается уже три года и объединяет людей, желающих освоить продажи и получать дополнительный доход.</p>
+  <p>Сейчас я также активно развиваюсь в сфере ресейла — помогаю увидеть ценность в вещах, которые больше не нужны одним людям, и найти для них новых владельцев.</p>
+  <div class="ek-sign">Елизавета Чайкина<small>основательница Авито-клуба</small></div>
+</section>
+</div>

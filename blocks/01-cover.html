@@ -1,0 +1,65 @@
+<!-- Taplink · HTML-блок 01-cover · Обложка. Вставлять целиком в блок «HTML-код». -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+.ek{
+  --paper:#f7f3ec; --sand:#ece3d4; --sand-2:#e2d6c3;
+  --ink:#1f1e1c; --graphite:#2b2a27; --muted:#6f6a61; --line:#d9cfbf;
+  --accent:#b4553a; --accent-soft:#f1dcd2; --ok:#4f6b4a; --pale:#e3a58f;
+  --sans:'Manrope',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  font-family:var(--sans); color:var(--ink); background:var(--paper);
+  max-width:480px; margin:0 auto; -webkit-font-smoothing:antialiased;
+  font-size:15px; line-height:1.6; overflow:hidden;
+}
+.ek *{box-sizing:border-box}
+.ek h1,.ek h2,.ek h3,.ek p{margin:0}
+.ek .ek-pad{padding:56px 22px}
+.ek .ek-eyebrow{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.ek h2{font-weight:800;font-size:29px;line-height:1.15;letter-spacing:-.03em;margin:12px 0 16px}
+.ek h2 em{font-style:normal;color:var(--accent)}
+.ek .ek-lead{color:var(--muted)}
+.ek .ek-ph{background:#fff3b0;color:#5a4a00;padding:0 4px;border-radius:3px;font-weight:700}
+.ek .ek-ic{width:1.05em;height:1.05em;display:inline-block;vertical-align:-.18em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ek .ek-photo-card{border-radius:20px;overflow:hidden;background:var(--sand)}
+.ek .ek-photo-card img{width:100%;height:100%;object-fit:cover;display:block}
+@keyframes ekPop{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes ekDot{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
+@media (prefers-reduced-motion:reduce){.ek-chat .ek-wall{scroll-behavior:auto}.ek-chat .ek-msg.ek-pop,.ek-chat .ek-dots i{animation:none}}
+@media (prefers-reduced-motion:reduce){.ek *{transition:none!important}}
+.ek .ek-hero{padding:18px 16px 30px}
+.ek .ek-hero .ek-photo{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/4.6;background:#d9d4cc}
+.ek .ek-hero .ek-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block}
+.ek .ek-hero .ek-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(20,19,17,.78) 100%)}
+.ek .ek-hero .ek-badges{position:absolute;left:14px;right:14px;bottom:14px;z-index:1;display:flex;flex-wrap:wrap;gap:6px}
+.ek .ek-hero .ek-badge{background:rgba(247,243,236,.94);color:var(--ink);font-size:12px;font-weight:600;padding:7px 11px;border-radius:30px}
+.ek .ek-hero .ek-badge .ek-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);margin-right:7px;vertical-align:1px}
+.ek .ek-hero .ek-copy{padding:26px 6px 22px}
+.ek .ek-hero h1{font-weight:800;font-size:34px;line-height:1.1;letter-spacing:-.035em;margin:12px 0 14px}
+.ek .ek-hero h1 em{font-style:normal;color:var(--accent)}
+.ek .ek-hero .ek-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:22px 0 0}
+.ek .ek-hero .ek-fact{background:var(--sand);border-radius:14px;padding:12px 10px}
+.ek .ek-hero .ek-fact b{display:block;font-size:22px;font-weight:800;line-height:1.1;letter-spacing:-.02em}
+.ek .ek-hero .ek-fact span{display:block;font-size:11px;line-height:1.35;color:var(--muted);margin-top:4px}
+@media (max-width:600px){.ek{width:100vw;max-width:100vw;margin-left:calc(50% - 50vw)}}
+</style>
+<div class="ek">
+<section class="ek-hero">
+  <div class="ek-photo">
+    <img src="https://psayha.github.io/avito-club-mockups/assets/hero.jpg?v=2" alt="Елизавета Чайкина с коробками посылок">
+    <div class="ek-badges">
+      <span class="ek-badge"><i class="ek-dot"></i>10+ лет продаю на Авито</span>
+      <span class="ek-badge">Авитолог</span>
+      <span class="ek-badge">Ресейл</span>
+    </div>
+  </div>
+  <div class="ek-copy">
+    <div class="ek-eyebrow">Авито-клуб Елизаветы Чайкиной</div>
+    <h1>Твоя пошаговая система продаж <em>на Авито</em></h1>
+    <p class="ek-lead">Это не просто набор уроков, а полноценная база знаний по работе с Авито, созданная на основе моего практического опыта в продажах, рекламе и маркетинге.</p>
+    <div class="ek-facts">
+      <div class="ek-fact"><b>550+</b><span>участников клуба</span></div>
+      <div class="ek-fact"><b>3 года</b><span>развивается сообщество</span></div>
+      <div class="ek-fact"><b>Навсегда</b><span>доступ к материалам</span></div>
+    </div>
+  </div>
+</section>
+</div>

@@ -1,0 +1,189 @@
+<!-- Taplink · HTML-блок 08-chat · Чат клуба. Вставлять целиком в блок «HTML-код». -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+.ek{
+  --paper:#f7f3ec; --sand:#ece3d4; --sand-2:#e2d6c3;
+  --ink:#1f1e1c; --graphite:#2b2a27; --muted:#6f6a61; --line:#d9cfbf;
+  --accent:#b4553a; --accent-soft:#f1dcd2; --ok:#4f6b4a; --pale:#e3a58f;
+  --sans:'Manrope',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  font-family:var(--sans); color:var(--ink); background:var(--paper);
+  max-width:480px; margin:0 auto; -webkit-font-smoothing:antialiased;
+  font-size:15px; line-height:1.6; overflow:hidden;
+}
+.ek *{box-sizing:border-box}
+.ek h1,.ek h2,.ek h3,.ek p{margin:0}
+.ek .ek-pad{padding:56px 22px}
+.ek .ek-eyebrow{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.ek h2{font-weight:800;font-size:29px;line-height:1.15;letter-spacing:-.03em;margin:12px 0 16px}
+.ek h2 em{font-style:normal;color:var(--accent)}
+.ek .ek-lead{color:var(--muted)}
+.ek .ek-ph{background:#fff3b0;color:#5a4a00;padding:0 4px;border-radius:3px;font-weight:700}
+.ek .ek-ic{width:1.05em;height:1.05em;display:inline-block;vertical-align:-.18em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ek .ek-photo-card{border-radius:20px;overflow:hidden;background:var(--sand)}
+.ek .ek-photo-card img{width:100%;height:100%;object-fit:cover;display:block}
+@keyframes ekPop{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes ekDot{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
+@media (prefers-reduced-motion:reduce){.ek-chat .ek-wall{scroll-behavior:auto}.ek-chat .ek-msg.ek-pop,.ek-chat .ek-dots i{animation:none}}
+@media (prefers-reduced-motion:reduce){.ek *{transition:none!important}}
+.ek .ek-chat{padding:56px 0}
+.ek .ek-chat .ek-hd{padding:0 22px}
+.ek .ek-chat .ek-phone{margin:22px 26px 0;border-radius:26px;overflow:hidden;box-shadow:0 24px 50px -28px rgba(30,40,50,.55);border:1px solid #d5dde4}
+.ek .ek-chat .ek-bar{display:flex;align-items:center;gap:10px;background:#fff;padding:10px 12px;border-bottom:1px solid #e6eaee}
+.ek .ek-chat .ek-bar .ek-back{color:#3390ec;display:flex}
+.ek .ek-chat .ek-bar .ek-back .ek-ic{width:22px;height:22px;stroke-width:2.2}
+.ek .ek-chat .ek-bar .ek-gava{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#d07a5c,#b4553a);color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;flex:0 0 40px}
+.ek .ek-chat .ek-bar b{display:block;font-size:15px;line-height:1.2}
+.ek .ek-chat .ek-bar span{font-size:12.5px;color:#8a9097}
+.ek .ek-chat .ek-pin{display:flex;gap:10px;background:#fff;padding:7px 12px;border-bottom:1px solid #e6eaee;font-size:12.5px;line-height:1.35}
+.ek .ek-chat .ek-pin i{width:2px;border-radius:2px;background:#3390ec;flex:0 0 2px}
+.ek .ek-chat .ek-pin b{display:block;color:#3390ec;font-weight:600}
+.ek .ek-chat .ek-pin span{color:#55595e;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ek .ek-chat .ek-screen{position:relative}
+.ek .ek-chat .ek-wall{position:relative;height:clamp(320px,56vh,470px);overflow-y:auto;-webkit-overflow-scrolling:touch;scroll-behavior:smooth;scrollbar-width:thin;background-attachment:local;background-color:#cfe3c4;background-image:radial-gradient(rgba(255,255,255,.35) 1.2px,transparent 1.4px),linear-gradient(160deg,#d7e8c1 0%,#bcd9c6 50%,#a9cdd0 100%);background-size:18px 18px,100% 100%;padding:12px 10px 14px}
+.ek .ek-chat .ek-screen:after{content:'';position:absolute;left:0;right:0;bottom:0;height:46px;background:linear-gradient(0deg,rgba(169,205,208,.95),transparent);pointer-events:none;transition:opacity .3s}
+.ek .ek-chat .ek-screen.ek-end:after{opacity:0}
+.ek .ek-chat .ek-down{position:absolute;z-index:3;right:10px;bottom:12px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:#7d8590;box-shadow:0 3px 12px rgba(0,0,0,.18);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:opacity .25s,transform .25s}
+.ek .ek-chat .ek-down .ek-ic{width:22px;height:22px;stroke-width:2.2}
+.ek .ek-chat .ek-down b{position:absolute;top:-6px;right:-4px;min-width:22px;height:22px;padding:0 6px;border-radius:11px;background:#3390ec;color:#fff;font-size:12px;font-weight:800;line-height:22px;text-align:center}
+.ek .ek-chat .ek-down.ek-hide{opacity:0;transform:scale(.6);pointer-events:none}
+.ek .ek-chat .ek-screen.ek-live .ek-msg.ek-wait{display:none}
+.ek .ek-chat .ek-msg.ek-pop{animation:ekPop .35s ease-out}
+.ek .ek-chat .ek-typing{display:flex;gap:7px;align-items:flex-end;margin-bottom:8px}
+.ek .ek-chat .ek-typing .ek-bub{display:flex;align-items:center;gap:8px;color:#8a9097;font-size:13px;padding:9px 12px}
+.ek .ek-chat .ek-dots{display:inline-flex;gap:3px}
+.ek .ek-chat .ek-dots i{width:6px;height:6px;border-radius:50%;background:#9aa3ab;animation:ekDot 1.2s infinite}
+.ek .ek-chat .ek-dots i:nth-child(2){animation-delay:.15s}
+.ek .ek-chat .ek-dots i:nth-child(3){animation-delay:.3s}
+.ek .ek-chat .ek-bar .ek-st.ek-typing-st{color:#3390ec}
+.ek .ek-chat .ek-day{text-align:center;margin:4px 0 10px}
+.ek .ek-chat .ek-day span{background:rgba(0,0,0,.18);color:#fff;font-size:12px;font-weight:600;padding:3px 10px;border-radius:12px}
+.ek .ek-chat .ek-msg{display:flex;gap:7px;align-items:flex-end;margin-bottom:8px}
+.ek .ek-chat .ek-ua{width:32px;height:32px;border-radius:50%;flex:0 0 32px;color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.ek .ek-chat .ek-bub{background:#fff;border-radius:16px 16px 16px 5px;padding:7px 10px 6px;max-width:86%;font-size:14px;line-height:1.42;color:#111;box-shadow:0 1px 1px rgba(0,0,0,.08)}
+.ek .ek-chat .ek-bub .ek-nm{display:block;font-size:13px;font-weight:700;margin-bottom:2px}
+.ek .ek-chat .ek-bub .ek-tag-h{color:#3390ec}
+.ek .ek-chat .ek-bub .ek-media{display:block;width:calc(100% + 12px);max-width:none;margin:2px -6px 6px;border-radius:12px;background:#eee}
+.ek .ek-chat .ek-bub mark{background:none;color:inherit;font-weight:800}
+.ek .ek-chat .ek-ft{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:5px}
+.ek .ek-chat .ek-rx{display:flex;gap:4px}
+.ek .ek-chat .ek-rx{flex-wrap:wrap}
+.ek .ek-chat .ek-rx .ek-money{background:#e2f4e5;color:#1d7f3a;font-weight:800;padding:2px 8px}
+.ek .ek-chat .ek-rx span{display:inline-flex;align-items:center;gap:3px;background:#e8f1fb;color:#3390ec;font-size:12px;font-weight:700;border-radius:12px;padding:2px 7px 2px 5px}
+.ek .ek-chat .ek-rx svg{width:14px;height:14px}
+.ek .ek-chat .ek-tm{font-size:11px;color:#a0a6ad;margin-left:auto;white-space:nowrap}
+.ek .ek-chat .ek-input{display:flex;align-items:center;gap:10px;background:#fff;padding:9px 10px 9px 14px;border-top:1px solid #e6eaee}
+.ek .ek-chat .ek-input .ek-f{flex:1;color:#a0a6ad;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ek .ek-chat .ek-input .ek-ic{width:22px;height:22px;color:#a0a6ad}
+.ek .ek-chat .ek-write{display:inline-flex;align-items:center;gap:6px;background:#3390ec;color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:10px 14px;border-radius:20px;white-space:nowrap}
+.ek .ek-chat .ek-write .ek-ic{width:16px;height:16px;color:#fff;stroke-width:2.2}
+.ek .ek-chat .ek-note{font-size:11px;color:var(--muted);text-align:center;margin-top:12px;padding:0 22px}
+@media (max-width:600px){.ek{width:100vw;max-width:100vw;margin-left:calc(50% - 50vw)}}
+</style>
+<div class="ek">
+<section class="ek-chat">
+  <div class="ek-hd">
+    <div class="ek-eyebrow">Без постановки</div>
+    <h2>Что пишут <em>в чате клуба</em></h2>
+  </div>
+  <div class="ek-phone">
+    <div class="ek-bar">
+      <span class="ek-back"><svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span>
+      <div class="ek-gava">АК</div>
+      <div><b>Чат Авито-клуба</b><span class="ek-st">закрытый чат участниц</span></div>
+    </div>
+    <div class="ek-pin"><i></i><div><b>Закреплённое сообщение</b><span>Сегодня у нас тематическая барахолка. Любые…</span></div></div>
+    <div class="ek-screen" data-chat>
+        <div class="ek-wall">
+      <div class="ek-day"><span>Итоги</span></div>
+
+      <div class="ek-msg"><div class="ek-ua" style="background:#e17076">О</div>
+        <div class="ek-bub"><span class="ek-nm" style="color:#d14f5a">Ольга</span>Всем здравствуйте. Меня зовут Ольга, я из Чебоксар, как и Лиза. Приобрела обучение в прошлую среду, так как кабинет просто встал. Почти ничего не продавалось, а вещей много… Расхламление начала с детской комнаты… продался детский халат кигуруми, который висел вроде полгода.<br>Итог:<br><mark>за неделю я продала на 20 188</mark>
+          <div class="ek-ft"><div class="ek-rx"><span class="ek-money">+20 188 ₽ за неделю</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f08a24" d="M12 2c.6 3.2 4.8 5.3 4.8 10a4.8 4.8 0 0 1-9.6 0c0-2.4 1.3-3.6 2.4-4.6.1 1.7.9 2.8 2 3.2-.5-3.2.1-6 .4-8.6z"/></svg>6</span></div><span class="ek-tm">17:18</span></div></div></div>
+
+      <div class="ek-msg"><div class="ek-ua" style="background:#7bc862">У</div>
+        <div class="ek-bub"><span class="ek-nm" style="color:#4f9a3a">Участница клуба</span>Больше чем довольна <span class="ek-tag-h">#итогигода</span><br><mark>180 продаж<br>80 отзывов «5»<br>сумма 111 000</mark> — прям магия цифр.<br>Зарегистрировалась на Авито в январе 2025, то есть меньше года, и сразу подписалась на Лизу… Все деньги потратила на путешествия с семьёй!! Ездили 2 раза в Питер, Геленджик…
+          
+          <div class="ek-ft"><div class="ek-rx"><span class="ek-money">111 000 ₽ за год</span><span class="ek-money">180 продаж</span></div></div></div></div>
+
+      <div class="ek-msg"><div class="ek-ua" style="background:#65aadd">У</div>
+        <div class="ek-bub"><span class="ek-nm" style="color:#3b84bf">Участница клуба</span><span class="ek-tag-h">#итогимесяца</span> Я на Авито с 2014 года, до 20 сентября 2025 года продаж было на 450к, то есть за 11 лет. А потом я купила курс и начала полное расхламление. Итого с 20 сентября по декабрь 2025 <mark>продано на 100 772 руб</mark>
+          <div class="ek-ft"><div class="ek-rx"><span class="ek-money">100 772 ₽ за сен–дек</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f08a24" d="M12 2c.6 3.2 4.8 5.3 4.8 10a4.8 4.8 0 0 1-9.6 0c0-2.4 1.3-3.6 2.4-4.6.1 1.7.9 2.8 2 3.2-.5-3.2.1-6 .4-8.6z"/></svg>14</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#e8485b" d="M12 21 4.7 13.9A5 5 0 0 1 12 7.2a5 5 0 0 1 7.3 6.7z"/></svg>1</span></div><span class="ek-tm">12:39</span></div></div></div>
+
+      <div class="ek-msg"><div class="ek-ua" style="background:#a695e7">Н</div>
+        <div class="ek-bub"><span class="ek-nm" style="color:#7a64d0">Наталья Симунова</span>А вообще, Лизок, я очень рада, что наконец-то пришла к тебе в клуб! Даже не ожидала получить столько пользы!!!<br>1) начала избавляться от вещей, что в моём случае прям подвиг!<br>2) получаю доп. доход;<br>3) это уже стало как игра, как драйв! Заказы просто окрыляют;<br>4) научилась уже быстрее и эффективнее выкладывать объявления;<br>5) здесь такое супер приятное пространство девочек с поддержкой!<br>Почти год тянула я с этим входом! Но лучше поздно, чем никогда
+          <div class="ek-ft"><div class="ek-rx"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#e8485b" d="M12 21 4.7 13.9A5 5 0 0 1 12 7.2a5 5 0 0 1 7.3 6.7z"/></svg>4</span></div><span class="ek-tm">09:43</span></div></div></div>
+
+      <div class="ek-msg"><div class="ek-ua" style="background:#ee7aae">В</div>
+        <div class="ek-bub"><span class="ek-nm" style="color:#c9508a">Вероника</span>Я в июле так <mark>клубнику, малину на 60к продала</mark>… и отдельно считала за лето — продала зелени: лук, укроп, петрушка… <mark>зелень вся вышла на 10к</mark>, я так неожидала, если честно… даже при сборах в школу, в садик девчонок своих я в принципе не ощутила фин. нагрузки
+          <div class="ek-ft"><div class="ek-rx"><span class="ek-money">60к ягоды</span><span class="ek-money">10к зелень</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f08a24" d="M12 2c.6 3.2 4.8 5.3 4.8 10a4.8 4.8 0 0 1-9.6 0c0-2.4 1.3-3.6 2.4-4.6.1 1.7.9 2.8 2 3.2-.5-3.2.1-6 .4-8.6z"/></svg>13</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#e8485b" d="M12 21 4.7 13.9A5 5 0 0 1 12 7.2a5 5 0 0 1 7.3 6.7z"/></svg>2</span></div><span class="ek-tm">05:48</span></div></div></div>
+
+      <div class="ek-msg"><div class="ek-ua" style="background:#faa774">Ю</div>
+        <div class="ek-bub"><span class="ek-nm" style="color:#d0773a">Юля Дрягина</span><img class="ek-media" src="https://psayha.github.io/avito-club-mockups/assets/chat-wb.jpg?v=1" alt="Скриншоты заказов на ВБ" loading="lazy"><span class="ek-tag-h">#заказ</span><br>Сегодня я магистр ВБ-ресейла. <mark>За ночь 11 заказов</mark> и ещё скромненько 3 на Авито
+          <div class="ek-ft"><div class="ek-rx"><span class="ek-money">11 заказов за ночь</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f08a24" d="M12 2c.6 3.2 4.8 5.3 4.8 10a4.8 4.8 0 0 1-9.6 0c0-2.4 1.3-3.6 2.4-4.6.1 1.7.9 2.8 2 3.2-.5-3.2.1-6 .4-8.6z"/></svg>39</span></div><span class="ek-tm">09:28</span></div></div></div>
+
+      <div class="ek-msg"><div class="ek-ua" style="background:#6ec9cb">У</div>
+        <div class="ek-bub"><span class="ek-nm" style="color:#2e9ea1">Участница клуба</span><img class="ek-media" src="https://psayha.github.io/avito-club-mockups/assets/chat-tables.jpg?v=1" alt="Таблицы продаж за месяц" loading="lazy"><span class="ek-tag-h">#итогимесяца</span><br>Всего продано <mark>183 позиции на сумму 292 596 рублей</mark>. А теперь реальные деньги считаем из этой суммы… И остаётся <mark>чистая прибыль 82 954 рубля</mark>. Из них 29 позиций своих б/у вещей на сумму 14 113. Считаю, очень хороший месяц получился.
+          <div class="ek-ft"><div class="ek-rx"><span class="ek-money">82 954 ₽ чистыми</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f08a24" d="M12 2c.6 3.2 4.8 5.3 4.8 10a4.8 4.8 0 0 1-9.6 0c0-2.4 1.3-3.6 2.4-4.6.1 1.7.9 2.8 2 3.2-.5-3.2.1-6 .4-8.6z"/></svg>7</span></div><span class="ek-tm">13:13</span></div></div></div>
+    </div>
+    <button class="ek-down ek-hide" type="button" aria-label="К следующему сообщению"><svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg><b>0</b></button>
+    </div>
+    <div class="ek-input"><svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.4 11-8.9 8.9a5.5 5.5 0 0 1-7.8-7.8l8.9-8.9a3.7 3.7 0 0 1 5.2 5.2l-8.9 8.9a1.8 1.8 0 0 1-2.6-2.6l8.2-8.2"/></svg><span class="ek-f">Хочу в клуб…</span><a class="ek-write" href="https://t.me/eliza_kry" target="_blank" rel="noopener">Написать<svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg></a></div>
+  </div>
+</section>
+</div>
+<script>
+(function(){
+  document.querySelectorAll('[data-chat]').forEach(function(sc){
+    var w=sc.querySelector('.ek-wall'), btn=sc.querySelector('.ek-down'), badge=btn.querySelector('b');
+    var st=sc.closest('.ek-phone').querySelector('.ek-bar .ek-st'), stText=st.textContent;
+    var msgs=[].slice.call(w.querySelectorAll('.ek-msg'));
+    var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // сколько сообщений ниже видимой области
+    function below(){ var edge=w.scrollTop+w.clientHeight-24;
+      return msgs.filter(function(m){return !m.classList.contains('ek-wait') && m.offsetTop>edge;}); }
+    function update(){ var b=below(), end=w.scrollTop+w.clientHeight>=w.scrollHeight-4;
+      badge.textContent=b.length; badge.style.display=b.length?'':'none';
+      btn.classList.toggle('ek-hide', end); sc.classList.toggle('ek-end', end); }
+    w.addEventListener('scroll',update,{passive:true});
+    btn.addEventListener('click',function(){ stopLive(); var b=below();
+      w.scrollTop = b.length ? b[0].offsetTop-10 : w.scrollHeight; });
+
+    // «живой чат»: первые сообщения появляются по одному с «печатает…»
+    var LIVE=3, live=false, timer=null, typing=null;
+    function showAll(){ msgs.forEach(function(m){m.classList.remove('ek-wait');}); }
+    function stopLive(){ if(!live) return; live=false; clearTimeout(timer);
+      if(typing){typing.remove(); typing=null;} st.textContent=stText; st.classList.remove('ek-typing-st');
+      sc.classList.remove('ek-live'); showAll(); update(); }
+    function step(k){
+      if(!live) return;
+      if(k>=LIVE){ stopLive(); return; }
+      var m=msgs[k], name=m.querySelector('.ek-nm').textContent, ua=m.querySelector('.ek-ua').cloneNode(true);
+      typing=document.createElement('div'); typing.className='ek-typing';
+      var bub=document.createElement('div'); bub.className='ek-bub';
+      bub.innerHTML='<span class="ek-dots"><i></i><i></i><i></i></span>';
+      bub.appendChild(document.createTextNode(name+' печатает'));
+      typing.appendChild(ua); typing.appendChild(bub); m.parentNode.insertBefore(typing,m);
+      st.textContent=name+' печатает…'; st.classList.add('ek-typing-st');
+      w.scrollTop=typing.offsetTop-w.clientHeight+typing.offsetHeight+16;
+      timer=setTimeout(function(){
+        if(!live) return;
+        typing.remove(); typing=null; st.textContent=stText; st.classList.remove('ek-typing-st');
+        m.classList.remove('ek-wait'); m.classList.add('ek-pop');
+        w.scrollTop=Math.max(0,m.offsetTop-12); update();
+        timer=setTimeout(function(){ step(k+1); }, 1700);
+      }, 1300);
+    }
+    if(!reduce && 'IntersectionObserver' in window){
+      msgs.forEach(function(m,k){ if(k>0) m.classList.add('ek-wait'); });
+      sc.classList.add('ek-live'); live=true;
+      ['touchstart','wheel','mousedown'].forEach(function(ev){ w.addEventListener(ev,stopLive,{passive:true}); });
+      var io=new IntersectionObserver(function(es){
+        if(es[0].isIntersecting){ io.disconnect(); timer=setTimeout(function(){ step(1); }, 600); }
+      },{threshold:.5});
+      io.observe(sc);
+    }
+    update();
+  });
+})();
+</script>
