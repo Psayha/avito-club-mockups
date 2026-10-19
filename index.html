@@ -58,11 +58,13 @@
 
 /* ============ 2. ОБО МНЕ (письмо) ============ */
 .ek-letter{background:var(--sand)}
-.ek-letter .head{display:flex;gap:16px;align-items:center;margin:18px 0 20px}
-.ek-letter .ava{width:92px;height:112px;flex:0 0 92px;border-radius:18px;overflow:hidden}
-.ek-letter .ava img{width:100%;height:100%;object-fit:cover;object-position:40% 30%;display:block}
-.ek-letter .head h2{margin:0 0 6px}
-.ek-letter .role{font-size:13px;color:var(--muted);line-height:1.4}
+.ek-letter .me-photo{position:relative;border-radius:22px;overflow:hidden;height:440px;margin:16px 0 22px;background:#d9d4cc}
+.ek-letter .me-photo img{width:100%;height:100%;object-fit:cover;object-position:40% 20%;display:block}
+.ek-letter .me-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(24,23,21,.85) 0%,rgba(24,23,21,.35) 30%,transparent 50%)}
+.ek-letter .me-cap{position:absolute;z-index:1;left:18px;right:18px;bottom:18px;color:#fff}
+.ek-letter .me-cap h2{margin:0 0 6px;color:#fff}
+.ek-letter .me-cap h2 em{color:#f1cdbd}
+.ek-letter .role{font-size:13.5px;line-height:1.4;color:#e9e2d6}
 .ek-letter p+p{margin-top:14px}
 .ek-letter .nums{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:20px 0}
 .ek-letter .nums div{background:var(--paper);border-radius:14px;padding:12px 10px}
@@ -249,9 +251,9 @@
 .ek-calc .hint b{color:var(--ink)}
 
 /* ============ 10. ФОТО-ПАУЗА ============ */
-.ek-break{position:relative;height:540px;overflow:hidden}
+.ek-break{position:relative;height:500px;overflow:hidden}
 .ek-break img{width:100%;height:100%;object-fit:cover;object-position:50% 0%;display:block}
-.ek-break:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(24,23,21,.9) 0%,rgba(24,23,21,.6) 38%,transparent 62%)}
+.ek-break:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(24,23,21,.92) 0%,rgba(24,23,21,.7) 30%,transparent 50%)}
 .ek-break p{position:absolute;z-index:1;bottom:28px;left:22px;right:22px;font-size:21px;font-weight:800;line-height:1.3;color:#fff;letter-spacing:-.02em}
 .ek-break p em{font-style:normal;color:#f1cdbd}
 .ek-break p span{display:block;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#e9e2d6;margin-top:12px}
@@ -346,12 +348,9 @@
 <!-- ===================== HTML-БЛОК 2: ОБО МНЕ ===================== -->
 <section class="ek-letter pad">
   <div class="eyebrow">Обо мне</div>
-  <div class="head">
-    <div class="ava"><img src="assets/letter.jpg?v=2" alt="Елизавета Чайкина"></div>
-    <div>
-      <h2>Привет, <em>я Лиза</em></h2>
-      <div class="role">Елизавета Чайкина — эксперт по продажам на Авито и ресейлу</div>
-    </div>
+  <div class="me-photo">
+    <img src="assets/letter.jpg?v=3" alt="Елизавета Чайкина">
+    <div class="me-cap"><h2>Привет, <em>я Лиза</em></h2><div class="role">Елизавета Чайкина — эксперт по продажам на Авито и ресейлу</div></div>
   </div>
   <p>Более 10 лет я продаю вещи на Авито. Когда-то это было просто хобби, которое помогало мне закрывать кредиты, досрочно гасить ипотеку, копить на путешествия и исполнять мечты.</p>
   <p>В декрете я решила превратить свой опыт в профессию: прошла обучение на авитолога и начала помогать другим продавать на площадке. Так увлечение стало источником дохода, который позволил мне зарабатывать <b>от 30 000 ₽ в месяц</b>, даже когда на руках был маленький ребёнок.</p>
@@ -613,7 +612,7 @@
 
 <!-- ===================== HTML-БЛОК 10: ФОТО-ПАУЗА ===================== -->
 <section class="ek-break">
-  <img src="assets/break.jpg?v=2" alt="">
+  <img src="assets/break.jpg?v=3" alt="">
   <p>«Я верю, что ненужные вещи могут стать деньгами, а грамотные продажи — <em>реальным инструментом для достижения финансовых целей</em>»<span>Елизавета Чайкина</span></p>
 </section>
 
