@@ -88,7 +88,7 @@
 
 /* ============ 4. ДО / ПОСЛЕ ============ */
 .ek-ba{background:#fff}
-.ek-ba .cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px;align-items:start}
+.ek-ba .cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px;align-items:stretch}
 .ek-ba .card-ad{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 1px 0 var(--line),0 10px 30px -18px rgba(40,30,20,.35);border:1px solid #eee7dc;position:relative}
 .ek-ba .tag-ad{position:absolute;top:8px;left:8px;z-index:3;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:6px 9px;border-radius:20px}
 .ek-ba .before .tag-ad{background:#e6e3de;color:#6d6860}
@@ -100,14 +100,20 @@
 .ek-ba .after .img-ad{background:linear-gradient(160deg,#f4efe7,#e7dccb)}
 .ek-ba .after .img-ad:before{content:'';position:absolute;left:50%;top:14%;width:30%;height:74%;transform:translateX(-50%);background:linear-gradient(180deg,#3d4a3a,#2c3529);border-radius:38% 38% 10px 10px;box-shadow:0 18px 22px -12px rgba(0,0,0,.35)}
 .ek-ba .after .img-ad:after{z-index:2;content:'1/8';position:absolute;right:10px;bottom:10px;background:rgba(0,0,0,.45);color:#fff;font-size:10px;padding:3px 7px;border-radius:10px}
-.ek-ba .body-ad{padding:10px 10px 12px}
+.ek-ba .card-ad{display:flex;flex-direction:column}
+.ek-ba .body-ad{padding:10px 10px 12px;flex:1;display:flex;flex-direction:column}
 .ek-ba .price-ad{font-weight:800;font-size:16px}
 .ek-ba .title-ad{font-size:13px;line-height:1.3;margin:2px 0 6px}
 .ek-ba .before .title-ad{color:#57534c}
 .ek-ba .after .title-ad{color:#1b5fb4;font-weight:600}
 .ek-ba .meta-ad{font-size:11px;line-height:1.35;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 10px}
 .ek-ba .chip-ad{background:#eef4e9;color:var(--ok);font-size:11px;font-weight:700;padding:3px 8px;border-radius:6px}
-.ek-ba .stat-ad{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);font-size:11.5px;line-height:1.35;font-weight:700}
+.ek-ba .stat-ad{margin-top:auto;padding-top:9px;border-top:1px dashed var(--line);font-size:12.5px;font-weight:800}
+.ek-ba .meta-ad{margin-bottom:9px}
+.ek-ba .nums-ad{display:flex;gap:10px}
+.ek-ba .nums-ad span{display:inline-flex;align-items:center;gap:3px}
+.ek-ba .nums-ad .ic{width:15px;height:15px;stroke-width:2}
+.ek-ba .per-ad{font-size:11px;font-weight:600;color:var(--muted);margin-top:2px}
 .ek-ba .before .stat-ad{color:#8b857b}
 .ek-ba .after .stat-ad{color:var(--ok)}
 .ek-ba .why{margin-top:22px;display:grid;gap:8px}
@@ -393,7 +399,7 @@
         <div class="price-ad">3 000 ₽</div>
         <div class="title-ad">Куртка</div>
         <div class="meta-ad"><span>Продаю куртку, почти не носила. Торг.</span></div>
-        <div class="stat-ad"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg> 12 за неделю<br>0 сообщений</div>
+        <div class="stat-ad"><div class="nums-ad"><span title="Просмотры"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>12</span><span title="В избранном"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"/></svg>0</span><span title="Сообщения"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.9-.9L3 21l1.9-5.1A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></svg>0</span></div><div class="per-ad">за неделю</div></div>
       </div>
     </div>
     <div class="card-ad after">
@@ -403,7 +409,7 @@
         <div class="price-ad">4 200 ₽</div>
         <div class="title-ad">Пуховик женский длинный, 44 (M), тёплый, как новый</div>
         <div class="meta-ad"><span class="chip-ad">Доставка</span><span>Замеры в описании</span></div>
-        <div class="stat-ad"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg> 147 за день<br>6 в избранном · 3 сообщения</div>
+        <div class="stat-ad"><div class="nums-ad"><span title="Просмотры"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>147</span><span title="В избранном"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"/></svg>6</span><span title="Сообщения"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.9-.9L3 21l1.9-5.1A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></svg>3</span></div><div class="per-ad">за день</div></div>
       </div>
     </div>
   </div>
