@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Авито-клуб Лизы Чайкиной</title>
+<title>Авито-клуб Елизаветы Чайкиной</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -12,8 +12,7 @@
 .ek{
   --paper:#f7f3ec; --sand:#ece3d4; --sand-2:#e2d6c3;
   --ink:#1f1e1c; --graphite:#2b2a27; --muted:#6f6a61; --line:#d9cfbf;
-  --accent:#b4553a; --accent-soft:#f1dcd2; --ok:#4f6b4a;
-  --serif:'Manrope',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  --accent:#b4553a; --accent-soft:#f1dcd2; --ok:#4f6b4a; --pale:#e3a58f;
   --sans:'Manrope',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
   font-family:var(--sans); color:var(--ink); background:var(--paper);
   max-width:480px; margin:0 auto; -webkit-font-smoothing:antialiased;
@@ -23,101 +22,131 @@
 .ek h1,.ek h2,.ek h3,.ek p{margin:0}
 .ek .pad{padding:56px 22px}
 .ek .eyebrow{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
-.ek h2{font-family:var(--serif);font-weight:800;font-size:29px;line-height:1.15;letter-spacing:-.03em;margin:12px 0 16px}
+.ek h2{font-weight:800;font-size:29px;line-height:1.15;letter-spacing:-.03em;margin:12px 0 16px}
 .ek h2 em{font-style:normal;color:var(--accent)}
 .ek .lead{color:var(--muted)}
-.ek .ph{background:#fff3b0;color:#5a4a00;padding:0 4px;border-radius:3px;font-weight:700} /* заглушка под цифры */
+.ek .ph{background:#fff3b0;color:#5a4a00;padding:0 4px;border-radius:3px;font-weight:700}
+.ek .ic{width:1.05em;height:1.05em;display:inline-block;vertical-align:-.18em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ek .photo-card{border-radius:20px;overflow:hidden;background:var(--sand)}
+.ek .photo-card img{width:100%;height:100%;object-fit:cover;display:block}
 
 /* Слот под штатный блок Taplink — в живой странице его не будет */
 .ek-native{border:1.5px dashed #9b8f7c;border-radius:12px;padding:14px;text-align:center;
   font-size:11px;line-height:1.5;color:#6f6450;background:repeating-linear-gradient(45deg,#f3ede3 0 10px,#efe7da 10px 20px);margin:0 22px}
 .ek-native b{display:block;font-size:12px;letter-spacing:.06em;color:#4a4232}
 .ek-native .fake-btn{display:block;margin:10px 0 6px;background:var(--accent);color:#fff;border-radius:12px;padding:16px;font-size:15px;font-weight:700;letter-spacing:.01em}
+.ek-native .fake-btn.dark{background:var(--graphite)}
 .ek-native .fake-btn small{display:block;font-weight:500;font-size:12px;opacity:.85}
 .ek-flag{background:var(--graphite);color:#e9e2d6;text-align:center;font-size:11px;padding:9px;letter-spacing:.04em}
+.ek-gap{height:22px}
 
 /* ============ 1. HERO ============ */
 .ek-hero{padding:18px 16px 30px}
 .ek-hero .photo{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/4.6;background:#d9d4cc}
-.ek-hero .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block}
-.ek-hero .photo:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(20,19,17,.82) 100%)}
+.ek-hero .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block}
+.ek-hero .photo:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(20,19,17,.78) 100%)}
 .ek-hero .badges{position:absolute;left:14px;right:14px;bottom:14px;z-index:1;display:flex;flex-wrap:wrap;gap:6px}
 .ek-hero .badge{background:rgba(247,243,236,.94);color:var(--ink);font-size:12px;font-weight:600;padding:7px 11px;border-radius:30px}
 .ek-hero .badge .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);margin-right:7px;vertical-align:1px}
 .ek-hero .copy{padding:26px 6px 22px}
-.ek-hero h1{font-family:var(--serif);font-weight:800;font-size:34px;line-height:1.1;letter-spacing:-.035em;margin:12px 0 14px}
+.ek-hero h1{font-weight:800;font-size:34px;line-height:1.1;letter-spacing:-.035em;margin:12px 0 14px}
 .ek-hero h1 em{font-style:normal;color:var(--accent)}
 .ek-hero .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:22px 0 0}
 .ek-hero .fact{background:var(--sand);border-radius:14px;padding:12px 10px}
-.ek-hero .fact b{display:block;font-family:var(--serif);font-size:22px;font-weight:800;line-height:1.1}
+.ek-hero .fact b{display:block;font-size:22px;font-weight:800;line-height:1.1;letter-spacing:-.02em}
 .ek-hero .fact span{display:block;font-size:11px;line-height:1.35;color:var(--muted);margin-top:4px}
 
-/* ============ 2. ПИСЬМО ЛИЗЫ ============ */
+/* ============ 2. ОБО МНЕ (письмо) ============ */
 .ek-letter{background:var(--sand)}
-.ek-letter .head{display:flex;gap:16px;align-items:center;margin:18px 0 22px}
-.ek-letter .ava{width:84px;height:104px;flex:0 0 84px;border-radius:16px;overflow:hidden}
-.ek-letter .ava img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
-.ek-letter .head h2{margin:0}
+.ek-letter .head{display:flex;gap:16px;align-items:center;margin:18px 0 20px}
+.ek-letter .ava{width:92px;height:112px;flex:0 0 92px;border-radius:18px;overflow:hidden}
+.ek-letter .ava img{width:100%;height:100%;object-fit:cover;object-position:40% 30%;display:block}
+.ek-letter .head h2{margin:0 0 6px}
+.ek-letter .role{font-size:13px;color:var(--muted);line-height:1.4}
 .ek-letter p+p{margin-top:14px}
-.ek-letter ul{list-style:none;padding:0;margin:18px 0;border-top:1px solid var(--sand-2)}
-.ek-letter li{padding:12px 0 12px 26px;border-bottom:1px solid var(--sand-2);position:relative;font-size:16px;font-weight:600;line-height:1.35}
-.ek-letter li:before{content:'';position:absolute;left:0;top:21px;width:12px;height:2px;background:var(--accent)}
+.ek-letter .nums{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:20px 0}
+.ek-letter .nums div{background:var(--paper);border-radius:14px;padding:12px 10px}
+.ek-letter .nums b{display:block;font-size:16px;font-weight:800;letter-spacing:-.02em;line-height:1.15}
+.ek-letter .nums span{display:block;font-size:11px;color:var(--muted);line-height:1.35;margin-top:4px}
 .ek-letter .sign{font-weight:800;font-size:20px;letter-spacing:-.02em;margin-top:22px}
 .ek-letter .sign small{display:block;font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:2px}
 
-/* ============ 3. ДО / ПОСЛЕ ============ */
+/* ============ 3. ДЛЯ КОГО ============ */
+.ek-fit .row-fit{display:flex;gap:14px;align-items:flex-start;padding:15px 0;border-top:1px solid var(--line)}
+.ek-fit .row-fit:last-of-type{border-bottom:1px solid var(--line)}
+.ek-fit .n{font-size:13px;font-weight:800;color:#fff;background:var(--accent);min-width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.ek-fit .row-fit p{font-weight:600;line-height:1.45;padding-top:3px}
+.ek-fit .myths{display:grid;gap:10px;margin-top:24px}
+.ek-fit .myth{border-radius:18px;padding:18px;background:var(--sand)}
+.ek-fit .myth.dark{background:var(--graphite);color:#efe8dc}
+.ek-fit .myth b{display:block;font-size:17px;line-height:1.3;letter-spacing:-.01em;margin-bottom:6px}
+.ek-fit .myth p{font-size:14px;color:var(--muted)}
+.ek-fit .myth.dark p{color:#c9c1b4}
+.ek-fit .myth.dark b{color:#fff}
+
+/* ============ 4. ДО / ПОСЛЕ ============ */
+.ek-ba{background:#fff}
 .ek-ba .cards{display:grid;gap:14px;margin-top:22px}
-.ek-ba .card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 1px 0 var(--line),0 10px 30px -18px rgba(40,30,20,.35);position:relative}
-.ek-ba .tag{position:absolute;top:10px;left:10px;z-index:2;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:6px 9px;border-radius:20px}
-.ek-ba .before .tag{background:#e6e3de;color:#6d6860}
-.ek-ba .after .tag{background:var(--accent);color:#fff}
-.ek-ba .img{height:150px;position:relative;overflow:hidden}
-.ek-ba .before .img{background:radial-gradient(ellipse at 40% 60%,#9b958a,#6f6a62 70%);filter:blur(.4px) saturate(.4)}
-.ek-ba .before .img:after{content:'';position:absolute;left:38%;top:22%;width:26%;height:62%;background:#4f4b45;border-radius:30% 30% 8px 8px;transform:rotate(-9deg);opacity:.8}
-.ek-ba .after .img{background:linear-gradient(160deg,#f4efe7,#e7dccb)}
-.ek-ba .after .img:before{content:'';position:absolute;left:50%;top:14%;width:30%;height:74%;transform:translateX(-50%);background:linear-gradient(180deg,#3d4a3a,#2c3529);border-radius:38% 38% 10px 10px;box-shadow:0 18px 22px -12px rgba(0,0,0,.35)}
-.ek-ba .after .img:after{content:'1/8';position:absolute;right:10px;bottom:10px;background:rgba(0,0,0,.45);color:#fff;font-size:10px;padding:3px 7px;border-radius:10px}
-.ek-ba .body{padding:12px 14px 14px}
-.ek-ba .price{font-weight:800;font-size:18px}
-.ek-ba .title{font-size:14px;line-height:1.35;margin:2px 0 6px}
-.ek-ba .before .title{color:#57534c}
-.ek-ba .after .title{color:#1b5fb4;font-weight:600}
-.ek-ba .meta{font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 10px}
-.ek-ba .chip{background:#eef4e9;color:var(--ok);font-size:11px;font-weight:700;padding:3px 8px;border-radius:6px}
-.ek-ba .stat{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);font-size:13px;font-weight:700}
-.ek-ba .before .stat{color:#8b857b}
-.ek-ba .after .stat{color:var(--ok)}
+.ek-ba .card-ad{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 1px 0 var(--line),0 10px 30px -18px rgba(40,30,20,.35);border:1px solid #eee7dc;position:relative}
+.ek-ba .tag-ad{position:absolute;top:10px;left:10px;z-index:2;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:6px 9px;border-radius:20px}
+.ek-ba .before .tag-ad{background:#e6e3de;color:#6d6860}
+.ek-ba .after .tag-ad{background:var(--accent);color:#fff}
+.ek-ba .img-ad{height:150px;position:relative;overflow:hidden}
+.ek-ba .before .img-ad{background:radial-gradient(ellipse at 40% 60%,#9b958a,#6f6a62 70%);filter:saturate(.4)}
+.ek-ba .before .img-ad:after{content:'';position:absolute;left:38%;top:22%;width:26%;height:62%;background:#4f4b45;border-radius:30% 30% 8px 8px;transform:rotate(-9deg);opacity:.8}
+.ek-ba .after .img-ad{background:linear-gradient(160deg,#f4efe7,#e7dccb)}
+.ek-ba .after .img-ad:before{content:'';position:absolute;left:50%;top:14%;width:30%;height:74%;transform:translateX(-50%);background:linear-gradient(180deg,#3d4a3a,#2c3529);border-radius:38% 38% 10px 10px;box-shadow:0 18px 22px -12px rgba(0,0,0,.35)}
+.ek-ba .after .img-ad:after{content:'1/8';position:absolute;right:10px;bottom:10px;background:rgba(0,0,0,.45);color:#fff;font-size:10px;padding:3px 7px;border-radius:10px}
+.ek-ba .body-ad{padding:12px 14px 14px}
+.ek-ba .price-ad{font-weight:800;font-size:18px}
+.ek-ba .title-ad{font-size:14px;line-height:1.35;margin:2px 0 6px}
+.ek-ba .before .title-ad{color:#57534c}
+.ek-ba .after .title-ad{color:#1b5fb4;font-weight:600}
+.ek-ba .meta-ad{font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 10px}
+.ek-ba .chip-ad{background:#eef4e9;color:var(--ok);font-size:11px;font-weight:700;padding:3px 8px;border-radius:6px}
+.ek-ba .stat-ad{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);font-size:13px;font-weight:700}
+.ek-ba .before .stat-ad{color:#8b857b}
+.ek-ba .after .stat-ad{color:var(--ok)}
 .ek-ba .why{margin-top:22px;display:grid;gap:8px}
 .ek-ba .why div{display:flex;gap:10px;font-size:14px;line-height:1.45}
 .ek-ba .why div:before{content:'→';color:var(--accent);font-weight:700}
+.ek-ba .quote-ad{margin-top:20px;padding:16px 18px;border-left:3px solid var(--accent);background:var(--paper);border-radius:0 14px 14px 0;font-size:14px}
+.ek-ba .quote-ad span{display:block;font-size:12px;color:var(--muted);margin-top:6px;font-weight:600}
 .ek-ba .note{font-size:11px;color:var(--muted);margin-top:14px}
 
-/* ============ 4. БИБЛИОТЕКА ============ */
+/* ============ 5. БИБЛИОТЕКА ============ */
 .ek-lib{background:var(--graphite);color:#efe8dc}
-.ek-lib .eyebrow{color:#e3a58f}
-.ek-lib h2 em{color:#e3a58f}
+.ek-lib .eyebrow{color:var(--pale)}
+.ek-lib h2 em{color:var(--pale)}
 .ek-lib .lead{color:#b9b1a4}
+.ek-lib .banner{border-radius:20px;overflow:hidden;height:240px;margin-bottom:28px}
+.ek-lib .banner img{width:100%;height:100%;object-fit:cover;object-position:50% 45%;display:block}
 .ek-lib .counters{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#45423d;border-radius:14px;overflow:hidden;margin:24px 0}
 .ek-lib .counters div{background:#33312d;padding:14px 10px;text-align:center}
-.ek-lib .counters b{display:block;font-family:var(--serif);font-size:26px;font-weight:800;color:#fff}
+.ek-lib .counters b{display:block;font-size:26px;font-weight:800;color:#fff}
 .ek-lib .counters span{font-size:11px;color:#b9b1a4}
 .ek-lib details{border-top:1px solid #45423d}
 .ek-lib details:last-of-type{border-bottom:1px solid #45423d}
 .ek-lib summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:15px 0;font-weight:700;font-size:15px}
 .ek-lib summary::-webkit-details-marker{display:none}
-.ek-lib summary .i{font-family:var(--serif);font-style:normal;color:#e3a58f;min-width:22px;font-weight:700;font-size:13px}
+.ek-lib summary .i{color:var(--pale);min-width:22px;font-weight:700;font-size:13px}
 .ek-lib summary .c{margin-left:auto;font-size:11px;font-weight:600;color:#b9b1a4;background:#3b3935;padding:4px 9px;border-radius:20px;white-space:nowrap}
+.ek-lib summary .c.soon{background:var(--accent);color:#fff}
 .ek-lib summary:after{content:'+';font-size:20px;font-weight:400;color:#b9b1a4;width:14px;text-align:center}
 .ek-lib details[open] summary:after{content:'–'}
 .ek-lib ul{margin:0 0 16px 34px;padding:0;list-style:none}
 .ek-lib li{font-size:13.5px;color:#d6cfc3;padding:4px 0;line-height:1.45}
-.ek-lib li:before{content:'·';color:#e3a58f;margin-right:8px;font-weight:800}
-.ek-lib li.etc{color:#9d958a;font-style:normal}
-.ek-lib li.etc:before{content:'+'}
-.ek-lib .more{font-size:12px;color:#b9b1a4;margin-top:16px}
+.ek-lib li:before{content:'·';color:var(--pale);margin-right:8px;font-weight:800}
+.ek-lib .tags-h{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--pale);margin:28px 0 12px}
+.ek-lib .tags{display:grid;gap:8px}
+.ek-lib .tg-tag{background:#33312d;border-radius:12px;padding:10px 12px;font-size:13px;color:#cfc8bc;line-height:1.4}
+.ek-lib .tg-tag b{color:#fff;font-weight:700;margin-right:6px}
+.ek-lib .more{font-size:13px;color:#cfc8bc;margin-top:22px;padding:14px 16px;border:1px solid #45423d;border-radius:14px}
 
-/* ============ 5. КРОМЕ БИБЛИОТЕКИ ============ */
-.ek-plus .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+/* ============ 6. ПОДДЕРЖКА ============ */
+.ek-plus .pic{height:320px;margin-top:20px}
+.ek-plus .pic img{object-position:50% 40%}
+.ek-plus .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
 .ek-plus .tile{background:#fff;border-radius:16px;padding:16px 14px;border:1px solid var(--line)}
 .ek-plus .tile.wide{grid-column:1/-1;background:var(--accent-soft);border-color:transparent}
 .ek-plus .ico{width:42px;height:42px;border-radius:50%;background:var(--sand);color:var(--accent);display:flex;align-items:center;justify-content:center}
@@ -126,87 +155,133 @@
 .ek-plus h3{font-size:15px;font-weight:800;margin:10px 0 4px;line-height:1.25}
 .ek-plus .tile p{font-size:13px;color:var(--muted);line-height:1.45}
 
-/* ============ 6. КАЛЬКУЛЯТОР ============ */
+/* ============ 7. КЕЙСЫ ============ */
+.ek-cases{background:var(--sand)}
+.ek-cases .case{background:var(--paper);border-radius:20px;padding:20px 18px;margin-top:14px}
+.ek-cases .case-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.ek-cases .case-no{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.ek-cases .case h3{font-size:20px;font-weight:800;letter-spacing:-.02em;line-height:1.2;margin:4px 0 2px}
+.ek-cases .case .sub{font-size:13px;color:var(--muted);line-height:1.4}
+.ek-cases .ab{display:grid;grid-template-columns:1fr;gap:8px;margin:16px 0}
+.ek-cases .pt{border-radius:14px;padding:12px 14px;font-size:13px;line-height:1.45}
+.ek-cases .pt small{display:block;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px}
+.ek-cases .pt.a{background:#efe9df;color:#5d584f}
+.ek-cases .pt.a small{color:#8f877b}
+.ek-cases .pt.b{background:var(--graphite);color:#efe8dc}
+.ek-cases .pt.b small{color:var(--pale)}
+.ek-cases .pt.b .big{display:block;font-size:26px;font-weight:800;letter-spacing:-.03em;color:#fff;line-height:1.15;margin:2px 0}
+.ek-cases .pt ul{margin:0;padding:0;list-style:none}
+.ek-cases .pt li{padding:2px 0 2px 14px;position:relative}
+.ek-cases .pt li:before{content:'';position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.5}
+.ek-cases .q{font-size:14px;line-height:1.55;padding-left:14px;border-left:3px solid var(--accent)}
+.ek-cases .months{display:flex;gap:8px;margin-top:8px}
+.ek-cases .months span{background:#3b3935;border-radius:8px;padding:4px 9px;font-size:12px;color:#cfc8bc}
+.ek-cases .mom{background:var(--graphite);color:#efe8dc}
+.ek-cases .mom .case-no{color:var(--pale)}
+.ek-cases .mom .sub{color:#b9b1a4}
+.ek-cases .mom .big{font-size:34px;font-weight:800;letter-spacing:-.03em;color:#fff;margin:14px 0 2px;line-height:1.1}
+.ek-cases .mom .q{border-color:var(--pale);color:#d6cfc3;margin-top:14px}
+
+/* ============ 8. ЧАТ (стиль мессенджера) ============ */
+.ek-chat{padding:56px 0}
+.ek-chat .hd{padding:0 22px}
+.ek-chat .phone{margin:22px 12px 0;border-radius:26px;overflow:hidden;box-shadow:0 24px 50px -28px rgba(30,40,50,.55);border:1px solid #d5dde4}
+.ek-chat .bar{display:flex;align-items:center;gap:10px;background:#fff;padding:10px 12px;border-bottom:1px solid #e6eaee}
+.ek-chat .bar .back{color:#3390ec;display:flex}
+.ek-chat .bar .back .ic{width:22px;height:22px;stroke-width:2.2}
+.ek-chat .bar .gava{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#d07a5c,#b4553a);color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;flex:0 0 40px}
+.ek-chat .bar b{display:block;font-size:15px;line-height:1.2}
+.ek-chat .bar span{font-size:12.5px;color:#8a9097}
+.ek-chat .pin{display:flex;gap:10px;background:#fff;padding:7px 12px;border-bottom:1px solid #e6eaee;font-size:12.5px;line-height:1.35}
+.ek-chat .pin i{width:2px;border-radius:2px;background:#3390ec;flex:0 0 2px}
+.ek-chat .pin b{display:block;color:#3390ec;font-weight:600}
+.ek-chat .pin span{color:#55595e;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ek-chat .wall{background-color:#cfe3c4;background-image:radial-gradient(rgba(255,255,255,.35) 1.2px,transparent 1.4px),linear-gradient(160deg,#d7e8c1 0%,#bcd9c6 50%,#a9cdd0 100%);background-size:18px 18px,100% 100%;padding:12px 10px 14px}
+.ek-chat .day{text-align:center;margin:4px 0 10px}
+.ek-chat .day span{background:rgba(0,0,0,.18);color:#fff;font-size:12px;font-weight:600;padding:3px 10px;border-radius:12px}
+.ek-chat .msg{display:flex;gap:7px;align-items:flex-end;margin-bottom:8px}
+.ek-chat .ua{width:32px;height:32px;border-radius:50%;flex:0 0 32px;color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.ek-chat .bub{background:#fff;border-radius:16px 16px 16px 5px;padding:7px 10px 6px;max-width:86%;font-size:14px;line-height:1.42;color:#111;box-shadow:0 1px 1px rgba(0,0,0,.08)}
+.ek-chat .bub .nm{display:block;font-size:13px;font-weight:700;margin-bottom:2px}
+.ek-chat .bub .tag-h{color:#3390ec}
+.ek-chat .bub mark{background:none;color:inherit;font-weight:800}
+.ek-chat .ft{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:5px}
+.ek-chat .rx{display:flex;gap:4px}
+.ek-chat .rx span{display:inline-flex;align-items:center;gap:3px;background:#e8f1fb;color:#3390ec;font-size:12px;font-weight:700;border-radius:12px;padding:2px 7px 2px 5px}
+.ek-chat .rx svg{width:14px;height:14px}
+.ek-chat .tm{font-size:11px;color:#a0a6ad;margin-left:auto;white-space:nowrap}
+.ek-chat .input{display:flex;align-items:center;gap:10px;background:#fff;padding:9px 12px;border-top:1px solid #e6eaee;color:#a0a6ad;font-size:14px}
+.ek-chat .input .ic{width:22px;height:22px}
+.ek-chat .input .f{flex:1}
+.ek-chat .note{font-size:11px;color:var(--muted);text-align:center;margin-top:12px;padding:0 22px}
+
+/* ============ 9. КАЛЬКУЛЯТОР ============ */
 .ek-calc{background:var(--sand)}
 .ek-calc .items{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
 .ek-calc button{font:inherit;font-size:13px;font-weight:600;border:1.5px solid var(--sand-2);background:var(--paper);color:var(--ink);padding:9px 13px;border-radius:30px;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
 .ek-calc button[aria-pressed="true"]{background:var(--graphite);border-color:var(--graphite);color:#fff}
 .ek-calc .result{background:var(--paper);border-radius:18px;padding:20px}
-.ek-calc .sum{font-family:var(--serif);font-size:40px;font-weight:800;line-height:1;letter-spacing:-.02em}
+.ek-calc .sum{font-size:40px;font-weight:800;line-height:1;letter-spacing:-.02em}
 .ek-calc .sum small{font-size:22px}
 .ek-calc .bar{height:8px;background:var(--sand);border-radius:8px;margin:16px 0 8px;overflow:hidden}
 .ek-calc .bar i{display:block;height:100%;width:0;background:var(--accent);border-radius:8px;transition:width .35s}
 .ek-calc .hint{font-size:13px;color:var(--muted)}
 .ek-calc .hint b{color:var(--ink)}
 
-/* ============ 7. ОТЗЫВЫ ============ */
-.ek-rev .shots{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:22px -22px 0;padding:0 22px 8px;scrollbar-width:none}
-.ek-rev .shots::-webkit-scrollbar{display:none}
-.ek-rev .shot{flex:0 0 72%;scroll-snap-align:start;aspect-ratio:9/14;border-radius:18px;background:#fff;border:1px solid var(--line);padding:16px;display:flex;flex-direction:column;gap:8px}
-.ek-rev .bub{background:var(--sand);border-radius:12px 12px 12px 4px;padding:10px 12px;font-size:12.5px;line-height:1.45}
-.ek-rev .bub.r{background:#efe2db;align-self:flex-end;border-radius:12px 12px 4px 12px}
-.ek-rev .line{height:8px;border-radius:4px;background:#ece6dc}
-.ek-rev .cap{margin-top:auto;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#a0978a;text-align:center}
+/* ============ 10. ФОТО-ПАУЗА ============ */
+.ek-break{position:relative;height:540px;overflow:hidden}
+.ek-break img{width:100%;height:100%;object-fit:cover;object-position:50% 0%;display:block}
+.ek-break:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(24,23,21,.9) 0%,rgba(24,23,21,.6) 38%,transparent 62%)}
+.ek-break p{position:absolute;z-index:1;bottom:28px;left:22px;right:22px;font-size:21px;font-weight:800;line-height:1.3;color:#fff;letter-spacing:-.02em}
+.ek-break p em{font-style:normal;color:#f1cdbd}
+.ek-break p span{display:block;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#e9e2d6;margin-top:12px}
 
-/* ============ 8. ОБО МНЕ ============ */
-.ek-me{background:#fff}
-.ek-me .ph-photo{border-radius:20px;overflow:hidden;height:420px;margin:22px 0}
-.ek-me .ph-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
-.ek-me p+p{margin-top:12px}
-.ek-me .bento{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px}
-.ek-me .bento div{background:var(--paper);border-radius:16px;padding:16px 14px}
-.ek-me .bento div:first-child{grid-column:1/-1;background:var(--graphite);color:#fff}
-.ek-me .bento b{display:block;font-family:var(--serif);font-size:26px;font-weight:800;line-height:1.1}
-.ek-me .bento span{font-size:12.5px;color:var(--muted);line-height:1.4;display:block;margin-top:4px}
-.ek-me .bento div:first-child span{color:#cfc8bc}
-
-/* ============ 9. ЦЕНА ============ */
+/* ============ 11. ЦЕНА ============ */
 .ek-price .compare{display:grid;gap:10px;margin:24px 0}
 .ek-price .opt{border-radius:18px;padding:18px}
 .ek-price .opt.sub{border:1.5px solid var(--line);color:var(--muted)}
-.ek-price .opt.sub .row{display:flex;justify-content:space-between;font-size:13px;padding:3px 0}
-.ek-price .opt.sub .row s{color:#a29a8d}
+.ek-price .opt.sub .ln{display:flex;justify-content:space-between;font-size:13px;padding:3px 0}
+.ek-price .opt.sub .ln s{color:#a29a8d}
 .ek-price .opt.club{background:var(--graphite);color:#fff;position:relative}
 .ek-price .opt .lbl{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
-.ek-price .opt.club .lbl{color:#e3a58f}
-.ek-price .big{font-family:var(--serif);font-size:50px;font-weight:800;line-height:1;letter-spacing:-.03em}
+.ek-price .opt.club .lbl{color:var(--pale)}
+.ek-price .big{font-size:50px;font-weight:800;line-height:1;letter-spacing:-.03em}
 .ek-price .big small{font-size:26px}
 .ek-price .once{font-size:13px;color:#cfc8bc;margin-top:6px}
 .ek-price .ribbon{position:absolute;top:16px;right:16px;background:var(--accent);font-size:11px;font-weight:800;padding:5px 10px;border-radius:20px}
 .ek-price ul{list-style:none;padding:0;margin:16px 0 0;border-top:1px solid #45423d}
 .ek-price li{padding:10px 0;border-bottom:1px solid #45423d;font-size:14px;display:flex;gap:10px}
-.ek-price li:before{content:'';display:inline-block;width:14px;height:14px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/contain no-repeat;flex:0 0 14px;color:#e3a58f;margin-top:4px}
+.ek-price li:before{content:'';display:inline-block;width:14px;height:14px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/contain no-repeat;flex:0 0 14px;color:var(--pale);margin-top:4px}
 .ek-price .payback{background:var(--accent-soft);border-radius:16px;padding:16px;font-size:14px;line-height:1.5}
 .ek-price .payback b{color:var(--accent)}
-.ek-price .vip{margin-top:12px;border:1.5px dashed var(--line);border-radius:18px;padding:16px;font-size:13px;color:var(--muted)}
-.ek-price .vip strong{color:var(--ink)}
+.ek-price .voice{display:flex;gap:12px;align-items:center;margin-top:12px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px}
+.ek-price .voice .ua{width:38px;height:38px;border-radius:50%;background:#7a9e7e;color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;flex:0 0 38px}
+.ek-price .voice p{font-size:13.5px;line-height:1.45}
+.ek-price .voice span{display:block;font-size:12px;color:var(--muted);margin-top:3px}
 .ek-price .legal{font-size:11px;color:var(--muted);margin-top:14px;line-height:1.5}
 
-/* фото-вставки */
-.ek-lib .banner{border-radius:20px;overflow:hidden;height:230px;margin-bottom:28px;position:relative}
-.ek-lib .banner img{width:100%;height:100%;object-fit:cover;object-position:50% 25%;display:block}
-.ek-plus .pic{border-radius:20px;overflow:hidden;height:300px;margin-top:20px}
-.ek-plus .pic img{width:100%;height:100%;object-fit:cover;object-position:50% 45%;display:block}
-.ek-break{position:relative;height:440px;overflow:hidden}
-.ek-break img{width:100%;height:100%;object-fit:cover;object-position:30% 60%;display:block}
-.ek-break:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(31,30,28,.55),transparent 55%)}
-.ek-break p{position:absolute;z-index:1;top:30px;left:22px;right:22px;font-family:var(--serif);font-size:24px;font-weight:800;line-height:1.25;color:#fff;letter-spacing:-.025em}
-.ek-break p em{font-style:normal;color:#f1cdbd}
-/* ============ ЧЕК-ЛИСТ ============ */
-.ek-lead{margin:0 16px;background:var(--graphite);color:#efe8dc;border-radius:22px;padding:26px 22px}
-.ek-lead .eyebrow{color:#e3a58f}
-.ek-lead h2{font-size:28px;margin:10px 0 8px}
-.ek-lead h2 em{color:#e3a58f}
-.ek-lead p{color:#c9c1b4;font-size:14px}
-.ek-lead .sheet{margin-top:16px;background:#f7f3ec;color:var(--ink);border-radius:10px;padding:14px 16px;transform:rotate(-1.5deg);box-shadow:0 12px 24px -14px rgba(0,0,0,.6)}
+/* ============ 12. РЕСЕЙЛ ============ */
+.ek-resale{background:var(--graphite);color:#efe8dc}
+.ek-resale .eyebrow{color:var(--pale)}
+.ek-resale h2 em{color:var(--pale)}
+.ek-resale .pic{height:340px;margin:20px 0}
+.ek-resale .pic img{object-position:50% 30%}
+.ek-resale .offer{font-size:17px;font-weight:700;line-height:1.4;color:#fff}
+.ek-resale .proofs{display:grid;gap:10px;margin-top:18px}
+.ek-resale .proof{background:#33312d;border-radius:14px;padding:14px}
+.ek-resale .proof b{display:block;font-size:22px;font-weight:800;color:#fff;letter-spacing:-.02em}
+.ek-resale .proof p{font-size:13px;color:#b9b1a4;line-height:1.45}
+.ek-resale .raw{font-size:11px;color:#8f877b;margin-top:12px}
+
+/* ============ 13. ЧЕК-ЛИСТ ============ */
+.ek-lead{margin:0 16px;background:var(--sand);border-radius:22px;padding:26px 22px}
+.ek-lead h2{font-size:26px;margin:10px 0 8px}
+.ek-lead p{color:var(--muted);font-size:14px}
+.ek-lead .sheet{margin-top:16px;background:#fff;color:var(--ink);border-radius:10px;padding:14px 16px;transform:rotate(-1.5deg);box-shadow:0 12px 24px -16px rgba(0,0,0,.45)}
 .ek-lead .sheet b{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
-.ek-lead .sheet div{font-size:13px;padding:4px 0;border-bottom:1px dashed var(--line)}
-.ek-lead .sheet div{display:flex;gap:8px;align-items:center}
-.ek-lead .sheet div:before{content:'';display:inline-block;width:14px;height:14px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='4' y='4' width='16' height='16' rx='3'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='4' y='4' width='16' height='16' rx='3'/%3E%3C/svg%3E") center/contain no-repeat;flex:0 0 14px;color:var(--muted)}
-.ek .ic{width:1.05em;height:1.05em;display:inline-block;vertical-align:-.18em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.ek .stars{display:inline-flex;gap:2px;vertical-align:-.1em}
-.ek .stars svg{width:.95em;height:.95em;fill:var(--star,#f5a623)}
-.ek-gap{height:22px}
+.ek-lead .sheet div{display:flex;gap:8px;align-items:center;font-size:13px;padding:4px 0;border-bottom:1px dashed var(--line)}
+.ek-lead .sheet div:before{content:'';display:inline-block;width:14px;height:14px;border:1.8px solid var(--muted);border-radius:4px;flex:0 0 14px}
+
 @media (prefers-reduced-motion:reduce){.ek *{transition:none!important}}
 </style>
 </head>
@@ -215,23 +290,24 @@
 
 <div class="ek-flag">МАКЕТ · <span style="background:#fff3b0;color:#5a4a00;padding:0 4px;border-radius:3px">жёлтым</span> заглушки · пунктир = штатные блоки Taplink</div>
 
-<!-- ===================== HTML-БЛОК 1: HERO ===================== -->
+<!-- ===================== HTML-БЛОК 1: ОБЛОЖКА ===================== -->
 <section class="ek-hero">
   <div class="photo">
-    <img src="assets/hero.jpg" alt="Лиза Чайкина">
+    <img src="assets/hero.jpg?v=2" alt="Елизавета Чайкина с коробками посылок">
     <div class="badges">
       <span class="badge"><i class="dot"></i>10+ лет продаю на Авито</span>
-      <span class="badge">Дипломированный авитолог</span>
+      <span class="badge">Авитолог</span>
+      <span class="badge">Ресейл</span>
     </div>
   </div>
   <div class="copy">
-    <div class="eyebrow">Авито-клуб Лизы Чайкиной</div>
-    <h1>Вся Авито-кухня в одном клубе. <em>Платишь один раз.</em></h1>
-    <p class="lead">Закрытый канал с пошаговыми инструкциями, эфиры с экспертами и чат продавцов. Собрала всё, что сама узнала за 10 лет продаж, чтобы вещи уходили быстрее, а не висели месяцами.</p>
+    <div class="eyebrow">Авито-клуб Елизаветы Чайкиной</div>
+    <h1>Твоя пошаговая система продаж <em>на Авито</em></h1>
+    <p class="lead">Это не просто набор уроков, а полноценная база знаний по работе с Авито, созданная на основе моего практического опыта в продажах, рекламе и маркетинге.</p>
     <div class="facts">
-      <div class="fact"><b>50+</b><span>тем и инструкций</span></div>
-      <div class="fact"><b>∞</b><span>доступ навсегда, без подписки</span></div>
-      <div class="fact"><b><span class="ph">000</span></b><span>участниц уже в клубе</span></div>
+      <div class="fact"><b>550+</b><span>участников клуба</span></div>
+      <div class="fact"><b>3 года</b><span>развивается сообщество</span></div>
+      <div class="fact"><b>Навсегда</b><span>доступ к материалам</span></div>
     </div>
   </div>
 </section>
@@ -239,118 +315,246 @@
 <!-- ===================== ШТАТНО: КНОПКА ОПЛАТЫ ===================== -->
 <div class="ek-native">
   <b>ШТАТНАЯ КНОПКА TAPLINK · ОПЛАТА</b>
-  <span class="fake-btn">Вступить в клуб<small>4 500 ₽ · один раз и навсегда</small></span>
-  товар «Авито-клуб», после оплаты — выдача доступа
+  <span class="fake-btn">Вступить в Авито-клуб<small>4 500 ₽ · один раз и навсегда</small></span>
 </div>
 <div class="ek-gap"></div>
 
-<!-- ===================== HTML-БЛОК 2: ПИСЬМО ЛИЗЫ ===================== -->
+<!-- ===================== HTML-БЛОК 2: ОБО МНЕ ===================== -->
 <section class="ek-letter pad">
-  <div class="eyebrow">Письмо от автора клуба</div>
+  <div class="eyebrow">Обо мне</div>
   <div class="head">
-    <div class="ava"><img src="assets/letter.jpg" alt="Лиза Чайкина"></div>
-    <h2>Привет, <em>это Лиза</em></h2>
+    <div class="ava"><img src="assets/letter.jpg?v=2" alt="Елизавета Чайкина"></div>
+    <div>
+      <h2>Привет, <em>я Лиза</em></h2>
+      <div class="role">Елизавета Чайкина — эксперт по продажам на Авито и ресейлу</div>
+    </div>
   </div>
-  <p>Я продаю на Авито больше 10 лет. За это время набила все возможные шишки, выучилась на авитолога и разобралась, почему одни вещи улетают за день, а другие висят месяцами.</p>
-  <p>Если тебе знакомо хоть что-то из этого — клуб для тебя:</p>
-  <ul>
-    <li>выложила вещь, а за неделю пара просмотров</li>
-    <li>не понимаешь, какую цену ставить</li>
-    <li>пугают доставка, лимиты и платные тарифы</li>
-    <li>покупатели торгуются и пропадают</li>
-    <li>дома полно вещей, а руки не доходят</li>
-  </ul>
-  <p>Я собрала всё, что знаю, в закрытый клуб — с инструкциями, эфирами и чатом, где тебе ответят. Без марафонов, без подписки. Один раз — и навсегда.</p>
-  <div class="sign">Лиза Чайкина<small>основательница Авито-клуба</small></div>
+  <p>Более 10 лет я продаю вещи на Авито. Когда-то это было просто хобби, которое помогало мне закрывать кредиты, досрочно гасить ипотеку, копить на путешествия и исполнять мечты.</p>
+  <p>В декрете я решила превратить свой опыт в профессию: прошла обучение на авитолога и начала помогать другим продавать на площадке. Так увлечение стало источником дохода, который позволил мне зарабатывать <b>от 30 000 ₽ в месяц</b>, даже когда на руках был маленький ребёнок.</p>
+  <div class="nums">
+    <div><b>10+ лет</b><span>продаю на Авито</span></div>
+    <div><b>от&nbsp;30&nbsp;000&nbsp;₽</b><span>в месяц — в декрете</span></div>
+    <div><b>550+</b><span>участников в клубе</span></div>
+  </div>
+  <p>Со временем я создала собственный Авито-клуб, который развивается уже три года и объединяет людей, желающих освоить продажи и получать дополнительный доход.</p>
+  <p>Сейчас я также активно развиваюсь в сфере ресейла — помогаю увидеть ценность в вещах, которые больше не нужны одним людям, и найти для них новых владельцев.</p>
+  <div class="sign">Елизавета Чайкина<small>основательница Авито-клуба</small></div>
 </section>
 
-<!-- ===================== HTML-БЛОК 3: ДО / ПОСЛЕ ===================== -->
+<!-- ===================== HTML-БЛОК 3: ДЛЯ КОГО ===================== -->
+<section class="ek-fit pad">
+  <div class="eyebrow">Для кого клуб</div>
+  <h2>Клуб подойдёт тебе, <em>если ты:</em></h2>
+  <div class="row-fit"><div class="n">1</div><p>Только начинаешь продавать на Авито и не знаешь, с чего начать.</p></div>
+  <div class="row-fit"><div class="n">2</div><p>Хочешь превратить ненужные вещи в дополнительный доход.</p></div>
+  <div class="row-fit"><div class="n">3</div><p>Уже продаёшь, но сталкиваешься с отсутствием просмотров и покупок.</p></div>
+  <div class="row-fit"><div class="n">4</div><p>Хочешь развивать перепродажу вещей как отдельное направление заработка.</p></div>
+  <div class="row-fit"><div class="n">5</div><p>Ищешь возможность зарабатывать, совмещая продажи с декретом, основной работой или пенсией.</p></div>
+  <div class="myths">
+    <div class="myth"><b>«У меня нет времени»</b><p>Совмещать продажи на Авито можно и в декрете, и с основной работой, и даже на пенсии!</p></div>
+    <div class="myth dark"><b>«У меня не продаётся»</b><p>Значит, ты просто пока не умеешь это делать. Алгоритмы площадки постоянно меняются, и чтобы продавать — важно их знать. Именно поэтому я сделала формат клуба с вечным доступом.</p></div>
+  </div>
+</section>
+
+<!-- ===================== HTML-БЛОК 4: ДО / ПОСЛЕ ===================== -->
 <section class="ek-ba pad">
   <div class="eyebrow">Одна и та же вещь</div>
   <h2>Разное оформление — <em>разные продажи</em></h2>
-  <p class="lead">Покупатель решает за секунду, пока листает ленту. Вот что меняется после разбора в клубе.</p>
+  <p class="lead">Покупатель решает за секунду, пока листает ленту. Вот что меняется, когда знаешь, как работает площадка.</p>
   <div class="cards">
-    <div class="card before">
-      <span class="tag">До</span>
-      <div class="img"></div>
-      <div class="body">
-        <div class="price">3 000 ₽</div>
-        <div class="title">Куртка</div>
-        <div class="meta"><span>Продаю куртку, почти не носила. Торг.</span></div>
-        <div class="stat"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg> 12 просмотров за неделю · 0 сообщений</div>
+    <div class="card-ad before">
+      <span class="tag-ad">До</span>
+      <div class="img-ad"></div>
+      <div class="body-ad">
+        <div class="price-ad">3 000 ₽</div>
+        <div class="title-ad">Куртка</div>
+        <div class="meta-ad"><span>Продаю куртку, почти не носила. Торг.</span></div>
+        <div class="stat-ad"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg> 12 просмотров за неделю · 0 сообщений</div>
       </div>
     </div>
-    <div class="card after">
-      <span class="tag">После</span>
-      <div class="img"></div>
-      <div class="body">
-        <div class="price">4 200 ₽</div>
-        <div class="title">Пуховик женский Zara, 44 (M), тёплый, как новый</div>
-        <div class="meta"><span class="chip">Доставка</span><span>Замеры в описании · 8 фото при дневном свете</span></div>
-        <div class="stat"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg> 147 просмотров за день · 6 в избранном · 3 сообщения</div>
+    <div class="card-ad after">
+      <span class="tag-ad">После</span>
+      <div class="img-ad"></div>
+      <div class="body-ad">
+        <div class="price-ad">4 200 ₽</div>
+        <div class="title-ad">Пуховик женский Zara, 44 (M), тёплый, как новый</div>
+        <div class="meta-ad"><span class="chip-ad">Доставка</span><span>Замеры в описании · 8 фото при дневном свете</span></div>
+        <div class="stat-ad"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg> 147 просмотров за день · 6 в избранном · 3 сообщения</div>
       </div>
     </div>
   </div>
   <div class="why">
-    <div>Заголовок из слов, которые реально ищут</div>
+    <div>Заголовок из ключевых слов, которые реально ищут</div>
     <div>Фото на светлом фоне, вещь целиком и детали</div>
     <div>Цена по рынку, а не «на глаз»</div>
-    <div>Включена доставка — покупателей в разы больше</div>
+    <div>Включена Авито Доставка — покупателей в разы больше</div>
     <div>Описание с замерами отвечает на вопросы заранее</div>
   </div>
-  <p class="note">Иллюстрация. <span class="ph">Заменим на реальный пример Лизы или участницы</span></p>
+  <div class="quote-ad">«Раньше просто нажимала „опубликовать“, сейчас всё делаю по-другому и вижу результат».<span>Анастасия Лодыгина, участница клуба</span></div>
+  <p class="note">Карточки — иллюстрация. <span class="ph">Можно заменить реальным «было / стало» Лизы</span></p>
 </section>
 
-<!-- ===================== HTML-БЛОК 4: БИБЛИОТЕКА ===================== -->
+<!-- ===================== HTML-БЛОК 5: БИБЛИОТЕКА ===================== -->
 <section class="ek-lib pad">
-  <div class="banner"><img src="assets/profile.jpg" alt=""></div>
+  <div class="banner"><img src="assets/prep.jpg?v=2" alt="Подготовка вещи к продаже"></div>
   <div class="eyebrow">Что внутри</div>
-  <h2>Энциклопедия Авито, <em>которая пополняется</em></h2>
-  <p class="lead">Не марафон на неделю, а библиотека: открываешь нужную тему тогда, когда она нужна. Нажми на раздел, чтобы посмотреть темы.</p>
+  <h2>Целая энциклопедия <em>продаж</em></h2>
+  <p class="lead">Внутри клуба собрана целая энциклопедия продаж: от создания первого объявления до системной работы с площадкой и увеличения количества продаж. Нажми на раздел, чтобы увидеть темы.</p>
   <div class="counters">
     <div><b>10</b><span>разделов</span></div>
     <div><b>50+</b><span>тем</span></div>
-    <div><b>4+</b><span>эфира</span></div>
+    <div><b>6</b><span>эфиров</span></div>
   </div>
 
-  <details><summary><span class="i">01</span>Профиль<span class="c">5 тем</span></summary>
-    <ul><li>Создание профиля с нуля</li><li>Связанные профили</li><li>Работаем по правилам Авито</li><li>Нужно ли платить налог с продаж</li><li>Уровень сервиса аккаунта</li></ul></details>
-  <details><summary><span class="i">02</span>Идеальное объявление<span class="c">8 тем</span></summary>
-    <ul><li>Как составить объявление, которое продаёт</li><li>Фото + видеоурок по съёмке</li><li>Как сгенерировать фото в ИИ быстро и бесплатно</li><li>Нужно ли видео</li><li>Цена и ценообразование</li><li>Как оценить вещь, о которой мало знаешь</li><li class="etc">и ещё 2 темы</li></ul></details>
-  <details><summary><span class="i">03</span>Алгоритмы и продажи<span class="c">7 тем</span></summary>
-    <ul><li>Бесплатные лимиты</li><li>Алгоритмы и активные продажи</li><li>Что делать, если вещи долго продаются</li><li>Негативный отзыв: что делать</li><li>Подкаст: как прокачать профиль без продаж</li><li>Корзина и лимит контактов</li><li class="etc">и ещё 1 тема</li></ul></details>
-  <details><summary><span class="i">04</span>Авито Доставка<span class="c">8 тем</span></summary>
-    <ul><li>Как работает доставка</li><li>Упаковка товаров</li><li>Кросс-доставка и пункты выдачи</li><li>Габариты</li><li>Запрещённые товары</li><li>Почему не принимается оплата на карту</li><li class="etc">и ещё 2 темы</li></ul></details>
-  <details><summary><span class="i">05</span>Продвижение и тарифы<span class="c">3 темы</span></summary>
-    <ul><li>Продвижение для б/у вещей</li><li>Просмотры: нюансы</li><li>Тариф за сделку</li></ul></details>
+  <details><summary><span class="i">01</span>Профиль на Авито<span class="c">4 темы</span></summary>
+    <ul><li>Нужно ли платить налог с продаж Авито</li><li>Всё про лимиты</li><li>Уровень сервиса вашего аккаунта</li><li>Как создавать несколько профилей</li></ul></details>
+  <details><summary><span class="i">02</span>Составление объявления<span class="c">9 тем</span></summary>
+    <ul><li>Составляем идеальное объявление</li><li>Делаем фото</li><li>Ключевые слова</li><li>Видеоурок, как делать качественные фото</li><li>Как сгенерировать в ИИ фотографию быстро и бесплатно</li><li>Нужно ли видео</li><li>Цена</li><li>Как узнать цену товара, о котором мало знаешь</li><li>Ценообразование товаров</li></ul></details>
+  <details><summary><span class="i">03</span>Работа с объявлениями<span class="c">6 тем</span></summary>
+    <ul><li>Алгоритмы и активные продажи</li><li>Что делать, если вещи долго продаются</li><li>Негативный отзыв</li><li>Подкаст: как прокачать профиль, если нет продаж</li><li>Про корзину на Авито и инструкция, как ей пользоваться</li><li>Что такое лимит контактов</li></ul></details>
+  <details><summary><span class="i">04</span>Авито Доставка<span class="c">7 тем</span></summary>
+    <ul><li>Что такое Авито Доставка</li><li>Упаковка товаров</li><li>Кросс-доставка</li><li>Пункты Авито Доставки</li><li>Габариты в доставке</li><li>Почему могут заблокировать «Пятёрочку»</li><li>Запрещённые товары на Авито</li></ul></details>
+  <details><summary><span class="i">05</span>Продвижение и тарифы<span class="c">4 темы</span></summary>
+    <ul><li>Платное продвижение для продажи б/у вещей</li><li>Тариф за просмотры: нюансы</li><li>Тарифы для товаров</li><li>Тариф за сделку</li></ul></details>
   <details><summary><span class="i">06</span>Дополнительный заработок<span class="c">5 тем</span></summary>
-    <ul><li>Профессия ресейлера</li><li>Продажа вещей с Садовода</li><li>Как я писала тексты и заработала <span class="ph">сумма</span></li><li class="etc">и ещё 2 темы</li></ul></details>
-  <details><summary><span class="i">07</span>По категориям<span class="c">5 тем</span></summary>
-    <ul><li>Одежда и обувь</li><li>Бытовая техника</li><li>Детские игрушки</li><li class="etc">и ещё 2 темы</li></ul></details>
-  <details><summary><span class="i">08</span>Лайфхаки<span class="c">5 тем</span></summary>
-    <ul><li>Как посмотреть адрес продавца</li><li>Как редактировать объявление после продажи</li><li>Как проверить косметику и духи на подделку</li><li class="etc">и ещё 2 темы</li></ul></details>
-  <details><summary><span class="i">09</span>Таблицы и шаблоны<span class="c">2 файла</span></summary>
-    <ul><li>Таблица лимитов во всех категориях</li><li>Таблица статистики продаж</li></ul></details>
-  <details><summary><span class="i">10</span>Записи эфиров<span class="c">4+</span></summary>
-    <ul><li>Марафон по расхламлению</li><li>Закуп в Китае</li><li>Нейросети для продавца</li><li>Продажа растений</li></ul></details>
-  <p class="more">Новые темы добавляются — рассказываю обо всех обновлениях площадки.</p>
+    <ul><li>Мой путь на Авито</li><li>Аренда техники</li><li>Подкаст: как я писала тексты и заработала 3 000 ₽</li><li>Про профессию ресейлера</li><li>Про перепродажу вещей с Садовода</li></ul></details>
+  <details><summary><span class="i">07</span>Лайфхаки<span class="c">8 тем</span></summary>
+    <ul><li>Как посмотреть адрес продавца</li><li>Как вернуть приложение Авито через Mac</li><li>Как проверить косметику и духи на паль</li><li>Как изменять объявления после продажи</li><li>Как продавать паль</li><li>Про Юлу и её лимиты</li><li>Почему не надо принимать оплату на карту</li><li>Почему нельзя копировать чужие тексты</li></ul></details>
+  <details><summary><span class="i">08</span>По категориям<span class="c">5 тем</span></summary>
+    <ul><li>Как продавать много одежды</li><li>Статья о продаже одежды от участницы чата</li><li>Нюансы при продаже обуви</li><li>Бытовая техника</li><li>Детские игрушки</li></ul></details>
+  <details><summary><span class="i">09</span>Эфиры и материалы<span class="c">8</span></summary>
+    <ul><li>Марафон по расхламлению</li><li>Эфир по закупу в Китае</li><li>Эфир по нейросетям</li><li>Эфир по продаже растений</li><li>Эфир с поставщиком женской одежды оптом для перепродажи</li><li>Эфир с налоговым экспертом</li><li>Таблица с лимитами во всех категориях</li><li>Таблица со статистикой продаж</li></ul></details>
+  <details><summary><span class="i">10</span>ВБ-ресейл<span class="c soon">скоро</span></summary>
+    <ul><li>Как зарегистрироваться</li><li>Нюансы создания объявления</li><li>Кто платит на ВБ</li><li>Алгоритмы и нюансы ВБ</li><li>Возвраты</li></ul></details>
+
+  <div class="tags-h">Рубрики канала</div>
+  <div class="tags">
+    <div class="tg-tag"><b>#итогимесяца</b>мои продажи за месяц — участники публикуют свои итоги в комментариях</div>
+    <div class="tg-tag"><b>#разбор</b>разборы и рекомендации по объявлениям участников</div>
+    <div class="tg-tag"><b>#чтопродать</b>подробнее о каждой продаже</div>
+    <div class="tg-tag"><b>#обновления</b>нововведения на Авито</div>
+    <div class="tg-tag"><b>#упаковка</b>как я упаковываю свои посылки</div>
+    <div class="tg-tag"><b>#осторожномошенники</b>рубрика про мошенников на Авито</div>
+    <div class="tg-tag"><b>#лайфхак</b>разные лайфхаки</div>
+  </div>
+  <p class="more">Доступ к материалам остаётся с тобой навсегда. Ты сможешь возвращаться к урокам в удобное время и изучать обновления по мере их появления.</p>
 </section>
 
-<!-- ===================== HTML-БЛОК 5: КРОМЕ БИБЛИОТЕКИ ===================== -->
+<!-- ===================== HTML-БЛОК 6: ПОДДЕРЖКА ===================== -->
 <section class="ek-plus pad">
-  <div class="eyebrow">И ещё</div>
+  <div class="eyebrow">Кроме базы знаний</div>
   <h2>Ты не одна <em>со своими вопросами</em></h2>
-  <div class="pic"><img src="assets/phone.jpg" alt="Лиза отвечает на вопросы"></div>
+  <p class="lead">Моя задача — не просто рассказать, как работает Авито, а дать тебе инструменты, которые помогут разобраться в площадке и выстроить собственную систему продаж.</p>
+  <div class="photo-card pic"><img src="assets/community.jpg?v=2" alt="Продавец и покупательница"></div>
   <div class="grid">
-    <div class="tile wide"><div class="ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.9-.9L3 21l1.9-5.1A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></svg></div><h3>Мои ответы на вопросы</h3><p>Застряла с объявлением, доставкой или отзывом — спрашиваешь в клубе, я отвечаю.</p></div>
-    <div class="tile"><div class="ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4"/></svg></div><h3>Эфиры с экспертами</h3><p>ИИ, закуп в Китае, мистери-боксы и другие темы.</p></div>
-    <div class="tile"><div class="ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>Чат продавцов</h3><p>Делимся успехами, есть рубрики и дни барахолки.</p></div>
-    <div class="tile"><div class="ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg></div><h3>Поставщик мистери-боксов</h3><p>Контакт, когда захочешь продавать не только своё.</p></div>
-    <div class="tile"><div class="ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg></div><h3>Таблицы</h3><p>Лимиты по категориям и учёт продаж.</p></div>
+    <div class="tile wide"><div class="ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.9-.9L3 21l1.9-5.1A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></svg></div><h3>Канал и чат поддержки с обратной связью</h3><p>Задаёшь вопрос — получаешь ответ. Делимся продажами, помогаем друг другу.</p></div>
+    <div class="tile"><div class="ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="15" height="14" rx="2"/><path d="m17 10 5-3v10l-5-3"/></svg></div><h3>Разбор объявлений в эфире</h3><p>Раз в месяц — разбираем объявления участников вживую.</p></div>
+    <div class="tile"><div class="ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4"/></svg></div><h3>Эфиры с экспертами</h3><p>Закуп в Китае, нейросети, налоги, поставщик одежды и другие.</p></div>
+    <div class="tile"><div class="ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg></div><h3>Барахолки и челленджи</h3><p>Тематические барахолки и челленджи, которые помогают выкладывать регулярно.</p></div>
+    <div class="tile"><div class="ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg></div><h3>Таблицы</h3><p>Лимиты во всех категориях и статистика продаж.</p></div>
   </div>
 </section>
 
-<!-- ===================== HTML-БЛОК 6: КАЛЬКУЛЯТОР (если Taplink пропустит JS) ===================== -->
+<!-- ===================== HTML-БЛОК 7: КЕЙСЫ ===================== -->
+<section class="ek-cases pad">
+  <div class="eyebrow">Результаты участниц</div>
+  <h2>Было → <em>стало</em></h2>
+  <p class="lead">Реальные истории участниц клуба — с их цифрами.</p>
+
+  <div class="case">
+    <div class="case-no">Кейс №1</div>
+    <h3>Анастасия Лодыгина</h3>
+    <div class="sub">Как из редких продаж выйти на стабильный доход на Авито</div>
+    <div class="ab">
+      <div class="pt a"><small>Точка А</small><ul><li>Продавала всё подряд: одежду, игрушки, технику</li><li>2–3 продажи в месяц</li><li>Доход до 1 000 ₽ в среднем</li><li>Во многие вещи — вообще тишина</li></ul></div>
+      <div class="pt b"><small>Точка Б</small>Стабильный доход только на Авито<span class="big">15 000–17 000 ₽</span>в месяц · иногда выходит от 10 000 до 40 000 ₽</div>
+    </div>
+    <p class="q">«Узнала много тонкостей и фишек по Авито. Раньше просто нажимала „опубликовать“, сейчас всё делаю по-другому и вижу результат. Авито стало частью моей жизни в декрете и любимым хобби».</p>
+  </div>
+
+  <div class="case">
+    <div class="case-no">Кейс №2</div>
+    <h3>Наталья Симунова</h3>
+    <div class="sub">Как превратить случайные продажи в стабильный доход</div>
+    <div class="ab">
+      <div class="pt a"><small>Точка А</small><ul><li>Аккаунт на Авито с 2017 года</li><li>Периодически выкладывала б/у вещи</li><li>Объявления оформляла интуитивно</li><li>Продажи были случайные, без плана</li></ul></div>
+      <div class="pt b"><small>Точка Б</small>Заработала с момента вступления в клуб<span class="big">60 000 ₽</span><div class="months"><span>Май — 33 000 ₽</span><span>Июнь — 24 000 ₽</span></div></div>
+    </div>
+    <p class="q">«Канал дал очень много: от теории по Авито до практических советов. Огромная поддержка от девочек и от Лизы — это бесценно! Благодаря клубу я уже избавилась от множества ненужных вещей дома и на даче».</p>
+  </div>
+
+  <div class="case">
+    <div class="case-no">Кейс №3</div>
+    <h3>Юлия Дрягина</h3>
+    <div class="sub">Как из ненужных вещей выйти на доход 16–18 тыс. рублей</div>
+    <div class="ab">
+      <div class="pt a"><small>Точка А</small><ul><li>Начала с детских вещей осенью 2024</li><li>Продавала только самовывозом, боясь освоить доставку</li><li>В среднем — около 3–5 тысяч рублей</li></ul></div>
+      <div class="pt b"><small>Точка Б</small>60–70 проданных товаров, а в сумме<span class="big">16–18 тысяч ₽</span></div>
+    </div>
+    <p class="q">«Это одно из лучших вложений! Я нашла двух чудесных девочек, с которыми общение вышло далеко за пределы чата».</p>
+  </div>
+
+  <div class="case mom">
+    <div class="case-no">Самая первая ученица</div>
+    <h3>Елена Крючкова — мама Лизы</h3>
+    <div class="sub">Всё началось с переезда в дом</div>
+    <div class="big">370 000 ₽</div>
+    <div class="sub">самая крупная продажа — икона</div>
+    <p class="q">«Вещей после двух детей осталось очень много, квартиру нужно было сдать чистой. Так Лиза познакомила меня с Авито. И понеслось… сижу вплотную уже несколько лет. Авито — моя жизнь».</p>
+  </div>
+</section>
+
+<!-- ===================== HTML-БЛОК 8: ЧАТ КЛУБА ===================== -->
+<section class="ek-chat">
+  <div class="hd">
+    <div class="eyebrow">Без постановки</div>
+    <h2>Что пишут <em>в чате клуба</em></h2>
+    <p class="lead">Сообщения участниц — так, как они их написали.</p>
+  </div>
+  <div class="phone">
+    <div class="bar">
+      <span class="back"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span>
+      <div class="gava">АК</div>
+      <div><b>Чат Авито-клуба</b><span>закрытый чат участниц</span></div>
+    </div>
+    <div class="pin"><i></i><div><b>Закреплённое сообщение</b><span>Сегодня у нас тематическая барахолка. Любые…</span></div></div>
+    <div class="wall">
+      <div class="day"><span>Итоги</span></div>
+
+      <div class="msg"><div class="ua" style="background:#e17076">О</div>
+        <div class="bub"><span class="nm" style="color:#d14f5a">Ольга</span>Всем здравствуйте. Меня зовут Ольга, я из Чебоксар, как и Лиза. Приобрела обучение в прошлую среду, так как кабинет просто встал. Почти ничего не продавалось, а вещей много… Расхламление начала с детской комнаты… продался детский халат кигуруми, который висел вроде полгода.<br>Итог:<br><mark>за неделю я продала на 20 188</mark>
+          <div class="ft"><div class="rx"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f08a24" d="M12 2c.6 3.2 4.8 5.3 4.8 10a4.8 4.8 0 0 1-9.6 0c0-2.4 1.3-3.6 2.4-4.6.1 1.7.9 2.8 2 3.2-.5-3.2.1-6 .4-8.6z"/></svg>6</span></div><span class="tm">17:18</span></div></div></div>
+
+      <div class="msg"><div class="ua" style="background:#7bc862">У</div>
+        <div class="bub"><span class="nm" style="color:#4f9a3a">Участница клуба</span>Больше чем довольна <span class="tag-h">#итогигода</span><br><mark>180 продаж<br>80 отзывов «5»<br>сумма 111 000</mark> — прям магия цифр.<br>Зарегистрировалась на Авито в январе 2025, то есть меньше года, и сразу подписалась на Лизу… Все деньги потратила на путешествия с семьёй!! Ездили 2 раза в Питер, Геленджик…
+          </div></div>
+
+      <div class="msg"><div class="ua" style="background:#65aadd">У</div>
+        <div class="bub"><span class="nm" style="color:#3b84bf">Участница клуба</span><span class="tag-h">#итогимесяца</span> Я на Авито с 2014 года, до 20 сентября 2025 года продаж было на 450к, то есть за 11 лет. А потом я купила курс и начала полное расхламление. Итого с 20 сентября по декабрь 2025 <mark>продано на 100 772 руб</mark>
+          <div class="ft"><div class="rx"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f08a24" d="M12 2c.6 3.2 4.8 5.3 4.8 10a4.8 4.8 0 0 1-9.6 0c0-2.4 1.3-3.6 2.4-4.6.1 1.7.9 2.8 2 3.2-.5-3.2.1-6 .4-8.6z"/></svg>14</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#e8485b" d="M12 21 4.7 13.9A5 5 0 0 1 12 7.2a5 5 0 0 1 7.3 6.7z"/></svg>1</span></div><span class="tm">12:39</span></div></div></div>
+
+      <div class="msg"><div class="ua" style="background:#a695e7">Н</div>
+        <div class="bub"><span class="nm" style="color:#7a64d0">Наталья Симунова</span>А вообще, Лизок, я очень рада, что наконец-то пришла к тебе в клуб! Даже не ожидала получить столько пользы!!!<br>1) начала избавляться от вещей, что в моём случае прям подвиг!<br>2) получаю доп. доход;<br>3) это уже стало как игра, как драйв! Заказы просто окрыляют;<br>4) научилась уже быстрее и эффективнее выкладывать объявления;<br>5) здесь такое супер приятное пространство девочек с поддержкой!<br>Почти год тянула я с этим входом! Но лучше поздно, чем никогда
+          <div class="ft"><div class="rx"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#e8485b" d="M12 21 4.7 13.9A5 5 0 0 1 12 7.2a5 5 0 0 1 7.3 6.7z"/></svg>4</span></div><span class="tm">09:43</span></div></div></div>
+
+      <div class="msg"><div class="ua" style="background:#ee7aae">В</div>
+        <div class="bub"><span class="nm" style="color:#c9508a">Вероника</span>Я в июле так <mark>клубнику, малину на 60к продала</mark>… и отдельно считала за лето — продала зелени: лук, укроп, петрушка… <mark>зелень вся вышла на 10к</mark>, я так неожидала, если честно… даже при сборах в школу, в садик девчонок своих я в принципе не ощутила фин. нагрузки
+          <div class="ft"><div class="rx"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f08a24" d="M12 2c.6 3.2 4.8 5.3 4.8 10a4.8 4.8 0 0 1-9.6 0c0-2.4 1.3-3.6 2.4-4.6.1 1.7.9 2.8 2 3.2-.5-3.2.1-6 .4-8.6z"/></svg>13</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#e8485b" d="M12 21 4.7 13.9A5 5 0 0 1 12 7.2a5 5 0 0 1 7.3 6.7z"/></svg>2</span></div><span class="tm">05:48</span></div></div></div>
+
+      <div class="msg"><div class="ua" style="background:#faa774">Ю</div>
+        <div class="bub"><span class="nm" style="color:#d0773a">Юля Дрягина</span><span class="tag-h">#заказ</span><br>Сегодня я магистр ВБ-ресейла. <mark>За ночь 11 заказов</mark> и ещё скромненько 3 на Авито
+          <div class="ft"><div class="rx"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f08a24" d="M12 2c.6 3.2 4.8 5.3 4.8 10a4.8 4.8 0 0 1-9.6 0c0-2.4 1.3-3.6 2.4-4.6.1 1.7.9 2.8 2 3.2-.5-3.2.1-6 .4-8.6z"/></svg>39</span></div><span class="tm">09:28</span></div></div></div>
+
+      <div class="msg"><div class="ua" style="background:#6ec9cb">У</div>
+        <div class="bub"><span class="nm" style="color:#2e9ea1">Участница клуба</span><span class="tag-h">#итогимесяца</span><br>Всего продано <mark>183 позиции на сумму 292 596 рублей</mark>. А теперь реальные деньги считаем из этой суммы… И остаётся <mark>чистая прибыль 82 954 рубля</mark>. Из них 29 позиций своих б/у вещей на сумму 14 113. Считаю, очень хороший месяц получился.
+          <div class="ft"><div class="rx"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f08a24" d="M12 2c.6 3.2 4.8 5.3 4.8 10a4.8 4.8 0 0 1-9.6 0c0-2.4 1.3-3.6 2.4-4.6.1 1.7.9 2.8 2 3.2-.5-3.2.1-6 .4-8.6z"/></svg>7</span></div><span class="tm">13:13</span></div></div></div>
+    </div>
+    <div class="input"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.4 11-8.9 8.9a5.5 5.5 0 0 1-7.8-7.8l8.9-8.9a3.7 3.7 0 0 1 5.2 5.2l-8.9 8.9a1.8 1.8 0 0 1-2.6-2.6l8.2-8.2"/></svg><span class="f">Сообщение</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4"/></svg></div>
+  </div>
+  <p class="note">Тексты сообщений — дословно, длинные фрагменты сокращены «…».</p>
+</section>
+
+<!-- ===================== HTML-БЛОК 9: КАЛЬКУЛЯТОР ===================== -->
 <section class="ek-calc pad">
   <div class="eyebrow">Проверь себя</div>
   <h2>Сколько денег <em>лежит у тебя дома?</em></h2>
@@ -376,50 +580,23 @@
   <p class="lead" style="font-size:11px;margin-top:10px">Средние цены б/у вещей — ориентир, не обещание. <span class="ph">цены сверить с Лизой</span></p>
 </section>
 
-<!-- ===================== HTML-БЛОК 7 или ШТАТНАЯ ГАЛЕРЕЯ: ОТЗЫВЫ ===================== -->
-<section class="ek-rev pad">
-  <div class="eyebrow">Из чата клуба</div>
-  <h2>Что пишут <em>участницы</em></h2>
-  <p class="lead">Настоящие сообщения из чата, без постановки. Листай →</p>
-  <div class="shots">
-    <div class="shot"><div class="bub">Девочки, продала пуховик за 2 дня после того, как поменяла фото!</div><div class="line" style="width:80%"></div><div class="line" style="width:60%"></div><div class="bub r">Ура, поздравляем!</div><div class="cap">Скрин №1</div></div>
-    <div class="shot"><div class="bub">Итог месяца: +750 бельё, +1300 толстовка…</div><div class="line" style="width:70%"></div><div class="line" style="width:85%"></div><div class="line" style="width:50%"></div><div class="cap">Скрин №2</div></div>
-    <div class="shot"><div class="bub">Лиза, спасибо за таблицу лимитов, наконец поняла…</div><div class="line" style="width:75%"></div><div class="line" style="width:65%"></div><div class="cap">Скрин №3</div></div>
-  </div>
-  <p class="lead" style="font-size:11px;margin-top:10px"><span class="ph">Нужно 5–10 реальных скринов от Лизы</span> · можно сделать штатной галереей Taplink</p>
-</section>
-
-<!-- ===================== HTML-БЛОК 8: ОБО МНЕ ===================== -->
-<section class="ek-me pad">
-  <div class="eyebrow">Обо мне</div>
-  <h2>Я Лиза. Продаю на Авито <em>больше 10 лет</em></h2>
-  <div class="ph-photo"><img src="assets/fur.jpg" alt="Лиза Чайкина"></div>
-  <p>За это время набила много шишек: объявления без откликов, ошибки с ценами, странные отзывы. Выучилась на авитолога, разобралась в алгоритмах и нюансах — и поняла, как продавать быстро и стабильно.</p>
-  <p>Всё это я собрала в клуб: чтобы тебе не пришлось проходить тот же путь методом проб и ошибок.</p>
-  <div class="bento">
-    <div><b><span class="ph">000 000 ₽</span></b><span>заработала на Авито за <span class="ph">период</span></span></div>
-    <div><b><span class="ph">000+</span></b><span>проданных вещей</span></div>
-    <div><b><span class="ph">000</span></b><span>участниц в клубе</span></div>
-  </div>
-</section>
-
-<!-- ===================== HTML-БЛОК: ФОТО-ПАУЗА ===================== -->
+<!-- ===================== HTML-БЛОК 10: ФОТО-ПАУЗА ===================== -->
 <section class="ek-break">
-  <img src="assets/sofa.jpg" alt="">
-  <p>Продавать на Авито можно спокойно — <em>без суеты и угадайки.</em></p>
+  <img src="assets/break.jpg?v=2" alt="">
+  <p>«Я верю, что ненужные вещи могут стать деньгами, а грамотные продажи — <em>реальным инструментом для достижения финансовых целей</em>»<span>Елизавета Чайкина</span></p>
 </section>
 
-<!-- ===================== HTML-БЛОК 9: ЦЕНА ===================== -->
+<!-- ===================== HTML-БЛОК 11: ЦЕНА ===================== -->
 <section class="ek-price pad">
   <div class="eyebrow">Стоимость</div>
   <h2>Один платёж <em>вместо подписки</em></h2>
-  <p class="lead">Обычно обучение по Авито продают доступом на месяц. В клубе — нет.</p>
+  <p class="lead">Алгоритмы Авито постоянно меняются — поэтому доступ к клубу вечный, а все обновления ты получаешь бесплатно.</p>
   <div class="compare">
     <div class="opt sub">
       <div class="lbl">Подписка на месяц</div>
-      <div class="row"><span>1 месяц</span><span>≈ 2 000 ₽</span></div>
-      <div class="row"><span>3 месяца</span><span>≈ 6 000 ₽</span></div>
-      <div class="row"><span>Через год</span><s>доступ закрыт</s></div>
+      <div class="ln"><span>1 месяц</span><span>≈ 2 000 ₽</span></div>
+      <div class="ln"><span>3 месяца</span><span>≈ 6 000 ₽</span></div>
+      <div class="ln"><span>Через год</span><s>доступ закрыт</s></div>
     </div>
     <div class="opt club">
       <span class="ribbon">навсегда</span>
@@ -427,28 +604,48 @@
       <div class="big">4 500 <small>₽</small></div>
       <div class="once">один раз · без продлений · все обновления включены</div>
       <ul>
-        <li>Библиотека: 50+ тем по шагам</li>
-        <li>Эфиры с экспертами и их записи</li>
-        <li>Чат продавцов, рубрики и дни барахолки</li>
-        <li>Контакт поставщика мистери-боксов</li>
-        <li>Мои ответы на твои вопросы</li>
+        <li>База знаний: 10 разделов, 50+ тем</li>
+        <li>Канал и чат поддержки с обратной связью</li>
+        <li>Раз в месяц — разбор объявлений в прямом эфире</li>
+        <li>Записи эфиров с экспертами</li>
+        <li>Таблицы лимитов и статистики продаж</li>
+        <li>Новые разделы — скоро ВБ-ресейл</li>
       </ul>
     </div>
   </div>
   <div class="payback">По сути клуб окупается <b>одной-двумя проданными вещами</b> из тех, что уже лежат у тебя дома.</div>
+  <div class="voice"><div class="ua">Ю</div><p>«Понравилось, что оплата единоразовая… Это одно из лучших вложений!»<span>Юлия Дрягина, участница клуба</span></p></div>
 </section>
 
 <!-- ===================== ШТАТНО: КНОПКА ОПЛАТЫ ===================== -->
 <div class="ek-native">
   <b>ШТАТНАЯ КНОПКА TAPLINK · ОПЛАТА</b>
-  <span class="fake-btn">Хочу в клуб<small>4 500 ₽ · доступ навсегда</small></span>
+  <span class="fake-btn">Вступить в Авито-клуб<small>4 500 ₽ · доступ навсегда</small></span>
 </div>
-<section class="ek-price" style="padding:0 22px 44px">
-  <div class="vip"><strong>Опционально — второй тариф:</strong> «Клуб + личный разбор профиля» за <span class="ph">0 000 ₽</span>. Работает как ценовой якорь: на его фоне 4 500 выглядят очевидным выбором. Решает Лиза.</div>
+<section class="ek-price" style="padding:0 22px 48px">
   <p class="legal">Результат зависит от товаров, спроса и твоих действий. Клуб — образовательный продукт и не гарантирует доход. Не является официальным проектом Авито.</p>
 </section>
 
-<!-- ===================== HTML-БЛОК 10: ЧЕК-ЛИСТ ===================== -->
+<!-- ===================== HTML-БЛОК 12: РЕСЕЙЛ ===================== -->
+<section class="ek-resale pad">
+  <div class="eyebrow">Новое направление</div>
+  <h2>Профессия <em>ресейлера</em></h2>
+  <div class="photo-card pic"><img src="assets/resale.jpg?v=2" alt="Елизавета Чайкина с посылками"></div>
+  <p class="offer">Зарабатывай на продаже чужих вещей от 100к, узнай все нюансы Авито и профессии.</p>
+  <div class="proofs">
+    <div class="proof"><b>750 000 ₽</b><p>заработали на продаже мебели из квартиры знакомого перед ремонтом — участница клуба</p></div>
+    <div class="proof"><b>8–10 тыс. в неделю</b><p>«Ресейлером я стала благодаря Елизавете и этому чату. Я чётко соблюдаю все её рекомендации» — участница клуба</p></div>
+  </div>
+</section>
+<div class="ek-gap"></div>
+<!-- ===================== ШТАТНО: КНОПКА → TELEGRAM ===================== -->
+<div class="ek-native">
+  <b>ШТАТНАЯ КНОПКА TAPLINK · ССЫЛКА В TELEGRAM</b>
+  <span class="fake-btn dark">Канал и обучение профессии ресейлера<small>подробнее в Telegram</small></span>
+</div>
+<div class="ek-gap" style="height:40px"></div>
+
+<!-- ===================== HTML-БЛОК 13: ЧЕК-ЛИСТ ===================== -->
 <section class="ek-lead">
   <div class="eyebrow">Бесплатно</div>
   <h2>Пока думаешь — <em>забери чек-лист</em></h2>
@@ -458,7 +655,7 @@
 <div class="ek-gap"></div>
 <div class="ek-native">
   <b>ШТАТНО · ФОРМА / КНОПКА МЕССЕНДЖЕРА</b>
-  «Получить чек-лист» → подписка на Telegram Лизы, бот отдаёт PDF
+  «Получить чек-лист» → Telegram Лизы <span class="ph">чек-лист нужно подготовить</span>
 </div>
 <div class="ek-gap"></div>
 
@@ -466,12 +663,11 @@
 <div class="ek-native" style="text-align:left">
   <b style="text-align:center">ШТАТНЫЙ БЛОК TAPLINK · ВОПРОСЫ</b>
   <div style="margin-top:8px">
-  • Подойдёт ли клуб новичку?<br>
-  • Нужно ли что-то закупать? — нет, начать можно с вещей из дома<br>
-  • Как я получу доступ после оплаты? <span class="ph">VK / TG?</span><br>
-  • «Навсегда» — это правда навсегда?<br>
-  • Можно ли задавать вопросы?<br>
-  • Кому клуб НЕ подойдёт? — недвижимость, авто, услуги, крупный товарный бизнес<br>
+  • Подойдёт ли клуб новичку? — Да, если только начинаешь и не знаешь, с чего начать<br>
+  • Смогу ли совмещать с работой или декретом? — Да, и даже на пенсии<br>
+  • Что значит «навсегда»? — Оплата разовая, материалы и обновления остаются с тобой<br>
+  • Можно ли задавать вопросы? — Да, в чате поддержки с обратной связью<br>
+  • Как я получу доступ после оплаты? <span class="ph">VK / Telegram?</span><br>
   • Есть ли возврат? <span class="ph">уточнить</span>
   </div>
 </div>
@@ -479,7 +675,7 @@
 
 <!-- ===================== ШТАТНО: КОНТАКТЫ И ДОКУМЕНТЫ ===================== -->
 <div class="ek-native">
-  <b>ШТАТНО · «Остались вопросы? Напиши мне» → Telegram</b>
+  <b>ШТАТНО · «Остались вопросы? Напиши мне» → Telegram @eliza_kry</b>
   соцсети · оферта · политика конфиденциальности · реквизиты <span class="ph">ИП / самозанятая</span>
 </div>
 <div class="ek-gap" style="height:40px"></div>
