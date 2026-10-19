@@ -163,7 +163,10 @@
 .ek-cases .case-head{display:flex;gap:14px;align-items:center}
 .ek-cases .case-ava{width:68px;height:68px;border-radius:50%;overflow:hidden;flex:0 0 68px;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--line)}
 .ek-cases .case-ava img{width:100%;height:100%;object-fit:cover;display:block}
-.ek-cases .case-head+.sub{margin-top:10px}
+.ek-cases .pill{display:inline-block;margin-top:6px;background:var(--accent-soft);color:var(--accent);font-size:12.5px;font-weight:700;line-height:1.3;padding:6px 11px;border-radius:14px}
+.ek-cases .mom .pill{background:#3b3935;color:var(--pale);margin-top:8px}
+.ek-cases .case-head{align-items:flex-start}
+.ek-cases .case-head h3{margin-top:2px}
 .ek-cases .case h3{font-size:20px;font-weight:800;letter-spacing:-.02em;line-height:1.2;margin:4px 0 2px}
 .ek-cases .case .sub{font-size:13px;color:var(--muted);line-height:1.4}
 .ek-cases .ab{display:grid;grid-template-columns:1fr;gap:8px;margin:16px 0}
@@ -232,6 +235,8 @@
 
 /* ============ 9. КАЛЬКУЛЯТОР ============ */
 .ek-calc{background:var(--sand)}
+.ek-calc .tap{display:inline-flex;align-items:center;gap:8px;background:var(--graphite);color:#fff;font-weight:700;font-size:14px;padding:9px 14px;border-radius:22px}
+.ek-calc .tap .ic{width:18px;height:18px}
 .ek-calc .items{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
 .ek-calc button{font:inherit;font-size:13px;font-weight:600;border:1.5px solid var(--sand-2);background:var(--paper);color:var(--ink);padding:9px 13px;border-radius:30px;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
 .ek-calc button[aria-pressed="true"]{background:var(--graphite);border-color:var(--graphite);color:#fff}
@@ -252,6 +257,10 @@
 .ek-break p span{display:block;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#e9e2d6;margin-top:12px}
 
 /* ============ 11. ЦЕНА ============ */
+.ek-price .forever{display:flex;gap:12px;align-items:flex-start;background:var(--accent-soft);border-radius:16px;padding:14px 16px;font-size:14.5px;line-height:1.45}
+.ek-price .forever b{color:var(--accent)}
+.ek-price .fi{width:34px;height:34px;flex:0 0 34px;border-radius:50%;background:#fff;color:var(--accent);display:flex;align-items:center;justify-content:center}
+.ek-price .fi .ic{width:18px;height:18px}
 .ek-price .compare{display:grid;gap:10px;margin:24px 0}
 .ek-price .opt{border-radius:18px;padding:18px}
 .ek-price .opt.sub{border:1.5px solid var(--line);color:var(--muted)}
@@ -406,7 +415,6 @@
     <div>Описание с замерами отвечает на вопросы заранее</div>
   </div>
   <div class="quote-ad">«Раньше просто нажимала „опубликовать“, сейчас всё делаю по-другому и вижу результат».<span>Анастасия Лодыгина, участница клуба</span></div>
-  <p class="note">Карточки — иллюстрация. <span class="ph">Можно заменить реальным «было / стало» Лизы</span></p>
 </section>
 
 <!-- ===================== HTML-БЛОК 5: БИБЛИОТЕКА ===================== -->
@@ -478,8 +486,7 @@
 
   <div class="case">
     <div class="case-head"><div class="case-ava"><img src="assets/case4.jpg?v=1" alt="Анастасия Воскресенская" style="object-position:40% 20%"></div><div><div class="case-no">Кейс №1</div>
-    <h3>Анастасия Воскресенская</h3></div></div>
-    <div class="sub">Как из редких продаж выйти на стабильный доход на Авито</div>
+    <h3>Анастасия Воскресенская</h3><span class="pill">Как из редких продаж выйти на стабильный доход на Авито</span></div></div>
     <div class="ab">
       <div class="pt a"><small>Точка А</small><ul><li>Ранее не сильно использовала Авито для продаж: выставляла раз в полгода что-то, особо ничего не брали, и я отдавала бесплатно</li><li>Сомнения были, была убеждена, что на Авито ничего не берут и это пустая трата времени</li></ul></div>
       <div class="pt b"><small>Точка Б</small>Сейчас активно продаю, выходит от 25 тыс. и выше<span class="big">50 000 ₽</span>в этом месяце</div>
@@ -489,8 +496,7 @@
 
   <div class="case">
     <div class="case-head"><div class="case-ava"><img src="assets/case2.jpg?v=1" alt="Наталья Симунова" style="object-position:50% 12%"></div><div><div class="case-no">Кейс №2</div>
-    <h3>Наталья Симунова</h3></div></div>
-    <div class="sub">Как превратить случайные продажи в стабильный доход</div>
+    <h3>Наталья Симунова</h3><span class="pill">Как превратить случайные продажи в стабильный доход</span></div></div>
     <div class="ab">
       <div class="pt a"><small>Точка А</small><ul><li>Аккаунт на Авито с 2017 года</li><li>Периодически выкладывала б/у вещи</li><li>Объявления оформляла интуитивно</li><li>Продажи были случайные, без плана</li></ul></div>
       <div class="pt b"><small>Точка Б</small>Заработала с момента вступления в клуб<span class="big">60 000 ₽</span><div class="months"><span>Май — 33 000 ₽</span><span>Июнь — 24 000 ₽</span></div></div>
@@ -500,8 +506,7 @@
 
   <div class="case">
     <div class="case-head"><div class="case-ava"><img src="assets/case1.jpg?v=1" alt="Анастасия Лодыгина" style="object-position:50% 25%"></div><div><div class="case-no">Кейс №3</div>
-    <h3>Анастасия Лодыгина</h3></div></div>
-    <div class="sub">Как из редких продаж выйти на стабильный доход на Авито</div>
+    <h3>Анастасия Лодыгина</h3><span class="pill">Как из редких продаж выйти на стабильный доход на Авито</span></div></div>
     <div class="ab">
       <div class="pt a"><small>Точка А</small><ul><li>Продавала всё подряд: одежду, игрушки, технику</li><li>2–3 продажи в месяц</li><li>Доход до 1 000 ₽ в среднем</li><li>Во многие вещи — вообще тишина</li></ul></div>
       <div class="pt b"><small>Точка Б</small>Стабильный доход только на Авито<span class="big">15 000–17 000 ₽</span>в месяц · иногда выходит от 10 000 до 40 000 ₽</div>
@@ -511,8 +516,7 @@
 
   <div class="case">
     <div class="case-head"><div class="case-ava"><img src="assets/case3.jpg?v=1" alt="Юлия Дрягина" style="object-position:50% 20%"></div><div><div class="case-no">Кейс №4</div>
-    <h3>Юлия Дрягина</h3></div></div>
-    <div class="sub">Как из ненужных вещей выйти на доход 16–18 тыс. рублей</div>
+    <h3>Юлия Дрягина</h3><span class="pill">Как из ненужных вещей выйти на доход 16–18 тыс. рублей</span></div></div>
     <div class="ab">
       <div class="pt a"><small>Точка А</small><ul><li>Начала с детских вещей осенью 2024</li><li>Продавала только самовывозом, боясь освоить доставку</li><li>В среднем — около 3–5 тысяч рублей</li></ul></div>
       <div class="pt b"><small>Точка Б</small>60–70 проданных товаров, а в сумме<span class="big">16–18 тысяч ₽</span></div>
@@ -523,7 +527,7 @@
   <div class="case mom">
     <div class="case-no">Самая первая ученица</div>
     <h3>Елена Крючкова — мама Лизы</h3>
-    <div class="sub">Всё началось с переезда в дом</div>
+    <span class="pill">Всё началось с переезда в дом</span>
     <div class="big">370 000 ₽</div>
     <div class="sub">самая крупная продажа — икона</div>
     <p class="q">«Вещей после двух детей осталось очень много, квартиру нужно было сдать чистой. Так Лиза познакомила меня с Авито. И понеслось… сижу вплотную уже несколько лет. Авито — моя жизнь».</p>
@@ -535,7 +539,6 @@
   <div class="hd">
     <div class="eyebrow">Без постановки</div>
     <h2>Что пишут <em>в чате клуба</em></h2>
-    <p class="lead">Сообщения участниц — так, как они их написали.</p>
   </div>
   <div class="phone">
     <div class="bar">
@@ -581,14 +584,13 @@
     </div>
     <div class="input"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.4 11-8.9 8.9a5.5 5.5 0 0 1-7.8-7.8l8.9-8.9a3.7 3.7 0 0 1 5.2 5.2l-8.9 8.9a1.8 1.8 0 0 1-2.6-2.6l8.2-8.2"/></svg><span class="f">Хочу в клуб…</span><a class="write" href="https://t.me/eliza_kry" target="_blank" rel="noopener">Написать<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg></a></div>
   </div>
-  <p class="note">Листай переписку внутри экрана. Тексты сообщений — дословно, длинные фрагменты сокращены «…».</p>
 </section>
 
 <!-- ===================== HTML-БЛОК 9: КАЛЬКУЛЯТОР ===================== -->
 <section class="ek-calc pad">
   <div class="eyebrow">Проверь себя</div>
   <h2>Сколько денег <em>лежит у тебя дома?</em></h2>
-  <p class="lead">Отметь, что есть у тебя без дела.</p>
+  <p class="tap"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V10"/><path d="M12 10V8.5a1.5 1.5 0 0 1 3 0V11"/><path d="M15 10.5a1.5 1.5 0 0 1 3 0V15a6 6 0 0 1-6 6h-1a6 6 0 0 1-5-2.7L3.6 15a1.6 1.6 0 0 1 2.6-1.8L9 15.5"/></svg>Отметь, что есть у тебя без дела</p>
   <div class="items" id="ekItems">
     <button type="button" data-v="3500" aria-pressed="false">Куртка / пуховик</button>
     <button type="button" data-v="1500" aria-pressed="false">Обувь</button>
@@ -607,7 +609,6 @@
     <div class="bar"><i id="ekBar"></i></div>
     <div class="hint" id="ekHint">Клуб стоит <b>4 500 ₽</b> — посмотрим, окупится ли.</div>
   </div>
-  <p class="lead" style="font-size:11px;margin-top:10px">Средние цены б/у вещей — ориентир, не обещание. <span class="ph">цены сверить с Лизой</span></p>
 </section>
 
 <!-- ===================== HTML-БЛОК 10: ФОТО-ПАУЗА ===================== -->
@@ -620,7 +621,7 @@
 <section class="ek-price pad">
   <div class="eyebrow">Стоимость</div>
   <h2>Один платёж <em>вместо подписки</em></h2>
-  <p class="lead">Алгоритмы Авито постоянно меняются — поэтому доступ к клубу вечный, а все обновления ты получаешь бесплатно.</p>
+  <div class="forever"><span class="fi"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 4v5h-5"/></svg></span><p>Алгоритмы Авито постоянно меняются — поэтому <b>доступ к клубу вечный</b>, а все обновления ты получаешь <b>бесплатно</b>.</p></div>
   <div class="compare">
     <div class="opt sub">
       <div class="lbl">Подписка на месяц</div>
