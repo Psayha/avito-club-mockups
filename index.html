@@ -66,8 +66,12 @@
 .ek-letter .me-cap h2 em{color:#f1cdbd}
 .ek-letter .role{font-size:13.5px;line-height:1.4;color:#e9e2d6}
 .ek-letter p+p{margin-top:14px}
-.ek-letter .mom-photo{height:360px;margin:18px 0 4px}
-.ek-letter .mom-photo img{object-position:50% 35%}
+.ek-letter .mom-grid{display:grid;grid-template-columns:1.1fr 1fr;grid-template-rows:1fr 1fr;gap:8px;height:390px;margin:18px 0 4px}
+.ek-letter .mom-grid .photo-card{border-radius:16px}
+.ek-letter .mom-grid .m1{grid-row:1/3}
+.ek-letter .mom-grid .m1 img{object-position:35% 50%}
+.ek-letter .mom-grid .m2 img{object-position:55% 60%}
+.ek-letter .mom-grid .m3 img{object-position:50% 30%}
 .ek-letter .nums{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:20px 0}
 .ek-letter .nums div{background:var(--paper);border-radius:14px;padding:12px 10px}
 .ek-letter .nums b{display:block;font-size:16px;font-weight:800;letter-spacing:-.02em;line-height:1.15}
@@ -153,7 +157,7 @@
 /* ============ 6. ПОДДЕРЖКА ============ */
 .ek-plus .pic{height:320px;margin-top:20px}
 .ek-plus .pic img{object-position:50% 30%}
-.ek-plus .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.ek-plus .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
 .ek-plus .tile{background:#fff;border-radius:16px;padding:16px 14px;border:1px solid var(--line)}
 .ek-plus .tile.wide{grid-column:1/-1;background:var(--accent-soft);border-color:transparent}
 .ek-plus .ico{width:42px;height:42px;border-radius:50%;background:var(--sand);color:var(--accent);display:flex;align-items:center;justify-content:center}
@@ -370,7 +374,11 @@
   </div>
   <p>Более 10 лет я продаю вещи на Авито. Когда-то это было просто хобби, которое помогало мне закрывать кредиты, досрочно гасить ипотеку, копить на путешествия и исполнять мечты.</p>
   <p>В декрете я решила превратить свой опыт в профессию: прошла обучение на авитолога и начала помогать другим продавать на площадке. Так увлечение стало источником дохода, который позволил мне зарабатывать <b>от 30 000 ₽ в месяц</b>, даже когда на руках был маленький ребёнок.</p>
-  <div class="photo-card mom-photo"><img src="assets/mom.jpg?v=1" alt="Елизавета с коляской"></div>
+  <div class="mom-grid">
+    <div class="photo-card m1"><img src="assets/mom.jpg?v=2" alt="Елизавета с коляской"></div>
+    <div class="photo-card m2"><img src="assets/laptop.jpg?v=1" alt="Работа за ноутбуком"></div>
+    <div class="photo-card m3"><img src="assets/kid.jpg?v=1" alt="Елизавета с ребёнком за ноутбуком"></div>
+  </div>
   <div class="nums">
     <div><b>10+ лет</b><span>продаю на Авито</span></div>
     <div><b>от&nbsp;30&nbsp;000&nbsp;₽</b><span>в месяц — в декрете</span></div>
@@ -474,7 +482,6 @@
   <div class="eyebrow">Кроме базы знаний</div>
   <h2>Ты не одна <em>со своими вопросами</em></h2>
   <p class="lead">Моя задача — не просто рассказать, как работает Авито, а дать тебе инструменты, которые помогут разобраться в площадке и выстроить собственную систему продаж.</p>
-  <div class="photo-card pic"><img src="assets/community.jpg?v=3" alt="Елизавета с ребёнком за ноутбуком"></div>
   <div class="grid">
     <div class="tile wide"><div class="ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.9-.9L3 21l1.9-5.1A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></svg></div><h3>Канал и чат поддержки с обратной связью</h3><p>Задаёшь вопрос — получаешь ответ. Делимся продажами, помогаем друг другу.</p></div>
     <div class="tile"><div class="ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="15" height="14" rx="2"/><path d="m17 10 5-3v10l-5-3"/></svg></div><h3>Разбор объявлений в эфире</h3><p>Раз в месяц — разбираем объявления участников вживую.</p></div>
