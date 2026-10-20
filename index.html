@@ -59,13 +59,15 @@
 /* ============ 2. ОБО МНЕ (письмо) ============ */
 .ek-letter{background:var(--sand)}
 .ek-letter .me-photo{position:relative;border-radius:22px;overflow:hidden;height:440px;margin:16px 0 22px;background:#d9d4cc}
-.ek-letter .me-photo img{width:100%;height:100%;object-fit:cover;object-position:40% 20%;display:block}
+.ek-letter .me-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;display:block}
 .ek-letter .me-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(24,23,21,.85) 0%,rgba(24,23,21,.35) 30%,transparent 50%)}
 .ek-letter .me-cap{position:absolute;z-index:1;left:18px;right:18px;bottom:18px;color:#fff}
 .ek-letter .me-cap h2{margin:0 0 6px;color:#fff}
 .ek-letter .me-cap h2 em{color:#f1cdbd}
 .ek-letter .role{font-size:13.5px;line-height:1.4;color:#e9e2d6}
 .ek-letter p+p{margin-top:14px}
+.ek-letter .mom-photo{height:360px;margin:18px 0 4px}
+.ek-letter .mom-photo img{object-position:50% 35%}
 .ek-letter .nums{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:20px 0}
 .ek-letter .nums div{background:var(--paper);border-radius:14px;padding:12px 10px}
 .ek-letter .nums b{display:block;font-size:16px;font-weight:800;letter-spacing:-.02em;line-height:1.15}
@@ -150,7 +152,7 @@
 
 /* ============ 6. ПОДДЕРЖКА ============ */
 .ek-plus .pic{height:320px;margin-top:20px}
-.ek-plus .pic img{object-position:50% 40%}
+.ek-plus .pic img{object-position:50% 30%}
 .ek-plus .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
 .ek-plus .tile{background:#fff;border-radius:16px;padding:16px 14px;border:1px solid var(--line)}
 .ek-plus .tile.wide{grid-column:1/-1;background:var(--accent-soft);border-color:transparent}
@@ -329,7 +331,6 @@
 <body style="margin:0;background:#e9e3d9">
 <div class="ek">
 
-<div class="ek-flag">МАКЕТ · <span style="background:#fff3b0;color:#5a4a00;padding:0 4px;border-radius:3px">жёлтым</span> заглушки · пунктир = штатные блоки Taplink</div>
 
 <!-- ===================== HTML-БЛОК 1: ОБЛОЖКА ===================== -->
 <section class="ek-hero">
@@ -364,11 +365,12 @@
 <section class="ek-letter pad">
   <div class="eyebrow">Обо мне</div>
   <div class="me-photo">
-    <img src="assets/letter.jpg?v=3" alt="Елизавета Чайкина">
+    <img src="assets/letter.jpg?v=4" alt="Елизавета Чайкина">
     <div class="me-cap"><h2>Привет, <em>я Лиза</em></h2><div class="role">Елизавета Чайкина — эксперт по продажам на Авито и ресейлу</div></div>
   </div>
   <p>Более 10 лет я продаю вещи на Авито. Когда-то это было просто хобби, которое помогало мне закрывать кредиты, досрочно гасить ипотеку, копить на путешествия и исполнять мечты.</p>
   <p>В декрете я решила превратить свой опыт в профессию: прошла обучение на авитолога и начала помогать другим продавать на площадке. Так увлечение стало источником дохода, который позволил мне зарабатывать <b>от 30 000 ₽ в месяц</b>, даже когда на руках был маленький ребёнок.</p>
+  <div class="photo-card mom-photo"><img src="assets/mom.jpg?v=1" alt="Елизавета с коляской"></div>
   <div class="nums">
     <div><b>10+ лет</b><span>продаю на Авито</span></div>
     <div><b>от&nbsp;30&nbsp;000&nbsp;₽</b><span>в месяц — в декрете</span></div>
@@ -472,7 +474,7 @@
   <div class="eyebrow">Кроме базы знаний</div>
   <h2>Ты не одна <em>со своими вопросами</em></h2>
   <p class="lead">Моя задача — не просто рассказать, как работает Авито, а дать тебе инструменты, которые помогут разобраться в площадке и выстроить собственную систему продаж.</p>
-  <div class="photo-card pic"><img src="assets/community.jpg?v=2" alt="Продавец и покупательница"></div>
+  <div class="photo-card pic"><img src="assets/community.jpg?v=3" alt="Елизавета с ребёнком за ноутбуком"></div>
   <div class="grid">
     <div class="tile wide"><div class="ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.9-.9L3 21l1.9-5.1A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></svg></div><h3>Канал и чат поддержки с обратной связью</h3><p>Задаёшь вопрос — получаешь ответ. Делимся продажами, помогаем друг другу.</p></div>
     <div class="tile"><div class="ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="15" height="14" rx="2"/><path d="m17 10 5-3v10l-5-3"/></svg></div><h3>Разбор объявлений в эфире</h3><p>Раз в месяц — разбираем объявления участников вживую.</p></div>
@@ -702,8 +704,8 @@
   • Смогу ли совмещать с работой или декретом? — Да, и даже на пенсии<br>
   • Что значит «навсегда»? — Оплата разовая, материалы и обновления остаются с тобой<br>
   • Можно ли задавать вопросы? — Да, в чате поддержки с обратной связью<br>
-  • Как я получу доступ после оплаты? <span class="ph">VK / Telegram?</span><br>
-  • Есть ли возврат? <span class="ph">уточнить</span>
+  • Как я получу доступ после оплаты? — Тебе на почту придёт письмо. Сам клуб с базой знаний — в Telegram, основной чат с поддержкой — во ВКонтакте<br>
+  • Есть ли возврат? — Возврата после оплаты нет
   </div>
 </div>
 <div class="ek-gap"></div>
@@ -711,7 +713,7 @@
 <!-- ===================== ШТАТНО: КОНТАКТЫ И ДОКУМЕНТЫ ===================== -->
 <div class="ek-native">
   <b>ШТАТНО · «Остались вопросы? Напиши мне» → Telegram @eliza_kry</b>
-  соцсети · оферта · политика конфиденциальности · реквизиты <span class="ph">ИП / самозанятая</span>
+  соцсети · оферта · политика конфиденциальности · реквизиты: самозанятая Чайкина Елизавета Сергеевна, ИНН 504227291394
 </div>
 <div class="ek-gap" style="height:40px"></div>
 
