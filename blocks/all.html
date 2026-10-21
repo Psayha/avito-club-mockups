@@ -1,0 +1,737 @@
+<!-- Taplink · ВСЯ СТРАНИЦА одним HTML-блоком. Вставлять целиком в блок «HTML-код». -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+.ek{
+  --paper:#f7f3ec; --sand:#ece3d4; --sand-2:#e2d6c3;
+  --ink:#1f1e1c; --graphite:#2b2a27; --muted:#6f6a61; --line:#d9cfbf;
+  --accent:#b4553a; --accent-soft:#f1dcd2; --ok:#4f6b4a; --pale:#e3a58f;
+  --sans:'Manrope',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  font-family:var(--sans); color:var(--ink); background:var(--paper);
+  max-width:480px; margin:0 auto; -webkit-font-smoothing:antialiased;
+  font-size:15px; line-height:1.6; overflow:hidden;
+}
+.ek *{box-sizing:border-box}
+.ek h1,.ek h2,.ek h3,.ek p{margin:0}
+.ek .ek-pad{padding:56px 22px}
+.ek .ek-eyebrow{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.ek h2{font-weight:800;font-size:29px;line-height:1.15;letter-spacing:-.03em;margin:12px 0 16px}
+.ek h2 em{font-style:normal;color:var(--accent)}
+.ek .ek-lead{color:var(--muted)}
+.ek .ek-ph{background:#fff3b0;color:#5a4a00;padding:0 4px;border-radius:3px;font-weight:700}
+.ek .ek-ic{width:1.05em;height:1.05em;display:inline-block;vertical-align:-.18em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ek .ek-photo-card{border-radius:20px;overflow:hidden;background:var(--sand)}
+.ek .ek-photo-card img{width:100%;height:100%;object-fit:cover;display:block}
+@keyframes ekPop{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes ekDot{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
+@media (prefers-reduced-motion:reduce){.ek-chat .ek-wall{scroll-behavior:auto}.ek-chat .ek-msg.ek-pop,.ek-chat .ek-dots i{animation:none}}
+.ek .ek-cta-btn{display:block;text-align:center;text-decoration:none;background:var(--accent);color:#fff;border-radius:14px;padding:15px 16px 14px;margin-top:20px;-webkit-tap-highlight-color:transparent;transition:transform .12s}
+.ek .ek-cta-btn:active{transform:scale(.98)}
+.ek .ek-cta-btn .ek-t{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:16px;font-weight:800;line-height:1.25}
+.ek .ek-cta-btn .ek-t .ek-ic{width:18px;height:18px;stroke-width:2.4;flex:0 0 18px}
+.ek .ek-cta-btn small{display:block;font-size:12px;font-weight:600;opacity:.85;margin-top:3px}
+.ek .ek-cta-btn.ek-light{background:#fff;color:var(--ink)}
+.ek .ek-cta-btn.ek-light small{color:var(--muted);opacity:1}
+@media (prefers-reduced-motion:reduce){.ek *{transition:none!important}}
+.ek-hero{padding:18px 16px 30px}
+.ek-hero .ek-photo{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/4.6;background:#d9d4cc}
+.ek-hero .ek-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block}
+.ek-hero .ek-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(20,19,17,.78) 100%)}
+.ek-hero .ek-badges{position:absolute;left:14px;right:14px;bottom:14px;z-index:1;display:flex;flex-wrap:wrap;gap:6px}
+.ek-hero .ek-badge{background:rgba(247,243,236,.94);color:var(--ink);font-size:12px;font-weight:600;padding:7px 11px;border-radius:30px}
+.ek-hero .ek-badge .ek-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);margin-right:7px;vertical-align:1px}
+.ek-hero .ek-copy{padding:26px 6px 22px}
+.ek-hero h1{font-weight:800;font-size:34px;line-height:1.1;letter-spacing:-.035em;margin:12px 0 14px}
+.ek-hero h1 em{font-style:normal;color:var(--accent)}
+.ek-hero .ek-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:22px 0 0}
+.ek-hero .ek-fact{background:var(--sand);border-radius:14px;padding:12px 10px}
+.ek-hero .ek-fact b{display:block;font-size:22px;font-weight:800;line-height:1.1;letter-spacing:-.02em}
+.ek-hero .ek-fact span{display:block;font-size:11px;line-height:1.35;color:var(--muted);margin-top:4px}
+.ek-letter{background:var(--sand)}
+.ek-letter .ek-me-photo{position:relative;border-radius:22px;overflow:hidden;height:440px;margin:16px 0 22px;background:#d9d4cc}
+.ek-letter .ek-me-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;display:block}
+.ek-letter .ek-me-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(24,23,21,.85) 0%,rgba(24,23,21,.35) 30%,transparent 50%)}
+.ek-letter .ek-me-cap{position:absolute;z-index:1;left:18px;right:18px;bottom:18px;color:#fff}
+.ek-letter .ek-me-cap h2{margin:0 0 6px;color:#fff}
+.ek-letter .ek-me-cap h2 em{color:#f1cdbd}
+.ek-letter .ek-role{font-size:13.5px;line-height:1.4;color:#e9e2d6}
+.ek-letter p+p{margin-top:14px}
+.ek-letter .ek-mom-grid{display:grid;grid-template-columns:1.1fr 1fr;grid-template-rows:1fr 1fr;gap:8px;height:390px;margin:18px 0 4px}
+.ek-letter .ek-mom-grid .ek-photo-card{border-radius:16px}
+.ek-letter .ek-mom-grid .ek-m1{grid-row:1/3}
+.ek-letter .ek-mom-grid .ek-m1 img{object-position:35% 50%}
+.ek-letter .ek-mom-grid .ek-m2 img{object-position:55% 60%}
+.ek-letter .ek-mom-grid .ek-m3 img{object-position:50% 30%}
+.ek-letter .ek-nums{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:20px 0}
+.ek-letter .ek-nums div{background:var(--paper);border-radius:14px;padding:12px 10px}
+.ek-letter .ek-nums b{display:block;font-size:16px;font-weight:800;letter-spacing:-.02em;line-height:1.15}
+.ek-letter .ek-nums span{display:block;font-size:11px;color:var(--muted);line-height:1.35;margin-top:4px}
+.ek-letter .ek-sign{font-weight:800;font-size:20px;letter-spacing:-.02em;margin-top:22px}
+.ek-letter .ek-sign small{display:block;font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.ek-fit .ek-row-fit{display:flex;gap:14px;align-items:flex-start;padding:15px 0;border-top:1px solid var(--line)}
+.ek-fit .ek-row-fit:last-of-type{border-bottom:1px solid var(--line)}
+.ek-fit .ek-n{font-size:13px;font-weight:800;color:#fff;background:var(--accent);min-width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.ek-fit .ek-row-fit p{font-weight:600;line-height:1.45;padding-top:3px}
+.ek-fit .ek-myths{display:grid;gap:10px;margin-top:24px}
+.ek-fit .ek-myth{border-radius:18px;padding:18px;background:var(--sand)}
+.ek-fit .ek-myth.ek-dark{background:var(--graphite);color:#efe8dc}
+.ek-fit .ek-myth b{display:block;font-size:17px;line-height:1.3;letter-spacing:-.01em;margin-bottom:6px}
+.ek-fit .ek-myth p{font-size:14px;color:var(--muted)}
+.ek-fit .ek-myth.ek-dark p{color:#c9c1b4}
+.ek-fit .ek-myth.ek-dark b{color:#fff}
+.ek-ba{background:#fff}
+.ek-ba .ek-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px;align-items:stretch}
+.ek-ba .ek-card-ad{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 1px 0 var(--line),0 10px 30px -18px rgba(40,30,20,.35);border:1px solid #eee7dc;position:relative}
+.ek-ba .ek-tag-ad{position:absolute;top:8px;left:8px;z-index:3;font-size:9.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:4px 7px;border-radius:20px}
+.ek-ba .ek-before .ek-tag-ad{background:#e6e3de;color:#6d6860}
+.ek-ba .ek-after .ek-tag-ad{background:var(--accent);color:#fff}
+.ek-ba .ek-img-ad{aspect-ratio:1/1;position:relative;overflow:hidden}
+.ek-ba .ek-img-ad img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:1}
+.ek-ba .ek-before .ek-img-ad{background:radial-gradient(ellipse at 40% 60%,#9b958a,#6f6a62 70%);filter:saturate(.4)}
+.ek-ba .ek-before .ek-img-ad:after{content:'';position:absolute;left:38%;top:22%;width:26%;height:62%;background:#4f4b45;border-radius:30% 30% 8px 8px;transform:rotate(-9deg);opacity:.8}
+.ek-ba .ek-after .ek-img-ad{background:linear-gradient(160deg,#f4efe7,#e7dccb)}
+.ek-ba .ek-after .ek-img-ad:before{content:'';position:absolute;left:50%;top:14%;width:30%;height:74%;transform:translateX(-50%);background:linear-gradient(180deg,#3d4a3a,#2c3529);border-radius:38% 38% 10px 10px;box-shadow:0 18px 22px -12px rgba(0,0,0,.35)}
+.ek-ba .ek-after .ek-img-ad:after{z-index:2;content:'1/8';position:absolute;right:10px;bottom:10px;background:rgba(0,0,0,.45);color:#fff;font-size:10px;padding:3px 7px;border-radius:10px}
+.ek-ba .ek-card-ad{display:flex;flex-direction:column}
+.ek-ba .ek-body-ad{padding:10px 10px 12px;flex:1;display:flex;flex-direction:column}
+.ek-ba .ek-price-ad{font-weight:800;font-size:16px}
+.ek-ba .ek-title-ad{font-size:13px;line-height:1.3;margin:2px 0 6px}
+.ek-ba .ek-before .ek-title-ad{color:#57534c}
+.ek-ba .ek-after .ek-title-ad{color:#1b5fb4;font-weight:600}
+.ek-ba .ek-meta-ad{font-size:11px;line-height:1.35;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 10px}
+.ek-ba .ek-chip-ad{background:#eef4e9;color:var(--ok);font-size:11px;font-weight:700;padding:3px 8px;border-radius:6px}
+.ek-ba .ek-stat-ad{margin-top:auto;padding-top:9px;border-top:1px dashed var(--line);font-size:12.5px;font-weight:800}
+.ek-ba .ek-meta-ad{margin-bottom:9px}
+.ek-ba .ek-nums-ad{display:flex;gap:10px}
+.ek-ba .ek-nums-ad span{display:inline-flex;align-items:center;gap:3px}
+.ek-ba .ek-nums-ad .ek-ic{width:15px;height:15px;stroke-width:2}
+.ek-ba .ek-per-ad{font-size:11px;font-weight:600;color:var(--muted);margin-top:2px}
+.ek-ba .ek-before .ek-stat-ad{color:#8b857b}
+.ek-ba .ek-after .ek-stat-ad{color:var(--ok)}
+.ek-ba .ek-why{margin-top:22px;display:grid;gap:8px}
+.ek-ba .ek-why div{display:flex;gap:10px;font-size:14px;line-height:1.45}
+.ek-ba .ek-why div:before{content:'→';color:var(--accent);font-weight:700}
+.ek-ba .ek-quote-ad{margin-top:20px;padding:16px 18px;border-left:3px solid var(--accent);background:var(--paper);border-radius:0 14px 14px 0;font-size:14px}
+.ek-ba .ek-quote-ad span{display:block;font-size:12px;color:var(--muted);margin-top:6px;font-weight:600}
+.ek-ba .ek-note{font-size:11px;color:var(--muted);margin-top:14px}
+.ek-lib{background:var(--graphite);color:#efe8dc}
+.ek-lib .ek-eyebrow{color:var(--pale)}
+.ek-lib h2 em{color:var(--pale)}
+.ek-lib .ek-lead{color:#b9b1a4}
+.ek-lib .ek-banner{border-radius:20px;overflow:hidden;height:240px;margin-bottom:28px}
+.ek-lib .ek-banner img{width:100%;height:100%;object-fit:cover;object-position:50% 45%;display:block}
+.ek-lib .ek-counters{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#45423d;border-radius:14px;overflow:hidden;margin:24px 0}
+.ek-lib .ek-counters div{background:#33312d;padding:14px 10px;text-align:center}
+.ek-lib .ek-counters b{display:block;font-size:26px;font-weight:800;color:#fff}
+.ek-lib .ek-counters span{font-size:11px;color:#b9b1a4}
+.ek-lib details{border-top:1px solid #45423d}
+.ek-lib details:last-of-type{border-bottom:1px solid #45423d}
+.ek-lib summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:15px 0;font-weight:700;font-size:15px}
+.ek-lib summary::-webkit-details-marker{display:none}
+.ek-lib summary .ek-i{color:var(--pale);min-width:22px;font-weight:700;font-size:13px}
+.ek-lib summary .ek-c{margin-left:auto;font-size:11px;font-weight:600;color:#b9b1a4;background:#3b3935;padding:4px 9px;border-radius:20px;white-space:nowrap}
+.ek-lib summary .ek-c.ek-soon{background:var(--accent);color:#fff}
+.ek-lib summary:after{content:'+';font-size:20px;font-weight:400;color:#b9b1a4;width:14px;text-align:center}
+.ek-lib details[open] summary:after{content:'–'}
+.ek-lib ul{margin:0 0 16px 34px;padding:0;list-style:none}
+.ek-lib li{font-size:13.5px;color:#d6cfc3;padding:4px 0;line-height:1.45}
+.ek-lib li:before{content:'·';color:var(--pale);margin-right:8px;font-weight:800}
+.ek-lib .ek-more{font-size:13px;color:#cfc8bc;margin-top:22px;padding:14px 16px;border:1px solid #45423d;border-radius:14px}
+.ek-plus .ek-pic{height:320px;margin-top:20px}
+.ek-plus .ek-pic img{object-position:50% 30%}
+.ek-plus .ek-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+.ek-plus .ek-tile{background:#fff;border-radius:16px;padding:16px 14px;border:1px solid var(--line)}
+.ek-plus .ek-tile.ek-wide{grid-column:1/-1;background:var(--accent-soft);border-color:transparent}
+.ek-plus .ek-ico{width:42px;height:42px;border-radius:50%;background:var(--sand);color:var(--accent);display:flex;align-items:center;justify-content:center}
+.ek-plus .ek-ico .ek-ic{width:21px;height:21px}
+.ek-plus .ek-tile.ek-wide .ek-ico{background:#fff}
+.ek-plus h3{font-size:15px;font-weight:800;margin:10px 0 4px;line-height:1.25}
+.ek-plus .ek-tile p{font-size:13px;color:var(--muted);line-height:1.45}
+.ek-cases{background:var(--sand)}
+.ek-cases .ek-case{background:var(--paper);border-radius:20px;padding:20px 18px;margin-top:14px}
+.ek-cases .ek-case-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.ek-cases .ek-case-no{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.ek-cases .ek-case-head{display:flex;gap:14px;align-items:center}
+.ek-cases .ek-case-ava{width:68px;height:68px;border-radius:50%;overflow:hidden;flex:0 0 68px;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--line)}
+.ek-cases .ek-case-ava img{width:100%;height:100%;object-fit:cover;display:block}
+.ek-cases .ek-pill{display:inline-block;margin-top:6px;background:var(--accent-soft);color:var(--accent);font-size:12.5px;font-weight:700;line-height:1.3;padding:6px 11px;border-radius:14px}
+.ek-cases .ek-mom .ek-pill{background:#3b3935;color:var(--pale);margin-top:8px}
+.ek-cases .ek-case-head{align-items:flex-start}
+.ek-cases .ek-case-head h3{margin-top:2px}
+.ek-cases .ek-case h3{font-size:20px;font-weight:800;letter-spacing:-.02em;line-height:1.2;margin:4px 0 2px}
+.ek-cases .ek-case .ek-sub{font-size:13px;color:var(--muted);line-height:1.4}
+.ek-cases .ek-ab{display:grid;grid-template-columns:1fr;gap:8px;margin:16px 0}
+.ek-cases .ek-pt{border-radius:14px;padding:12px 14px;font-size:13px;line-height:1.45}
+.ek-cases .ek-pt small{display:block;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px}
+.ek-cases .ek-pt.ek-a{background:#efe9df;color:#5d584f}
+.ek-cases .ek-pt.ek-a small{color:#8f877b}
+.ek-cases .ek-pt.ek-b{background:var(--graphite);color:#efe8dc}
+.ek-cases .ek-pt.ek-b small{color:var(--pale)}
+.ek-cases .ek-pt.ek-b .ek-big{display:block;font-size:26px;font-weight:800;letter-spacing:-.03em;color:#fff;line-height:1.15;margin:2px 0}
+.ek-cases .ek-pt ul{margin:0;padding:0;list-style:none}
+.ek-cases .ek-pt li{padding:2px 0 2px 14px;position:relative}
+.ek-cases .ek-pt li:before{content:'';position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.5}
+.ek-cases .ek-q{font-size:14px;line-height:1.55;padding-left:14px;border-left:3px solid var(--accent)}
+.ek-cases .ek-months{display:flex;gap:8px;margin-top:8px}
+.ek-cases .ek-months span{background:#3b3935;border-radius:8px;padding:4px 9px;font-size:12px;color:#cfc8bc}
+.ek-cases .ek-mom{background:var(--graphite);color:#efe8dc}
+.ek-cases .ek-mom .ek-case-no{color:var(--pale)}
+.ek-cases .ek-mom .ek-sub{color:#b9b1a4}
+.ek-cases .ek-mom .ek-big{font-size:34px;font-weight:800;letter-spacing:-.03em;color:#fff;margin:14px 0 2px;line-height:1.1}
+.ek-cases .ek-mom .ek-q{border-color:var(--pale);color:#d6cfc3;margin-top:14px}
+.ek-chat{padding:56px 0}
+.ek-chat .ek-hd{padding:0 22px}
+.ek-chat .ek-phone{margin:22px 26px 0;border-radius:26px;overflow:hidden;box-shadow:0 24px 50px -28px rgba(30,40,50,.55);border:1px solid #d5dde4}
+.ek-chat .ek-bar{display:flex;align-items:center;gap:10px;background:#fff;padding:10px 12px;border-bottom:1px solid #e6eaee}
+.ek-chat .ek-bar .ek-back{color:#3390ec;display:flex}
+.ek-chat .ek-bar .ek-back .ek-ic{width:22px;height:22px;stroke-width:2.2}
+.ek-chat .ek-bar .ek-gava{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#d07a5c,#b4553a);color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;flex:0 0 40px}
+.ek-chat .ek-bar b{display:block;font-size:15px;line-height:1.2}
+.ek-chat .ek-bar span{font-size:12.5px;color:#8a9097}
+.ek-chat .ek-pin{display:flex;gap:10px;background:#fff;padding:7px 12px;border-bottom:1px solid #e6eaee;font-size:12.5px;line-height:1.35}
+.ek-chat .ek-pin i{width:2px;border-radius:2px;background:#3390ec;flex:0 0 2px}
+.ek-chat .ek-pin b{display:block;color:#3390ec;font-weight:600}
+.ek-chat .ek-pin span{color:#55595e;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ek-chat .ek-screen{position:relative}
+.ek-chat .ek-wall{position:relative;height:clamp(320px,56vh,470px);overflow-y:auto;-webkit-overflow-scrolling:touch;scroll-behavior:smooth;scrollbar-width:thin;background-attachment:local;background-color:#cfe3c4;background-image:radial-gradient(rgba(255,255,255,.35) 1.2px,transparent 1.4px),linear-gradient(160deg,#d7e8c1 0%,#bcd9c6 50%,#a9cdd0 100%);background-size:18px 18px,100% 100%;padding:12px 10px 14px}
+.ek-chat .ek-screen:after{content:'';position:absolute;left:0;right:0;bottom:0;height:46px;background:linear-gradient(0deg,rgba(169,205,208,.95),transparent);pointer-events:none;transition:opacity .3s}
+.ek-chat .ek-screen.ek-end:after{opacity:0}
+.ek-chat .ek-down{position:absolute;z-index:3;right:10px;bottom:12px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:#7d8590;box-shadow:0 3px 12px rgba(0,0,0,.18);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:opacity .25s,transform .25s}
+.ek-chat .ek-down .ek-ic{width:22px;height:22px;stroke-width:2.2}
+.ek-chat .ek-down b{position:absolute;top:-6px;right:-4px;min-width:22px;height:22px;padding:0 6px;border-radius:11px;background:#3390ec;color:#fff;font-size:12px;font-weight:800;line-height:22px;text-align:center}
+.ek-chat .ek-down.ek-hide{opacity:0;transform:scale(.6);pointer-events:none}
+.ek-chat .ek-screen.ek-live .ek-msg.ek-wait{display:none}
+.ek-chat .ek-msg.ek-pop{animation:ekPop .35s ease-out}
+.ek-chat .ek-typing{display:flex;gap:7px;align-items:flex-end;margin-bottom:8px}
+.ek-chat .ek-typing .ek-bub{display:flex;align-items:center;gap:8px;color:#8a9097;font-size:13px;padding:9px 12px}
+.ek-chat .ek-dots{display:inline-flex;gap:3px}
+.ek-chat .ek-dots i{width:6px;height:6px;border-radius:50%;background:#9aa3ab;animation:ekDot 1.2s infinite}
+.ek-chat .ek-dots i:nth-child(2){animation-delay:.15s}
+.ek-chat .ek-dots i:nth-child(3){animation-delay:.3s}
+.ek-chat .ek-bar .ek-st.ek-typing-st{color:#3390ec}
+.ek-chat .ek-day{text-align:center;margin:4px 0 10px}
+.ek-chat .ek-day span{background:rgba(0,0,0,.18);color:#fff;font-size:12px;font-weight:600;padding:3px 10px;border-radius:12px}
+.ek-chat .ek-msg{display:flex;gap:7px;align-items:flex-end;margin-bottom:8px}
+.ek-chat .ek-ua{width:32px;height:32px;border-radius:50%;flex:0 0 32px;color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.ek-chat .ek-bub{background:#fff;border-radius:16px 16px 16px 5px;padding:7px 10px 6px;max-width:86%;font-size:14px;line-height:1.42;color:#111;box-shadow:0 1px 1px rgba(0,0,0,.08)}
+.ek-chat .ek-bub .ek-nm{display:block;font-size:13px;font-weight:700;margin-bottom:2px}
+.ek-chat .ek-bub .ek-tag-h{color:#3390ec}
+.ek-chat .ek-bub .ek-media{display:block;width:calc(100% + 12px);max-width:none;margin:2px -6px 6px;border-radius:12px;background:#eee}
+.ek-chat .ek-bub mark{background:none;color:inherit;font-weight:800}
+.ek-chat .ek-ft{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:5px}
+.ek-chat .ek-rx{display:flex;gap:4px}
+.ek-chat .ek-rx{flex-wrap:wrap}
+.ek-chat .ek-rx .ek-money{background:#e2f4e5;color:#1d7f3a;font-weight:800;padding:2px 8px}
+.ek-chat .ek-rx span{display:inline-flex;align-items:center;gap:3px;background:#e8f1fb;color:#3390ec;font-size:12px;font-weight:700;border-radius:12px;padding:2px 7px 2px 5px}
+.ek-chat .ek-rx svg{width:14px;height:14px}
+.ek-chat .ek-tm{font-size:11px;color:#a0a6ad;margin-left:auto;white-space:nowrap}
+.ek-chat .ek-input{display:flex;align-items:center;gap:10px;background:#fff;padding:9px 10px 9px 14px;border-top:1px solid #e6eaee}
+.ek-chat .ek-input .ek-f{flex:1;color:#a0a6ad;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ek-chat .ek-input .ek-ic{width:22px;height:22px;color:#a0a6ad}
+.ek-chat .ek-write{display:inline-flex;align-items:center;gap:6px;background:#3390ec;color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:10px 14px;border-radius:20px;white-space:nowrap}
+.ek-chat .ek-write .ek-ic{width:16px;height:16px;color:#fff;stroke-width:2.2}
+.ek-chat .ek-note{font-size:11px;color:var(--muted);text-align:center;margin-top:12px;padding:0 22px}
+.ek-calc{background:var(--sand)}
+.ek-calc .ek-tap{display:inline-flex;align-items:center;gap:8px;background:var(--graphite);color:#fff;font-weight:700;font-size:14px;padding:9px 14px;border-radius:22px}
+.ek-calc .ek-tap .ek-ic{width:18px;height:18px}
+.ek-calc .ek-items{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
+.ek-calc button{font:inherit;font-size:13px;font-weight:600;border:1.5px solid var(--sand-2);background:var(--paper);color:var(--ink);padding:9px 13px;border-radius:30px;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.ek-calc button[aria-pressed="true"]{background:var(--graphite);border-color:var(--graphite);color:#fff}
+.ek-calc .ek-result{background:var(--paper);border-radius:18px;padding:20px}
+.ek-calc .ek-sum{font-size:40px;font-weight:800;line-height:1;letter-spacing:-.02em}
+.ek-calc .ek-sum small{font-size:22px}
+.ek-calc .ek-bar{height:8px;background:var(--sand);border-radius:8px;margin:16px 0 8px;overflow:hidden}
+.ek-calc .ek-bar i{display:block;height:100%;width:0;background:var(--accent);border-radius:8px;transition:width .35s}
+.ek-calc .ek-hint{font-size:13px;color:var(--muted)}
+.ek-calc .ek-hint b{color:var(--ink)}
+.ek-break{position:relative;height:500px;overflow:hidden}
+.ek-break img{width:100%;height:100%;object-fit:cover;object-position:50% 0%;display:block}
+.ek-break:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(24,23,21,.92) 0%,rgba(24,23,21,.7) 30%,transparent 50%)}
+.ek-break p{position:absolute;z-index:1;bottom:28px;left:22px;right:22px;font-size:21px;font-weight:800;line-height:1.3;color:#fff;letter-spacing:-.02em}
+.ek-break p em{font-style:normal;color:#f1cdbd}
+.ek-break p span{display:block;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#e9e2d6;margin-top:12px}
+.ek-price .ek-forever{display:flex;gap:12px;align-items:flex-start;background:var(--accent-soft);border-radius:16px;padding:14px 16px;font-size:14.5px;line-height:1.45}
+.ek-price .ek-forever b{color:var(--accent)}
+.ek-price .ek-fi{width:34px;height:34px;flex:0 0 34px;border-radius:50%;background:#fff;color:var(--accent);display:flex;align-items:center;justify-content:center}
+.ek-price .ek-fi .ek-ic{width:18px;height:18px}
+.ek-price .ek-compare{display:grid;gap:10px;margin:24px 0}
+.ek-price .ek-opt{border-radius:18px;padding:18px}
+.ek-price .ek-opt.ek-sub{border:1.5px solid var(--line);color:var(--muted)}
+.ek-price .ek-opt.ek-sub .ek-ln{display:flex;justify-content:space-between;font-size:13px;padding:3px 0}
+.ek-price .ek-opt.ek-sub .ek-ln s{color:#a29a8d}
+.ek-price .ek-opt.ek-club{background:var(--graphite);color:#fff;position:relative}
+.ek-price .ek-opt .ek-lbl{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.ek-price .ek-opt.ek-club .ek-lbl{color:var(--pale)}
+.ek-price .ek-big{font-size:50px;font-weight:800;line-height:1;letter-spacing:-.03em}
+.ek-price .ek-big small{font-size:26px}
+.ek-price .ek-once{font-size:13px;color:#cfc8bc;margin-top:6px}
+.ek-price .ek-ribbon{position:absolute;top:16px;right:16px;background:var(--accent);font-size:11px;font-weight:800;padding:5px 10px;border-radius:20px}
+.ek-price ul{list-style:none;padding:0;margin:16px 0 0;border-top:1px solid #45423d}
+.ek-price li{padding:10px 0;border-bottom:1px solid #45423d;font-size:14px;display:flex;gap:10px}
+.ek-price li:before{content:'';display:inline-block;width:14px;height:14px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/contain no-repeat;flex:0 0 14px;color:var(--pale);margin-top:4px}
+.ek-price .ek-payback{background:var(--accent-soft);border-radius:16px;padding:16px;font-size:14px;line-height:1.5}
+.ek-price .ek-payback b{color:var(--accent)}
+.ek-price .ek-voice{display:flex;gap:12px;align-items:center;margin-top:12px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px}
+.ek-price .ek-voice .ek-ua{width:38px;height:38px;border-radius:50%;background:#7a9e7e;color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;flex:0 0 38px}
+.ek-price .ek-voice p{font-size:13.5px;line-height:1.45}
+.ek-price .ek-voice span{display:block;font-size:12px;color:var(--muted);margin-top:3px}
+.ek-price .ek-legal{font-size:11px;color:var(--muted);margin-top:14px;line-height:1.5}
+.ek-resale{background:var(--graphite);color:#efe8dc}
+.ek-resale .ek-eyebrow{color:var(--pale)}
+.ek-resale h2 em{color:var(--pale)}
+.ek-resale .ek-pic{height:340px;margin:20px 0}
+.ek-resale .ek-pic img{object-position:50% 30%}
+.ek-resale .ek-offer{font-size:17px;font-weight:700;line-height:1.4;color:#fff}
+.ek-resale .ek-proofs{display:grid;gap:10px;margin-top:18px}
+.ek-resale .ek-proof{background:#33312d;border-radius:14px;padding:14px}
+.ek-resale .ek-proof b{display:block;font-size:22px;font-weight:800;color:#fff;letter-spacing:-.02em}
+.ek-resale .ek-proof p{font-size:13px;color:#b9b1a4;line-height:1.45}
+.ek-resale .ek-raw{font-size:11px;color:#8f877b;margin-top:12px}
+.ek-faq{background:var(--sand)}
+.ek-faq details{background:var(--paper);border-radius:14px;margin-top:8px}
+.ek-faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 16px;font-weight:700;font-size:15px;line-height:1.35}
+.ek-faq summary::-webkit-details-marker{display:none}
+.ek-faq summary:after{content:'+';font-size:22px;font-weight:400;color:var(--accent);line-height:1;flex:0 0 auto}
+.ek-faq details[open] summary:after{content:'–'}
+.ek-faq details p{padding:0 16px 16px;font-size:14px;color:var(--muted);line-height:1.5}
+.ek-faq .ek-contact{display:flex;align-items:center;gap:14px;margin-top:28px;background:var(--graphite);color:#fff;border-radius:18px 18px 0 0;padding:18px 18px 4px}
+.ek-faq .ek-contact img{width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:50% 18%;flex:0 0 56px;border:2px solid var(--pale)}
+.ek-faq .ek-contact b{display:block;font-size:17px;font-weight:800}
+.ek-faq .ek-contact span{font-size:13px;color:#cfc8bc}
+.ek-faq .ek-tg{margin-top:-1px;border-radius:0 0 18px 18px;background:var(--graphite);color:var(--ink);padding:14px 18px 20px}
+.ek-faq .ek-tg .ek-t{background:#fff;border-radius:12px;padding:13px 16px;width:100%}
+.ek-faq .ek-docs{text-align:center;font-size:12px;color:var(--muted);margin-top:22px;line-height:1.6}
+.ek-faq .ek-docs a{color:var(--muted);text-decoration:underline;text-underline-offset:2px}
+.ek-faq .ek-docs span{margin:0 6px}
+.ek-faq .ek-docs p{margin-top:6px;font-size:11.5px}
+.ek-check{margin:0 16px;background:var(--sand);border-radius:22px;padding:26px 22px}
+.ek-check h2{font-size:26px;margin:10px 0 8px}
+.ek-check p{color:var(--muted);font-size:14px}
+.ek-check .ek-sheet{margin-top:16px;background:#fff;color:var(--ink);border-radius:10px;padding:14px 16px;transform:rotate(-1.5deg);box-shadow:0 12px 24px -16px rgba(0,0,0,.45)}
+.ek-check .ek-sheet b{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.ek-check .ek-sheet div{display:flex;gap:8px;align-items:center;font-size:13px;padding:4px 0;border-bottom:1px dashed var(--line)}
+.ek-check .ek-sheet div:before{content:'';display:inline-block;width:14px;height:14px;border:1.8px solid var(--muted);border-radius:4px;flex:0 0 14px}
+@media (max-width:600px){.ek{width:100vw;max-width:100vw;margin-left:calc(50% - 50vw)}}
+</style>
+<div class="ek">
+<section class="ek-hero">
+  <div class="ek-photo">
+    <img src="https://taplink.st/p/6/b/4/5/71193412.jpg" alt="Елизавета Чайкина с коробками посылок">
+    <div class="ek-badges">
+      <span class="ek-badge"><i class="ek-dot"></i>10+ лет продаю на Авито</span>
+      <span class="ek-badge">Авитолог</span>
+      <span class="ek-badge">Ресейл</span>
+    </div>
+  </div>
+  <div class="ek-copy">
+    <div class="ek-eyebrow">Авито-клуб Елизаветы Чайкиной</div>
+    <h1>Твоя пошаговая система продаж <em>на Авито</em></h1>
+    <p class="ek-lead">Это не просто набор уроков, а полноценная база знаний по работе с Авито, созданная на основе моего практического опыта в продажах, рекламе и маркетинге.</p>
+    <div class="ek-facts">
+      <div class="ek-fact"><b>550+</b><span>участников клуба</span></div>
+      <div class="ek-fact"><b>3 года</b><span>развивается сообщество</span></div>
+      <div class="ek-fact"><b>Навсегда</b><span>доступ к материалам</span></div>
+    </div>
+    <a class="ek-cta-btn" data-link="pay" href="https://taplink.cc/eliza_kry/p/10f895d/"><span class="ek-t">Вступить в Авито-клуб<svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><small>4 500 ₽ · один раз и навсегда</small></a>
+  </div>
+</section>
+
+<section class="ek-letter ek-pad">
+  <div class="ek-eyebrow">Обо мне</div>
+  <div class="ek-me-photo">
+    <img src="https://taplink.st/p/1/4/c/4/71193416.jpg" alt="Елизавета Чайкина">
+    <div class="ek-me-cap"><h2>Привет, <em>я Лиза</em></h2><div class="ek-role">Елизавета Чайкина — эксперт по продажам на Авито и ресейлу</div></div>
+  </div>
+  <p>Более 10 лет я продаю вещи на Авито. Когда-то это было просто хобби, которое помогало мне закрывать кредиты, досрочно гасить ипотеку, копить на путешествия и исполнять мечты.</p>
+  <p>В декрете я решила превратить свой опыт в профессию: прошла обучение на авитолога и начала помогать другим продавать на площадке. Так увлечение стало источником дохода, который позволил мне зарабатывать <b>от 30 000 ₽ в месяц</b>, даже когда на руках был маленький ребёнок.</p>
+  <div class="ek-mom-grid">
+    <div class="ek-photo-card ek-m1"><img src="https://taplink.st/p/a/e/3/a/71193417.jpg" alt="Елизавета с коляской"></div>
+    <div class="ek-photo-card ek-m2"><img src="https://taplink.st/p/3/f/f/a/71193415.jpg" alt="Работа за ноутбуком"></div>
+    <div class="ek-photo-card ek-m3"><img src="https://taplink.st/p/5/3/d/a/71193413.jpg" alt="Елизавета с ребёнком за ноутбуком"></div>
+  </div>
+  <div class="ek-nums">
+    <div><b>10+ лет</b><span>продаю на Авито</span></div>
+    <div><b>от&nbsp;30&nbsp;000&nbsp;₽</b><span>в месяц — в декрете</span></div>
+    <div><b>550+</b><span>участников в клубе</span></div>
+  </div>
+  <p>Со временем я создала собственный Авито-клуб, который развивается уже три года и объединяет людей, желающих освоить продажи и получать дополнительный доход.</p>
+  <p>Сейчас я также активно развиваюсь в сфере ресейла — помогаю увидеть ценность в вещах, которые больше не нужны одним людям, и найти для них новых владельцев.</p>
+  <div class="ek-sign">Елизавета Чайкина<small>основательница Авито-клуба</small></div>
+</section>
+
+<section class="ek-fit ek-pad">
+  <div class="ek-eyebrow">Для кого клуб</div>
+  <h2>Клуб подойдёт тебе, <em>если ты:</em></h2>
+  <div class="ek-row-fit"><div class="ek-n">1</div><p>Только начинаешь продавать на Авито и не знаешь, с чего начать.</p></div>
+  <div class="ek-row-fit"><div class="ek-n">2</div><p>Хочешь превратить ненужные вещи в дополнительный доход.</p></div>
+  <div class="ek-row-fit"><div class="ek-n">3</div><p>Уже продаёшь, но сталкиваешься с отсутствием просмотров и покупок.</p></div>
+  <div class="ek-row-fit"><div class="ek-n">4</div><p>Хочешь развивать перепродажу вещей как отдельное направление заработка.</p></div>
+  <div class="ek-row-fit"><div class="ek-n">5</div><p>Ищешь возможность зарабатывать, совмещая продажи с декретом, основной работой или пенсией.</p></div>
+  <div class="ek-myths">
+    <div class="ek-myth"><b>«У меня нет времени»</b><p>Совмещать продажи на Авито можно и в декрете, и с основной работой, и даже на пенсии!</p></div>
+    <div class="ek-myth ek-dark"><b>«У меня не продаётся»</b><p>Значит, ты просто пока не умеешь это делать. Алгоритмы площадки постоянно меняются, и чтобы продавать — важно их знать. Именно поэтому я сделала формат клуба с вечным доступом.</p></div>
+  </div>
+</section>
+
+<section class="ek-ba ek-pad">
+  <div class="ek-eyebrow">Одна и та же вещь</div>
+  <h2>Разное оформление — <em>разные продажи</em></h2>
+  <p class="ek-lead">Покупатель решает за секунду, пока листает ленту. Вот что меняется, когда знаешь, как работает площадка.</p>
+  <div class="ek-cards">
+    <div class="ek-card-ad ek-before">
+      <span class="ek-tag-ad">До</span>
+      <div class="ek-img-ad"><img src="https://taplink.st/p/1/5/2/6/71193389.jpg" alt="Фото до: куртка на кровати" onerror="this.remove()"></div>
+      <div class="ek-body-ad">
+        <div class="ek-price-ad">3 000 ₽</div>
+        <div class="ek-title-ad">Куртка</div>
+        <div class="ek-meta-ad"><span>Продаю куртку, почти не носила. Торг.</span></div>
+        <div class="ek-stat-ad"><div class="ek-nums-ad"><span title="Просмотры"><svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>12</span><span title="В избранном"><svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"/></svg>0</span><span title="Сообщения"><svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.9-.9L3 21l1.9-5.1A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></svg>0</span></div><div class="ek-per-ad">за неделю</div></div>
+      </div>
+    </div>
+    <div class="ek-card-ad ek-after">
+      <span class="ek-tag-ad">После</span>
+      <div class="ek-img-ad"><img src="https://taplink.st/p/0/1/a/8/71193379.jpg" alt="Фото после: пуховик на светлом фоне" onerror="this.remove()"></div>
+      <div class="ek-body-ad">
+        <div class="ek-price-ad">4 200 ₽</div>
+        <div class="ek-title-ad">Пуховик женский длинный, 44 (M), тёплый, как новый</div>
+        <div class="ek-meta-ad"><span class="ek-chip-ad">Доставка</span><span>Замеры в описании</span></div>
+        <div class="ek-stat-ad"><div class="ek-nums-ad"><span title="Просмотры"><svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>147</span><span title="В избранном"><svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"/></svg>6</span><span title="Сообщения"><svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.9-.9L3 21l1.9-5.1A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></svg>3</span></div><div class="ek-per-ad">за день</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="ek-why">
+    <div>Заголовок из ключевых слов, которые реально ищут</div>
+    <div>Фото на светлом фоне, вещь целиком и детали</div>
+    <div>Цена по рынку, а не «на глаз»</div>
+    <div>Включена Авито Доставка — покупателей в разы больше</div>
+    <div>Описание с замерами отвечает на вопросы заранее</div>
+  </div>
+  <div class="ek-quote-ad">«Раньше просто нажимала „опубликовать“, сейчас всё делаю по-другому и вижу результат».<span>Анастасия Лодыгина, участница клуба</span></div>
+</section>
+
+<section class="ek-lib ek-pad">
+  <div class="ek-banner"><img src="https://taplink.st/p/e/8/2/0/71193418.jpg" alt="Подготовка вещи к продаже"></div>
+  <div class="ek-eyebrow">Что внутри</div>
+  <h2>Целая энциклопедия <em>продаж</em></h2>
+  <p class="ek-lead">Внутри клуба собрана целая энциклопедия продаж: от создания первого объявления до системной работы с площадкой и увеличения количества продаж. Нажми на раздел, чтобы увидеть темы.</p>
+  <div class="ek-counters">
+    <div><b>10</b><span>разделов</span></div>
+    <div><b>50+</b><span>тем</span></div>
+    <div><b>6</b><span>эфиров</span></div>
+  </div>
+
+  <details><summary><span class="ek-i">01</span>Профиль на Авито<span class="ek-c">4 темы</span></summary>
+    <ul><li>Нужно ли платить налог с продаж Авито</li><li>Всё про лимиты</li><li>Уровень сервиса вашего аккаунта</li><li>Как создавать несколько профилей</li></ul></details>
+  <details><summary><span class="ek-i">02</span>Составление объявления<span class="ek-c">9 тем</span></summary>
+    <ul><li>Составляем идеальное объявление</li><li>Делаем фото</li><li>Ключевые слова</li><li>Видеоурок, как делать качественные фото</li><li>Как сгенерировать в ИИ фотографию быстро и бесплатно</li><li>Нужно ли видео</li><li>Цена</li><li>Как узнать цену товара, о котором мало знаешь</li><li>Ценообразование товаров</li></ul></details>
+  <details><summary><span class="ek-i">03</span>Работа с объявлениями<span class="ek-c">6 тем</span></summary>
+    <ul><li>Алгоритмы и активные продажи</li><li>Что делать, если вещи долго продаются</li><li>Негативный отзыв</li><li>Подкаст: как прокачать профиль, если нет продаж</li><li>Про корзину на Авито и инструкция, как ей пользоваться</li><li>Что такое лимит контактов</li></ul></details>
+  <details><summary><span class="ek-i">04</span>Авито Доставка<span class="ek-c">7 тем</span></summary>
+    <ul><li>Что такое Авито Доставка</li><li>Упаковка товаров</li><li>Кросс-доставка</li><li>Пункты Авито Доставки</li><li>Габариты в доставке</li><li>Почему могут заблокировать «Пятёрочку»</li><li>Запрещённые товары на Авито</li></ul></details>
+  <details><summary><span class="ek-i">05</span>Продвижение и тарифы<span class="ek-c">4 темы</span></summary>
+    <ul><li>Платное продвижение для продажи б/у вещей</li><li>Тариф за просмотры: нюансы</li><li>Тарифы для товаров</li><li>Тариф за сделку</li></ul></details>
+  <details><summary><span class="ek-i">06</span>Дополнительный заработок<span class="ek-c">5 тем</span></summary>
+    <ul><li>Мой путь на Авито</li><li>Аренда техники</li><li>Подкаст: как я писала тексты и заработала 3 000 ₽</li><li>Про профессию ресейлера</li><li>Про перепродажу вещей с Садовода</li></ul></details>
+  <details><summary><span class="ek-i">07</span>Лайфхаки<span class="ek-c">8 тем</span></summary>
+    <ul><li>Как посмотреть адрес продавца</li><li>Как вернуть приложение Авито через Mac</li><li>Как проверить косметику и духи на паль</li><li>Как изменять объявления после продажи</li><li>Как продавать паль</li><li>Про Юлу и её лимиты</li><li>Почему не надо принимать оплату на карту</li><li>Почему нельзя копировать чужие тексты</li></ul></details>
+  <details><summary><span class="ek-i">08</span>По категориям<span class="ek-c">5 тем</span></summary>
+    <ul><li>Как продавать много одежды</li><li>Статья о продаже одежды от участницы чата</li><li>Нюансы при продаже обуви</li><li>Бытовая техника</li><li>Детские игрушки</li></ul></details>
+  <details><summary><span class="ek-i">09</span>Эфиры и материалы<span class="ek-c">8</span></summary>
+    <ul><li>Марафон по расхламлению</li><li>Эфир по закупу в Китае</li><li>Эфир по нейросетям</li><li>Эфир по продаже растений</li><li>Эфир с поставщиком женской одежды оптом для перепродажи</li><li>Эфир с налоговым экспертом</li><li>Таблица с лимитами во всех категориях</li><li>Таблица со статистикой продаж</li></ul></details>
+  <details><summary><span class="ek-i">10</span>ВБ-ресейл<span class="ek-c ek-soon">скоро</span></summary>
+    <ul><li>Как зарегистрироваться</li><li>Нюансы создания объявления</li><li>Кто платит на ВБ</li><li>Алгоритмы и нюансы ВБ</li><li>Возвраты</li></ul></details>
+
+  <p class="ek-more">Доступ к материалам остаётся с тобой навсегда. Ты сможешь возвращаться к урокам в удобное время и изучать обновления по мере их появления.</p>
+</section>
+
+<section class="ek-plus ek-pad">
+  <div class="ek-eyebrow">Кроме базы знаний</div>
+  <h2>Ты не одна <em>со своими вопросами</em></h2>
+  <p class="ek-lead">Моя задача — не просто рассказать, как работает Авито, а дать тебе инструменты, которые помогут разобраться в площадке и выстроить собственную систему продаж.</p>
+  <div class="ek-grid">
+    <div class="ek-tile ek-wide"><div class="ek-ico"><svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.9-.9L3 21l1.9-5.1A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></svg></div><h3>Канал и чат поддержки с обратной связью</h3><p>Задаёшь вопрос — получаешь ответ. Делимся продажами, помогаем друг другу.</p></div>
+    <div class="ek-tile"><div class="ek-ico"><svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="15" height="14" rx="2"/><path d="m17 10 5-3v10l-5-3"/></svg></div><h3>Разбор объявлений в эфире</h3><p>Раз в месяц — разбираем объявления участников вживую.</p></div>
+    <div class="ek-tile"><div class="ek-ico"><svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4"/></svg></div><h3>Эфиры с экспертами</h3><p>Закуп в Китае, нейросети, налоги, поставщик одежды и другие.</p></div>
+    <div class="ek-tile"><div class="ek-ico"><svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg></div><h3>Барахолки и челленджи</h3><p>Тематические барахолки и челленджи, которые помогают выкладывать регулярно.</p></div>
+    <div class="ek-tile"><div class="ek-ico"><svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg></div><h3>Таблицы</h3><p>Лимиты во всех категориях и статистика продаж.</p></div>
+  </div>
+</section>
+
+<section class="ek-cases ek-pad">
+  <div class="ek-eyebrow">Результаты участниц</div>
+  <h2>Было → <em>стало</em></h2>
+  <p class="ek-lead">Реальные истории участниц клуба — с их цифрами.</p>
+
+  <div class="ek-case">
+    <div class="ek-case-head"><div class="ek-case-ava"><img src="https://taplink.st/p/9/2/7/1/71193405.jpg" alt="Анастасия Воскресенская" style="object-position:40% 20%"></div><div><div class="ek-case-no">Кейс №1</div>
+    <h3>Анастасия Воскресенская</h3><span class="ek-pill">Как из редких продаж выйти на стабильный доход на Авито</span></div></div>
+    <div class="ek-ab">
+      <div class="ek-pt ek-a"><small>Точка А</small><ul><li>Ранее не сильно использовала Авито для продаж: выставляла раз в полгода что-то, особо ничего не брали, и я отдавала бесплатно</li><li>Сомнения были, была убеждена, что на Авито ничего не берут и это пустая трата времени</li></ul></div>
+      <div class="ek-pt ek-b"><small>Точка Б</small>Сейчас активно продаю, выходит от 25 тыс. и выше<span class="ek-big">50 000 ₽</span>в этом месяце</div>
+    </div>
+    <p class="ek-q">«Я очень благодарна каналу, здесь масса нужной информации и алгоритмов, новых фишек и экспериментов. Приятное и позитивное общение в кругу единомышленников, поддержка и помощь. А также крутые мотивационные челленджи».</p>
+  </div>
+
+  <div class="ek-case">
+    <div class="ek-case-head"><div class="ek-case-ava"><img src="https://taplink.st/p/7/d/d/5/71193401.jpg" alt="Наталья Симунова" style="object-position:50% 12%"></div><div><div class="ek-case-no">Кейс №2</div>
+    <h3>Наталья Симунова</h3><span class="ek-pill">Как превратить случайные продажи в стабильный доход</span></div></div>
+    <div class="ek-ab">
+      <div class="ek-pt ek-a"><small>Точка А</small><ul><li>Аккаунт на Авито с 2017 года</li><li>Периодически выкладывала б/у вещи</li><li>Объявления оформляла интуитивно</li><li>Продажи были случайные, без плана</li></ul></div>
+      <div class="ek-pt ek-b"><small>Точка Б</small>Заработала с момента вступления в клуб<span class="ek-big">60 000 ₽</span><div class="ek-months"><span>Май — 33 000 ₽</span><span>Июнь — 24 000 ₽</span></div></div>
+    </div>
+    <p class="ek-q">«Канал дал очень много: от теории по Авито до практических советов. Огромная поддержка от девочек и от Лизы — это бесценно! Благодаря клубу я уже избавилась от множества ненужных вещей дома и на даче».</p>
+  </div>
+
+  <div class="ek-case">
+    <div class="ek-case-head"><div class="ek-case-ava"><img src="https://taplink.st/p/f/6/b/4/71193400.jpg" alt="Анастасия Лодыгина" style="object-position:50% 25%"></div><div><div class="ek-case-no">Кейс №3</div>
+    <h3>Анастасия Лодыгина</h3><span class="ek-pill">Как из редких продаж выйти на стабильный доход на Авито</span></div></div>
+    <div class="ek-ab">
+      <div class="ek-pt ek-a"><small>Точка А</small><ul><li>Продавала всё подряд: одежду, игрушки, технику</li><li>2–3 продажи в месяц</li><li>Доход до 1 000 ₽ в среднем</li><li>Во многие вещи — вообще тишина</li></ul></div>
+      <div class="ek-pt ek-b"><small>Точка Б</small>Стабильный доход только на Авито<span class="ek-big">15 000–17 000 ₽</span>в месяц · иногда выходит от 10 000 до 40 000 ₽</div>
+    </div>
+    <p class="ek-q">«Узнала много тонкостей и фишек по Авито. Раньше просто нажимала „опубликовать“, сейчас всё делаю по-другому и вижу результат. Авито стало частью моей жизни в декрете и любимым хобби».</p>
+  </div>
+
+  <div class="ek-case">
+    <div class="ek-case-head"><div class="ek-case-ava"><img src="https://taplink.st/p/f/8/3/a/71193402.jpg" alt="Юлия Дрягина" style="object-position:50% 20%"></div><div><div class="ek-case-no">Кейс №4</div>
+    <h3>Юлия Дрягина</h3><span class="ek-pill">Как из ненужных вещей выйти на доход 16–18 тыс. рублей</span></div></div>
+    <div class="ek-ab">
+      <div class="ek-pt ek-a"><small>Точка А</small><ul><li>Начала с детских вещей осенью 2024</li><li>Продавала только самовывозом, боясь освоить доставку</li><li>В среднем — около 3–5 тысяч рублей</li></ul></div>
+      <div class="ek-pt ek-b"><small>Точка Б</small>60–70 проданных товаров, а в сумме<span class="ek-big">16–18 тысяч ₽</span></div>
+    </div>
+    <p class="ek-q">«Это одно из лучших вложений! Я нашла двух чудесных девочек, с которыми общение вышло далеко за пределы чата».</p>
+  </div>
+
+  <div class="ek-case ek-mom">
+    <div class="ek-case-no">Самая первая ученица</div>
+    <h3>Елена Крючкова — мама Лизы</h3>
+    <span class="ek-pill">Всё началось с переезда в дом</span>
+    <div class="ek-big">370 000 ₽</div>
+    <div class="ek-sub">самая крупная продажа — икона</div>
+    <p class="ek-q">«Вещей после двух детей осталось очень много, квартиру нужно было сдать чистой. Так Лиза познакомила меня с Авито. И понеслось… сижу вплотную уже несколько лет. Авито — моя жизнь».</p>
+  </div>
+</section>
+
+<section class="ek-chat">
+  <div class="ek-hd">
+    <div class="ek-eyebrow">Без постановки</div>
+    <h2>Что пишут <em>в чате клуба</em></h2>
+  </div>
+  <div class="ek-phone">
+    <div class="ek-bar">
+      <span class="ek-back"><svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span>
+      <div class="ek-gava">АК</div>
+      <div><b>Чат Авито-клуба</b><span class="ek-st">закрытый чат участниц</span></div>
+    </div>
+    <div class="ek-pin"><i></i><div><b>Закреплённое сообщение</b><span>Сегодня у нас тематическая барахолка. Любые…</span></div></div>
+    <div class="ek-screen" data-chat>
+        <div class="ek-wall">
+      <div class="ek-day"><span>Итоги</span></div>
+
+      <div class="ek-msg"><div class="ek-ua" style="background:#e17076">О</div>
+        <div class="ek-bub"><span class="ek-nm" style="color:#d14f5a">Ольга</span>Всем здравствуйте. Меня зовут Ольга, я из Чебоксар, как и Лиза. Приобрела обучение в прошлую среду, так как кабинет просто встал. Почти ничего не продавалось, а вещей много… Расхламление начала с детской комнаты… продался детский халат кигуруми, который висел вроде полгода.<br>Итог:<br><mark>за неделю я продала на 20 188</mark>
+          <div class="ek-ft"><div class="ek-rx"><span class="ek-money">+20 188 ₽ за неделю</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f08a24" d="M12 2c.6 3.2 4.8 5.3 4.8 10a4.8 4.8 0 0 1-9.6 0c0-2.4 1.3-3.6 2.4-4.6.1 1.7.9 2.8 2 3.2-.5-3.2.1-6 .4-8.6z"/></svg>6</span></div><span class="ek-tm">17:18</span></div></div></div>
+
+      <div class="ek-msg"><div class="ek-ua" style="background:#7bc862">У</div>
+        <div class="ek-bub"><span class="ek-nm" style="color:#4f9a3a">Участница клуба</span>Больше чем довольна <span class="ek-tag-h">#итогигода</span><br><mark>180 продаж<br>80 отзывов «5»<br>сумма 111 000</mark> — прям магия цифр.<br>Зарегистрировалась на Авито в январе 2025, то есть меньше года, и сразу подписалась на Лизу… Все деньги потратила на путешествия с семьёй!! Ездили 2 раза в Питер, Геленджик…
+          
+          <div class="ek-ft"><div class="ek-rx"><span class="ek-money">111 000 ₽ за год</span><span class="ek-money">180 продаж</span></div></div></div></div>
+
+      <div class="ek-msg"><div class="ek-ua" style="background:#65aadd">У</div>
+        <div class="ek-bub"><span class="ek-nm" style="color:#3b84bf">Участница клуба</span><span class="ek-tag-h">#итогимесяца</span> Я на Авито с 2014 года, до 20 сентября 2025 года продаж было на 450к, то есть за 11 лет. А потом я купила курс и начала полное расхламление. Итого с 20 сентября по декабрь 2025 <mark>продано на 100 772 руб</mark>
+          <div class="ek-ft"><div class="ek-rx"><span class="ek-money">100 772 ₽ за сен–дек</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f08a24" d="M12 2c.6 3.2 4.8 5.3 4.8 10a4.8 4.8 0 0 1-9.6 0c0-2.4 1.3-3.6 2.4-4.6.1 1.7.9 2.8 2 3.2-.5-3.2.1-6 .4-8.6z"/></svg>14</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#e8485b" d="M12 21 4.7 13.9A5 5 0 0 1 12 7.2a5 5 0 0 1 7.3 6.7z"/></svg>1</span></div><span class="ek-tm">12:39</span></div></div></div>
+
+      <div class="ek-msg"><div class="ek-ua" style="background:#a695e7">Н</div>
+        <div class="ek-bub"><span class="ek-nm" style="color:#7a64d0">Наталья Симунова</span>А вообще, Лизок, я очень рада, что наконец-то пришла к тебе в клуб! Даже не ожидала получить столько пользы!!!<br>1) начала избавляться от вещей, что в моём случае прям подвиг!<br>2) получаю доп. доход;<br>3) это уже стало как игра, как драйв! Заказы просто окрыляют;<br>4) научилась уже быстрее и эффективнее выкладывать объявления;<br>5) здесь такое супер приятное пространство девочек с поддержкой!<br>Почти год тянула я с этим входом! Но лучше поздно, чем никогда
+          <div class="ek-ft"><div class="ek-rx"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#e8485b" d="M12 21 4.7 13.9A5 5 0 0 1 12 7.2a5 5 0 0 1 7.3 6.7z"/></svg>4</span></div><span class="ek-tm">09:43</span></div></div></div>
+
+      <div class="ek-msg"><div class="ek-ua" style="background:#ee7aae">В</div>
+        <div class="ek-bub"><span class="ek-nm" style="color:#c9508a">Вероника</span>Я в июле так <mark>клубнику, малину на 60к продала</mark>… и отдельно считала за лето — продала зелени: лук, укроп, петрушка… <mark>зелень вся вышла на 10к</mark>, я так неожидала, если честно… даже при сборах в школу, в садик девчонок своих я в принципе не ощутила фин. нагрузки
+          <div class="ek-ft"><div class="ek-rx"><span class="ek-money">60к ягоды</span><span class="ek-money">10к зелень</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f08a24" d="M12 2c.6 3.2 4.8 5.3 4.8 10a4.8 4.8 0 0 1-9.6 0c0-2.4 1.3-3.6 2.4-4.6.1 1.7.9 2.8 2 3.2-.5-3.2.1-6 .4-8.6z"/></svg>13</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#e8485b" d="M12 21 4.7 13.9A5 5 0 0 1 12 7.2a5 5 0 0 1 7.3 6.7z"/></svg>2</span></div><span class="ek-tm">05:48</span></div></div></div>
+
+      <div class="ek-msg"><div class="ek-ua" style="background:#faa774">Ю</div>
+        <div class="ek-bub"><span class="ek-nm" style="color:#d0773a">Юля Дрягина</span><img class="ek-media" src="https://taplink.st/p/0/c/d/f/71193409.jpg" alt="Скриншоты заказов на ВБ" loading="lazy"><span class="ek-tag-h">#заказ</span><br>Сегодня я магистр ВБ-ресейла. <mark>За ночь 11 заказов</mark> и ещё скромненько 3 на Авито
+          <div class="ek-ft"><div class="ek-rx"><span class="ek-money">11 заказов за ночь</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f08a24" d="M12 2c.6 3.2 4.8 5.3 4.8 10a4.8 4.8 0 0 1-9.6 0c0-2.4 1.3-3.6 2.4-4.6.1 1.7.9 2.8 2 3.2-.5-3.2.1-6 .4-8.6z"/></svg>39</span></div><span class="ek-tm">09:28</span></div></div></div>
+
+      <div class="ek-msg"><div class="ek-ua" style="background:#6ec9cb">У</div>
+        <div class="ek-bub"><span class="ek-nm" style="color:#2e9ea1">Участница клуба</span><img class="ek-media" src="https://taplink.st/p/a/6/a/b/71193406.jpg" alt="Таблицы продаж за месяц" loading="lazy"><span class="ek-tag-h">#итогимесяца</span><br>Всего продано <mark>183 позиции на сумму 292 596 рублей</mark>. А теперь реальные деньги считаем из этой суммы… И остаётся <mark>чистая прибыль 82 954 рубля</mark>. Из них 29 позиций своих б/у вещей на сумму 14 113. Считаю, очень хороший месяц получился.
+          <div class="ek-ft"><div class="ek-rx"><span class="ek-money">82 954 ₽ чистыми</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f08a24" d="M12 2c.6 3.2 4.8 5.3 4.8 10a4.8 4.8 0 0 1-9.6 0c0-2.4 1.3-3.6 2.4-4.6.1 1.7.9 2.8 2 3.2-.5-3.2.1-6 .4-8.6z"/></svg>7</span></div><span class="ek-tm">13:13</span></div></div></div>
+    </div>
+    <button class="ek-down ek-hide" type="button" aria-label="К следующему сообщению"><svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg><b>0</b></button>
+    </div>
+    <div class="ek-input"><svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.4 11-8.9 8.9a5.5 5.5 0 0 1-7.8-7.8l8.9-8.9a3.7 3.7 0 0 1 5.2 5.2l-8.9 8.9a1.8 1.8 0 0 1-2.6-2.6l8.2-8.2"/></svg><span class="ek-f">Хочу в клуб…</span><a class="ek-write" data-link="telegram" href="https://t.me/eliza_kry" target="_blank" rel="noopener">Написать<svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg></a></div>
+  </div>
+</section>
+
+<section class="ek-calc ek-pad">
+  <div class="ek-eyebrow">Проверь себя</div>
+  <h2>Сколько денег <em>лежит у тебя дома?</em></h2>
+  <p class="ek-tap"><svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V10"/><path d="M12 10V8.5a1.5 1.5 0 0 1 3 0V11"/><path d="M15 10.5a1.5 1.5 0 0 1 3 0V15a6 6 0 0 1-6 6h-1a6 6 0 0 1-5-2.7L3.6 15a1.6 1.6 0 0 1 2.6-1.8L9 15.5"/></svg>Отметь, что есть у тебя без дела</p>
+  <div class="ek-items" id="ekItems">
+    <button type="button" data-v="3500" aria-pressed="false">Куртка / пуховик</button>
+    <button type="button" data-v="1500" aria-pressed="false">Обувь</button>
+    <button type="button" data-v="2500" aria-pressed="false">Платья и джинсы</button>
+    <button type="button" data-v="4000" aria-pressed="false">Детская коляска</button>
+    <button type="button" data-v="1500" aria-pressed="false">Детские вещи</button>
+    <button type="button" data-v="800" aria-pressed="false">Игрушки</button>
+    <button type="button" data-v="3000" aria-pressed="false">Бытовая техника</button>
+    <button type="button" data-v="2000" aria-pressed="false">Сумка</button>
+    <button type="button" data-v="1200" aria-pressed="false">Косметика, духи</button>
+    <button type="button" data-v="2500" aria-pressed="false">Спорт-инвентарь</button>
+  </div>
+  <div class="ek-result">
+    <div class="ek-hint">Примерно</div>
+    <div class="ek-sum"><span id="ekSum">0</span> <small>₽</small></div>
+    <div class="ek-bar"><i id="ekBar"></i></div>
+    <div class="ek-hint" id="ekHint">Клуб стоит <b>4 500 ₽</b> — посмотрим, окупится ли.</div>
+  </div>
+</section>
+
+<section class="ek-break">
+  <img src="https://taplink.st/p/2/5/b/e/71193391.jpg" alt="">
+  <p>«Я верю, что ненужные вещи могут стать деньгами, а грамотные продажи — <em>реальным инструментом для достижения финансовых целей</em>»<span>Елизавета Чайкина</span></p>
+</section>
+
+<section class="ek-price ek-pad">
+  <div class="ek-eyebrow">Стоимость</div>
+  <h2>Один платёж <em>вместо подписки</em></h2>
+  <div class="ek-forever"><span class="ek-fi"><svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 4v5h-5"/></svg></span><p>Алгоритмы Авито постоянно меняются — поэтому <b>доступ к клубу вечный</b>, а все обновления ты получаешь <b>бесплатно</b>.</p></div>
+  <div class="ek-compare">
+    <div class="ek-opt ek-sub">
+      <div class="ek-lbl">Подписка на месяц</div>
+      <div class="ek-ln"><span>1 месяц</span><span>≈ 2 000 ₽</span></div>
+      <div class="ek-ln"><span>3 месяца</span><span>≈ 6 000 ₽</span></div>
+      <div class="ek-ln"><span>Через год</span><s>доступ закрыт</s></div>
+    </div>
+    <div class="ek-opt ek-club">
+      <span class="ek-ribbon">навсегда</span>
+      <div class="ek-lbl">Авито-клуб</div>
+      <div class="ek-big">4 500 <small>₽</small></div>
+      <div class="ek-once">один раз · без продлений · все обновления включены</div>
+      <ul>
+        <li>База знаний: 10 разделов, 50+ тем</li>
+        <li>Канал и чат поддержки с обратной связью</li>
+        <li>Раз в месяц — разбор объявлений в прямом эфире</li>
+        <li>Записи эфиров с экспертами</li>
+        <li>Таблицы лимитов и статистики продаж</li>
+        <li>Новые разделы — скоро ВБ-ресейл</li>
+      </ul>
+    </div>
+  </div>
+  <div class="ek-payback">По сути клуб окупается <b>одной-двумя проданными вещами</b> из тех, что уже лежат у тебя дома.</div>
+  <div class="ek-voice"><div class="ek-ua">Ю</div><p>«Понравилось, что оплата единоразовая… Это одно из лучших вложений!»<span>Юлия Дрягина, участница клуба</span></p></div>
+  <a class="ek-cta-btn" data-link="pay" href="https://taplink.cc/eliza_kry/p/10f895d/"><span class="ek-t">Вступить в Авито-клуб<svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><small>4 500 ₽ · доступ навсегда</small></a>
+  <p class="ek-legal">Результат зависит от товаров, спроса и твоих действий. Клуб — образовательный продукт и не гарантирует доход. Не является официальным проектом Авито.</p>
+</section>
+
+<section class="ek-resale ek-pad">
+  <div class="ek-eyebrow">Новое направление</div>
+  <h2>Профессия <em>ресейлера</em></h2>
+  <div class="ek-photo-card ek-pic"><img src="https://taplink.st/p/5/4/d/6/71193419.jpg" alt="Елизавета Чайкина с посылками"></div>
+  <p class="ek-offer">Зарабатывай на продаже чужих вещей от 100к, узнай все нюансы Авито и профессии.</p>
+  <div class="ek-proofs">
+    <div class="ek-proof"><b>750 000 ₽</b><p>заработали на продаже мебели из квартиры знакомого перед ремонтом — участница клуба</p></div>
+    <div class="ek-proof"><b>8–10 тыс. в неделю</b><p>«Ресейлером я стала благодаря Елизавете и этому чату. Я чётко соблюдаю все её рекомендации» — участница клуба</p></div>
+  </div>
+  <a class="ek-cta-btn ek-light" data-link="resale" href="https://t.me/eliza_kry"><span class="ek-t">Канал и обучение профессии ресейлера<svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><small>подробнее в Telegram</small></a>
+</section>
+
+<section class="ek-check">
+  <div class="ek-eyebrow">Бесплатно</div>
+  <h2>Пока думаешь — <em>забери чек-лист</em></h2>
+  <p>Проверь свои объявления уже сегодня. Отправлю в Telegram.</p>
+  <div class="ek-sheet"><b>5 ошибок в объявлении</b><div>Фото</div><div>Заголовок</div><div>Цена</div><div>Описание</div><div>Доставка</div></div>
+  <a class="ek-cta-btn" data-link="checklist" href="https://t.me/eliza_kry"><span class="ek-t">Получить чек-лист<svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><small>бесплатно, в Telegram</small></a>
+</section>
+
+<section class="ek-faq ek-pad">
+  <div class="ek-eyebrow">Вопросы</div>
+  <h2>Частые <em>вопросы</em></h2>
+  <details><summary>Подойдёт ли клуб новичку?</summary><p>Да. Клуб подойдёт, если ты только начинаешь продавать на Авито и не знаешь, с чего начать.</p></details>
+  <details><summary>Смогу ли совмещать с работой или декретом?</summary><p>Да: совмещать продажи на Авито можно и в декрете, и с основной работой, и даже на пенсии.</p></details>
+  <details><summary>Что значит «навсегда»?</summary><p>Оплата разовая. Доступ к материалам остаётся с тобой навсегда, обновления — бесплатно.</p></details>
+  <details><summary>Можно ли задавать вопросы?</summary><p>Да, в чате поддержки с обратной связью. Раз в месяц — разбор объявлений в прямом эфире.</p></details>
+  <details><summary>Как я получу доступ после оплаты?</summary><p>Тебе на почту придёт письмо. Сам клуб с базой знаний находится в Telegram, основной чат с поддержкой — во ВКонтакте.</p></details>
+  <details><summary>Есть ли возврат?</summary><p>Возврата после оплаты нет.</p></details>
+  <div class="ek-contact">
+    <img src="https://taplink.st/p/1/4/c/4/71193416.jpg" alt="Елизавета Чайкина">
+    <div><b>Остались вопросы?</b><span>Напиши мне в Telegram — @eliza_kry</span></div>
+  </div>
+  <a class="ek-cta-btn ek-tg" data-link="telegram" href="https://t.me/eliza_kry"><span class="ek-t"><svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg>Написать в Telegram</span></a>
+  <div class="ek-docs">
+    <a data-link="offer" href="#">Публичная оферта</a><span>·</span><a data-link="privacy" href="#">Политика конфиденциальности</a>
+    <p>Самозанятая Чайкина Елизавета Сергеевна,<br>ИНН&nbsp;504227291394</p>
+  </div>
+</section>
+</div>
+<script>
+(function(){
+  var wrap=document.getElementById('ekItems'); if(!wrap) return;
+  var sumEl=document.getElementById('ekSum'), bar=document.getElementById('ekBar'), hint=document.getElementById('ekHint');
+  var PRICE=4500, fmt=function(n){return n.toLocaleString('ru-RU')};
+  wrap.addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b) return;
+    b.setAttribute('aria-pressed', b.getAttribute('aria-pressed')==='true'?'false':'true');
+    var s=0; wrap.querySelectorAll('[aria-pressed="true"]').forEach(function(x){s+=+x.dataset.v});
+    sumEl.textContent=fmt(s);
+    bar.style.width=Math.min(100,s/(PRICE*4)*100)+'%';
+    if(!s) hint.innerHTML='Клуб стоит <b>4 500 ₽</b> — посмотрим, окупится ли.';
+    else if(s<PRICE) hint.innerHTML='Почти! Ещё пара вещей — и клуб <b>окупится</b>.';
+    else hint.innerHTML='Это <b>в '+(s/PRICE).toFixed(1).replace('.',',')+' раза</b> больше стоимости клуба.';
+  });
+})();
+
+(function(){
+  document.querySelectorAll('[data-chat]').forEach(function(sc){
+    var w=sc.querySelector('.ek-wall'), btn=sc.querySelector('.ek-down'), badge=btn.querySelector('b');
+    var st=sc.closest('.ek-phone').querySelector('.ek-bar .ek-st'), stText=st.textContent;
+    var msgs=[].slice.call(w.querySelectorAll('.ek-msg'));
+    var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // сколько сообщений ниже видимой области
+    function below(){ var edge=w.scrollTop+w.clientHeight-24;
+      return msgs.filter(function(m){return !m.classList.contains('ek-wait') && m.offsetTop>edge;}); }
+    function update(){ var b=below(), end=w.scrollTop+w.clientHeight>=w.scrollHeight-4;
+      badge.textContent=b.length; badge.style.display=b.length?'':'none';
+      btn.classList.toggle('ek-hide', end); sc.classList.toggle('ek-end', end); }
+    w.addEventListener('scroll',update,{passive:true});
+    btn.addEventListener('click',function(){ stopLive(); var b=below();
+      w.scrollTop = b.length ? b[0].offsetTop-10 : w.scrollHeight; });
+
+    // «живой чат»: первые сообщения появляются по одному с «печатает…»
+    var LIVE=3, live=false, timer=null, typing=null;
+    function showAll(){ msgs.forEach(function(m){m.classList.remove('ek-wait');}); }
+    function stopLive(){ if(!live) return; live=false; clearTimeout(timer);
+      if(typing){typing.remove(); typing=null;} st.textContent=stText; st.classList.remove('ek-typing-st');
+      sc.classList.remove('ek-live'); showAll(); update(); }
+    function step(k){
+      if(!live) return;
+      if(k>=LIVE){ stopLive(); return; }
+      var m=msgs[k], name=m.querySelector('.ek-nm').textContent, ua=m.querySelector('.ek-ua').cloneNode(true);
+      typing=document.createElement('div'); typing.className='ek-typing';
+      var bub=document.createElement('div'); bub.className='ek-bub';
+      bub.innerHTML='<span class="ek-dots"><i></i><i></i><i></i></span>';
+      bub.appendChild(document.createTextNode(name+' печатает'));
+      typing.appendChild(ua); typing.appendChild(bub); m.parentNode.insertBefore(typing,m);
+      st.textContent=name+' печатает…'; st.classList.add('ek-typing-st');
+      w.scrollTop=typing.offsetTop-w.clientHeight+typing.offsetHeight+16;
+      timer=setTimeout(function(){
+        if(!live) return;
+        typing.remove(); typing=null; st.textContent=stText; st.classList.remove('ek-typing-st');
+        m.classList.remove('ek-wait'); m.classList.add('ek-pop');
+        w.scrollTop=Math.max(0,m.offsetTop-12); update();
+        timer=setTimeout(function(){ step(k+1); }, 1700);
+      }, 1300);
+    }
+    if(!reduce && 'IntersectionObserver' in window){
+      msgs.forEach(function(m,k){ if(k>0) m.classList.add('ek-wait'); });
+      sc.classList.add('ek-live'); live=true;
+      ['touchstart','wheel','mousedown'].forEach(function(ev){ w.addEventListener(ev,stopLive,{passive:true}); });
+      var io=new IntersectionObserver(function(es){
+        if(es[0].isIntersecting){ io.disconnect(); timer=setTimeout(function(){ step(1); }, 600); }
+      },{threshold:.5});
+      io.observe(sc);
+    }
+    update();
+  });
+})();
+</script>
