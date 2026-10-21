@@ -1,4 +1,4 @@
-<!-- Taplink · HTML-блок 14-checklist · Чек-лист. Вставлять целиком в блок «HTML-код». -->
+<!-- Taplink · HTML-блок 13-checklist · Чек-лист + кнопка. Вставлять целиком в блок «HTML-код». -->
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 .ek{
@@ -24,6 +24,13 @@
 @keyframes ekPop{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:none}}
 @keyframes ekDot{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
 @media (prefers-reduced-motion:reduce){.ek-chat .ek-wall{scroll-behavior:auto}.ek-chat .ek-msg.ek-pop,.ek-chat .ek-dots i{animation:none}}
+.ek .ek-cta-btn{display:block;text-align:center;text-decoration:none;background:var(--accent);color:#fff;border-radius:14px;padding:15px 16px 14px;margin-top:20px;-webkit-tap-highlight-color:transparent;transition:transform .12s}
+.ek .ek-cta-btn:active{transform:scale(.98)}
+.ek .ek-cta-btn .ek-t{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:16px;font-weight:800;line-height:1.25}
+.ek .ek-cta-btn .ek-t .ek-ic{width:18px;height:18px;stroke-width:2.4;flex:0 0 18px}
+.ek .ek-cta-btn small{display:block;font-size:12px;font-weight:600;opacity:.85;margin-top:3px}
+.ek .ek-cta-btn.ek-light{background:#fff;color:var(--ink)}
+.ek .ek-cta-btn.ek-light small{color:var(--muted);opacity:1}
 @media (prefers-reduced-motion:reduce){.ek *{transition:none!important}}
 .ek .ek-check{margin:0 16px;background:var(--sand);border-radius:22px;padding:26px 22px}
 .ek .ek-check h2{font-size:26px;margin:10px 0 8px}
@@ -40,5 +47,6 @@
   <h2>Пока думаешь — <em>забери чек-лист</em></h2>
   <p>Проверь свои объявления уже сегодня. Отправлю в Telegram.</p>
   <div class="ek-sheet"><b>5 ошибок в объявлении</b><div>Фото</div><div>Заголовок</div><div>Цена</div><div>Описание</div><div>Доставка</div></div>
+  <a class="ek-cta-btn" data-link="checklist" href="https://t.me/eliza_kry"><span class="ek-t">Получить чек-лист<svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><small>бесплатно, в Telegram</small></a>
 </section>
 </div>

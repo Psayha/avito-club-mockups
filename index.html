@@ -320,6 +320,34 @@
 .ek-resale .proof p{font-size:13px;color:#b9b1a4;line-height:1.45}
 .ek-resale .raw{font-size:11px;color:#8f877b;margin-top:12px}
 
+/* ============ КНОПКИ (вместо штатных) ============ */
+.ek .cta-btn{display:block;text-align:center;text-decoration:none;background:var(--accent);color:#fff;border-radius:14px;padding:15px 16px 14px;margin-top:20px;-webkit-tap-highlight-color:transparent;transition:transform .12s}
+.ek .cta-btn:active{transform:scale(.98)}
+.ek .cta-btn .t{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:16px;font-weight:800;line-height:1.25}
+.ek .cta-btn .t .ic{width:18px;height:18px;stroke-width:2.4;flex:0 0 18px}
+.ek .cta-btn small{display:block;font-size:12px;font-weight:600;opacity:.85;margin-top:3px}
+.ek .cta-btn.light{background:#fff;color:var(--ink)}
+.ek .cta-btn.light small{color:var(--muted);opacity:1}
+
+/* ============ 14. ВОПРОСЫ И КОНТАКТЫ ============ */
+.ek-faq{background:var(--sand)}
+.ek-faq details{background:var(--paper);border-radius:14px;margin-top:8px}
+.ek-faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 16px;font-weight:700;font-size:15px;line-height:1.35}
+.ek-faq summary::-webkit-details-marker{display:none}
+.ek-faq summary:after{content:'+';font-size:22px;font-weight:400;color:var(--accent);line-height:1;flex:0 0 auto}
+.ek-faq details[open] summary:after{content:'–'}
+.ek-faq details p{padding:0 16px 16px;font-size:14px;color:var(--muted);line-height:1.5}
+.ek-faq .contact{display:flex;align-items:center;gap:14px;margin-top:28px;background:var(--graphite);color:#fff;border-radius:18px 18px 0 0;padding:18px 18px 4px}
+.ek-faq .contact img{width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:50% 18%;flex:0 0 56px;border:2px solid var(--pale)}
+.ek-faq .contact b{display:block;font-size:17px;font-weight:800}
+.ek-faq .contact span{font-size:13px;color:#cfc8bc}
+.ek-faq .tg{margin-top:-1px;border-radius:0 0 18px 18px;background:var(--graphite);color:var(--ink);padding:14px 18px 20px}
+.ek-faq .tg .t{background:#fff;border-radius:12px;padding:13px 16px;width:100%}
+.ek-faq .docs{text-align:center;font-size:12px;color:var(--muted);margin-top:22px;line-height:1.6}
+.ek-faq .docs a{color:var(--muted);text-decoration:underline;text-underline-offset:2px}
+.ek-faq .docs span{margin:0 6px}
+.ek-faq .docs p{margin-top:6px;font-size:11.5px}
+
 /* ============ 13. ЧЕК-ЛИСТ ============ */
 .ek-check{margin:0 16px;background:var(--sand);border-radius:22px;padding:26px 22px}
 .ek-check h2{font-size:26px;margin:10px 0 8px}
@@ -355,15 +383,9 @@
       <div class="fact"><b>3 года</b><span>развивается сообщество</span></div>
       <div class="fact"><b>Навсегда</b><span>доступ к материалам</span></div>
     </div>
+    <a class="cta-btn" data-link="pay" href="https://taplink.cc/eliza_kry"><span class="t">Вступить в Авито-клуб<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><small>4 500 ₽ · один раз и навсегда</small></a>
   </div>
 </section>
-
-<!-- ===================== ШТАТНО: КНОПКА ОПЛАТЫ ===================== -->
-<div class="ek-native">
-  <b>ШТАТНАЯ КНОПКА TAPLINK · ОПЛАТА</b>
-  <span class="fake-btn">Вступить в Авито-клуб<small>4 500 ₽ · один раз и навсегда</small></span>
-</div>
-<div class="ek-gap"></div>
 
 <!-- ===================== HTML-БЛОК 2: ОБО МНЕ ===================== -->
 <section class="ek-letter pad">
@@ -595,7 +617,7 @@
     </div>
     <button class="down hide" type="button" aria-label="К следующему сообщению"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg><b>0</b></button>
     </div>
-    <div class="input"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.4 11-8.9 8.9a5.5 5.5 0 0 1-7.8-7.8l8.9-8.9a3.7 3.7 0 0 1 5.2 5.2l-8.9 8.9a1.8 1.8 0 0 1-2.6-2.6l8.2-8.2"/></svg><span class="f">Хочу в клуб…</span><a class="write" href="https://t.me/eliza_kry" target="_blank" rel="noopener">Написать<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg></a></div>
+    <div class="input"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.4 11-8.9 8.9a5.5 5.5 0 0 1-7.8-7.8l8.9-8.9a3.7 3.7 0 0 1 5.2 5.2l-8.9 8.9a1.8 1.8 0 0 1-2.6-2.6l8.2-8.2"/></svg><span class="f">Хочу в клуб…</span><a class="write" data-link="telegram" href="https://t.me/eliza_kry" target="_blank" rel="noopener">Написать<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg></a></div>
   </div>
 </section>
 
@@ -659,14 +681,7 @@
   </div>
   <div class="payback">По сути клуб окупается <b>одной-двумя проданными вещами</b> из тех, что уже лежат у тебя дома.</div>
   <div class="voice"><div class="ua">Ю</div><p>«Понравилось, что оплата единоразовая… Это одно из лучших вложений!»<span>Юлия Дрягина, участница клуба</span></p></div>
-</section>
-
-<!-- ===================== ШТАТНО: КНОПКА ОПЛАТЫ ===================== -->
-<div class="ek-native">
-  <b>ШТАТНАЯ КНОПКА TAPLINK · ОПЛАТА</b>
-  <span class="fake-btn">Вступить в Авито-клуб<small>4 500 ₽ · доступ навсегда</small></span>
-</div>
-<section class="ek-price" style="padding:0 22px 48px">
+  <a class="cta-btn" data-link="pay" href="https://taplink.cc/eliza_kry"><span class="t">Вступить в Авито-клуб<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><small>4 500 ₽ · доступ навсегда</small></a>
   <p class="legal">Результат зависит от товаров, спроса и твоих действий. Клуб — образовательный продукт и не гарантирует доход. Не является официальным проектом Авито.</p>
 </section>
 
@@ -680,49 +695,38 @@
     <div class="proof"><b>750 000 ₽</b><p>заработали на продаже мебели из квартиры знакомого перед ремонтом — участница клуба</p></div>
     <div class="proof"><b>8–10 тыс. в неделю</b><p>«Ресейлером я стала благодаря Елизавете и этому чату. Я чётко соблюдаю все её рекомендации» — участница клуба</p></div>
   </div>
+  <a class="cta-btn light" data-link="resale" href="https://t.me/eliza_kry"><span class="t">Канал и обучение профессии ресейлера<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><small>подробнее в Telegram</small></a>
 </section>
-<div class="ek-gap"></div>
-<!-- ===================== ШТАТНО: КНОПКА → TELEGRAM ===================== -->
-<div class="ek-native">
-  <b>ШТАТНАЯ КНОПКА TAPLINK · ССЫЛКА В TELEGRAM</b>
-  <span class="fake-btn dark">Канал и обучение профессии ресейлера<small>подробнее в Telegram</small></span>
-</div>
-<div class="ek-gap" style="height:40px"></div>
-
 <!-- ===================== HTML-БЛОК 13: ЧЕК-ЛИСТ ===================== -->
 <section class="ek-check">
   <div class="eyebrow">Бесплатно</div>
   <h2>Пока думаешь — <em>забери чек-лист</em></h2>
   <p>Проверь свои объявления уже сегодня. Отправлю в Telegram.</p>
   <div class="sheet"><b>5 ошибок в объявлении</b><div>Фото</div><div>Заголовок</div><div>Цена</div><div>Описание</div><div>Доставка</div></div>
+  <a class="cta-btn" data-link="checklist" href="https://t.me/eliza_kry"><span class="t">Получить чек-лист<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><small>бесплатно, в Telegram</small></a>
 </section>
 <div class="ek-gap"></div>
-<div class="ek-native">
-  <b>ШТАТНО · ФОРМА / КНОПКА МЕССЕНДЖЕРА</b>
-  «Получить чек-лист» → Telegram Лизы (PDF готов, выдаёт бот или закреп в канале)
-</div>
-<div class="ek-gap"></div>
 
-<!-- ===================== ШТАТНО: FAQ ===================== -->
-<div class="ek-native" style="text-align:left">
-  <b style="text-align:center">ШТАТНЫЙ БЛОК TAPLINK · ВОПРОСЫ</b>
-  <div style="margin-top:8px">
-  • Подойдёт ли клуб новичку? — Да, если только начинаешь и не знаешь, с чего начать<br>
-  • Смогу ли совмещать с работой или декретом? — Да, и даже на пенсии<br>
-  • Что значит «навсегда»? — Оплата разовая, материалы и обновления остаются с тобой<br>
-  • Можно ли задавать вопросы? — Да, в чате поддержки с обратной связью<br>
-  • Как я получу доступ после оплаты? — Тебе на почту придёт письмо. Сам клуб с базой знаний — в Telegram, основной чат с поддержкой — во ВКонтакте<br>
-  • Есть ли возврат? — Возврата после оплаты нет
+<!-- ===================== HTML-БЛОК 14: ВОПРОСЫ И КОНТАКТЫ ===================== -->
+<section class="ek-faq pad">
+  <div class="eyebrow">Вопросы</div>
+  <h2>Частые <em>вопросы</em></h2>
+  <details><summary>Подойдёт ли клуб новичку?</summary><p>Да. Клуб подойдёт, если ты только начинаешь продавать на Авито и не знаешь, с чего начать.</p></details>
+  <details><summary>Смогу ли совмещать с работой или декретом?</summary><p>Да: совмещать продажи на Авито можно и в декрете, и с основной работой, и даже на пенсии.</p></details>
+  <details><summary>Что значит «навсегда»?</summary><p>Оплата разовая. Доступ к материалам остаётся с тобой навсегда, обновления — бесплатно.</p></details>
+  <details><summary>Можно ли задавать вопросы?</summary><p>Да, в чате поддержки с обратной связью. Раз в месяц — разбор объявлений в прямом эфире.</p></details>
+  <details><summary>Как я получу доступ после оплаты?</summary><p>Тебе на почту придёт письмо. Сам клуб с базой знаний находится в Telegram, основной чат с поддержкой — во ВКонтакте.</p></details>
+  <details><summary>Есть ли возврат?</summary><p>Возврата после оплаты нет.</p></details>
+  <div class="contact">
+    <img src="assets/letter.jpg?v=5" alt="Елизавета Чайкина">
+    <div><b>Остались вопросы?</b><span>Напиши мне в Telegram — @eliza_kry</span></div>
   </div>
-</div>
-<div class="ek-gap"></div>
-
-<!-- ===================== ШТАТНО: КОНТАКТЫ И ДОКУМЕНТЫ ===================== -->
-<div class="ek-native">
-  <b>ШТАТНО · «Остались вопросы? Напиши мне» → Telegram @eliza_kry</b>
-  соцсети · оферта · политика конфиденциальности · реквизиты: самозанятая Чайкина Елизавета Сергеевна, ИНН 504227291394
-</div>
-<div class="ek-gap" style="height:40px"></div>
+  <a class="cta-btn tg" data-link="telegram" href="https://t.me/eliza_kry"><span class="t"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg>Написать в Telegram</span></a>
+  <div class="docs">
+    <a data-link="offer" href="#">Публичная оферта</a><span>·</span><a data-link="privacy" href="#">Политика конфиденциальности</a>
+    <p>Самозанятая Чайкина Елизавета Сергеевна,<br>ИНН&nbsp;504227291394</p>
+  </div>
+</section>
 
 </div>
 

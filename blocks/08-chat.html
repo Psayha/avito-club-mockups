@@ -24,6 +24,13 @@
 @keyframes ekPop{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:none}}
 @keyframes ekDot{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
 @media (prefers-reduced-motion:reduce){.ek-chat .ek-wall{scroll-behavior:auto}.ek-chat .ek-msg.ek-pop,.ek-chat .ek-dots i{animation:none}}
+.ek .ek-cta-btn{display:block;text-align:center;text-decoration:none;background:var(--accent);color:#fff;border-radius:14px;padding:15px 16px 14px;margin-top:20px;-webkit-tap-highlight-color:transparent;transition:transform .12s}
+.ek .ek-cta-btn:active{transform:scale(.98)}
+.ek .ek-cta-btn .ek-t{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:16px;font-weight:800;line-height:1.25}
+.ek .ek-cta-btn .ek-t .ek-ic{width:18px;height:18px;stroke-width:2.4;flex:0 0 18px}
+.ek .ek-cta-btn small{display:block;font-size:12px;font-weight:600;opacity:.85;margin-top:3px}
+.ek .ek-cta-btn.ek-light{background:#fff;color:var(--ink)}
+.ek .ek-cta-btn.ek-light small{color:var(--muted);opacity:1}
 @media (prefers-reduced-motion:reduce){.ek *{transition:none!important}}
 .ek .ek-chat{padding:56px 0}
 .ek .ek-chat .ek-hd{padding:0 22px}
@@ -127,7 +134,7 @@
     </div>
     <button class="ek-down ek-hide" type="button" aria-label="К следующему сообщению"><svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg><b>0</b></button>
     </div>
-    <div class="ek-input"><svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.4 11-8.9 8.9a5.5 5.5 0 0 1-7.8-7.8l8.9-8.9a3.7 3.7 0 0 1 5.2 5.2l-8.9 8.9a1.8 1.8 0 0 1-2.6-2.6l8.2-8.2"/></svg><span class="ek-f">Хочу в клуб…</span><a class="ek-write" href="https://t.me/eliza_kry" target="_blank" rel="noopener">Написать<svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg></a></div>
+    <div class="ek-input"><svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.4 11-8.9 8.9a5.5 5.5 0 0 1-7.8-7.8l8.9-8.9a3.7 3.7 0 0 1 5.2 5.2l-8.9 8.9a1.8 1.8 0 0 1-2.6-2.6l8.2-8.2"/></svg><span class="ek-f">Хочу в клуб…</span><a class="ek-write" data-link="telegram" href="https://t.me/eliza_kry" target="_blank" rel="noopener">Написать<svg class="ek-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg></a></div>
   </div>
 </section>
 </div>

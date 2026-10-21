@@ -24,6 +24,13 @@
 @keyframes ekPop{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:none}}
 @keyframes ekDot{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
 @media (prefers-reduced-motion:reduce){.ek-chat .ek-wall{scroll-behavior:auto}.ek-chat .ek-msg.ek-pop,.ek-chat .ek-dots i{animation:none}}
+.ek .ek-cta-btn{display:block;text-align:center;text-decoration:none;background:var(--accent);color:#fff;border-radius:14px;padding:15px 16px 14px;margin-top:20px;-webkit-tap-highlight-color:transparent;transition:transform .12s}
+.ek .ek-cta-btn:active{transform:scale(.98)}
+.ek .ek-cta-btn .ek-t{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:16px;font-weight:800;line-height:1.25}
+.ek .ek-cta-btn .ek-t .ek-ic{width:18px;height:18px;stroke-width:2.4;flex:0 0 18px}
+.ek .ek-cta-btn small{display:block;font-size:12px;font-weight:600;opacity:.85;margin-top:3px}
+.ek .ek-cta-btn.ek-light{background:#fff;color:var(--ink)}
+.ek .ek-cta-btn.ek-light small{color:var(--muted);opacity:1}
 @media (prefers-reduced-motion:reduce){.ek *{transition:none!important}}
 .ek .ek-cases{background:var(--sand)}
 .ek .ek-cases .ek-case{background:var(--paper);border-radius:20px;padding:20px 18px;margin-top:14px}
